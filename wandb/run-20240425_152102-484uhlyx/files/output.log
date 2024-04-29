@@ -1,0 +1,49 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [555 416 500 555 555   0   0 454 454 357]
+ - Client 1: [  0 416 500 555 555 555   0 454 454 357]
+ - Client 2: [  0 416   0   0   0   0   0   0   0 357]
+ - Client 3: [555 416 500 555   0 555   0 454 454 357]
+ - Client 4: [  0 417   0   0   0   0   0 454 454 357]
+ - Client 5: [  0 417   0   0   0   0   0 454 454 357]
+ - Client 6: [555   0 500   0   0 555   0   0   0 357]
+ - Client 7: [555   0 500   0 555 555   0   0   0 357]
+ - Client 8: [  0 417   0   0 555   0   0 455   0 357]
+ - Client 9: [  0 417 500 555 556 556   0 455 455 357]
+ - Client 10: [  0   0   0   0   0   0   0   0 455   0]
+ - Client 11: [ 556  417  500  556  556    0 1000  455  455  357]
+ - Client 12: [556   0   0 556   0   0   0   0   0   0]
+ - Client 13: [ 556    0    0  556    0  556 1000    0    0    0]
+ - Client 14: [   0    0    0    0    0    0 1000    0    0    0]
+ - Client 15: [  0 417 500   0 556 556   0 455 455 357]
+ - Client 16: [  0   0   0   0   0 556   0   0 455 358]
+ - Client 17: [ 556  417  500  556  556  556 1000  455  455    0]
+ - Client 18: [  0 417 500   0 556   0   0 455   0   0]
+ - Client 19: [ 556    0    0  556    0    0 1000    0    0  358]
+
+
+ 33%|█████████████████████████████████████████████████████████▋                                                                                                                   | 2/6 [00:32<01:04, 16.07s/it]
+Traceback (most recent call last):
+  File "train.py", line 75, in <module>
+    loss += client_update(client_models[i], opt[i], train_loader[client_idx[i]], epochs)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 410, in client_update
+    This function updates/trains client model on client data
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 253, in __getitem__
+    img = self.transforms(img)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 61, in __call__
+    img = t(img)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1097, in _call_impl
+    forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)
+KeyboardInterrupt

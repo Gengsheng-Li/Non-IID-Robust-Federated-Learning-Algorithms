@@ -1,0 +1,34 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [228 251 242 270 227 252 255 263 237 275]
+ - Client 1: [246 261 247 264 255 267 277 240 240 203]
+ - Client 2: [250 240 246 253 222 271 248 256 237 277]
+ - Client 3: [245 266 245 252 258 244 242 251 250 247]
+ - Client 4: [227 229 281 243 255 250 258 252 253 252]
+ - Client 5: [257 244 256 238 264 242 251 255 240 253]
+ - Client 6: [260 281 229 249 261 263 249 244 232 232]
+ - Client 7: [257 236 254 228 253 261 268 251 240 252]
+ - Client 8: [264 270 232 243 246 251 242 253 258 241]
+ - Client 9: [283 237 214 261 250 235 253 271 239 257]
+ - Client 10: [   0    0    0    0    0    0    0    0   13 2487]
+ - Client 11: [   0    0 1746    0    0    0    0  754    0    0]
+ - Client 12: [   0  560    0    0    0    0 1940    0    0    0]
+ - Client 13: [ 257    0    0    0    0    0    0    0    0 2243]
+ - Client 14: [   0    0    0    0    0    0  486    0 2014    0]
+ - Client 15: [   0    0    0    0    0 1873  627    0    0    0]
+ - Client 16: [ 196    0    0    0    0    0 2304    0    0    0]
+ - Client 17: [   0    0    0 2122    0  378    0    0    0    0]
+ - Client 18: [   0    0    0  583    0    0 1917    0    0    0]
+ - Client 19: [  51    0    0    0 2449    0    0    0    0    0]
+Traceback (most recent call last):
+  File "train.py", line 57, in <module>
+    train_loader, test_loader = get_data_loaders(classes_pc=classes_pc, nclients= num_clients,
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 389, in get_data_loaders
+    split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=10)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 460, in split_balanced_non_iid
+    clients_split = np.array(clients_split, dtype=object)
+ValueError: could not broadcast input array from shape (2500,3,32,32) into shape (2500,)

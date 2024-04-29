@@ -1,0 +1,35 @@
+
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [454 500   0   0   0 500   0 454   0   0]
+ - Client 1: [454 500 500 555   0 500   0 454 500   0]
+ - Client 2: [454   0 500   0   0   0   0 454 500   0]
+ - Client 3: [454   0 500   0   0   0   0 454   0   0]
+ - Client 4: [  0   0   0   0   0 500   0   0 500   0]
+ - Client 5: [454 500 500 555   0 500 714 454 500   0]
+ - Client 6: [455 500 500 555   0 500   0 455 500   0]
+ - Client 7: [  0 500   0 555   0   0 714   0   0 833]
+ - Client 8: [  0 500   0 556   0   0 714   0   0   0]
+ - Client 9: [455   0   0   0   0 500   0   0 500 833]
+ - Client 10: [  0   0   0   0   0   0   0 455   0   0]
+ - Client 11: [455   0 500   0   0 500   0 455 500 833]
+ - Client 12: [   0  500  500  556 1250    0  714  455    0    0]
+ - Client 13: [ 455  500  500  556 1250  500  714    0  500  833]
+ - Client 14: [  0   0 500   0   0   0   0   0   0   0]
+ - Client 15: [  0 500   0   0   0   0   0   0   0   0]
+ - Client 16: [   0    0    0  556 1250    0  715    0  500  834]
+ - Client 17: [455   0   0   0   0 500   0   0   0   0]
+ - Client 18: [ 455  500    0  556 1250  500  715  455  500  834]
+ - Client 19: [  0   0 500   0   0   0   0 455   0   0]
+
+ 17%|████████████████████████████▊                                                                                                                                                | 1/6 [00:55<04:39, 55.81s/it]
+Traceback (most recent call last):
+  File "train.py", line 75, in <module>
+    loss += client_update(client_models[i], opt[i], train_loader[client_idx[i]], epochs)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 415, in client_update
+    data, target = data.cuda(), target.cuda()
+KeyboardInterrupt

@@ -1,0 +1,716 @@
+2024-04-25 15:30:44,198 INFO    StreamThr :291362 [internal.py:wandb_internal():86] W&B internal server running at pid: 291362, started at: 2024-04-25 15:30:44.197675
+2024-04-25 15:30:44,202 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status
+2024-04-25 15:30:44,203 INFO    WriterThread:291362 [datastore.py:open_for_write():87] open: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/run-bpj7lz0s.wandb
+2024-04-25 15:30:44,204 DEBUG   SenderThread:291362 [sender.py:send():379] send: header
+2024-04-25 15:30:44,204 DEBUG   SenderThread:291362 [sender.py:send():379] send: run
+2024-04-25 15:30:44,954 INFO    SenderThread:291362 [dir_watcher.py:__init__():211] watching files in: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files
+2024-04-25 15:30:44,954 INFO    SenderThread:291362 [sender.py:_start_run_threads():1124] run started: bpj7lz0s with start time 1714030244.196243
+2024-04-25 15:30:44,957 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: check_version
+2024-04-25 15:30:44,958 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: check_version
+2024-04-25 15:30:45,378 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: run_start
+2024-04-25 15:30:45,410 DEBUG   HandlerThread:291362 [system_info.py:__init__():26] System info init
+2024-04-25 15:30:45,411 DEBUG   HandlerThread:291362 [system_info.py:__init__():41] System info init done
+2024-04-25 15:30:45,411 INFO    HandlerThread:291362 [system_monitor.py:start():194] Starting system monitor
+2024-04-25 15:30:45,411 INFO    SystemMonitor:291362 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-25 15:30:45,411 INFO    HandlerThread:291362 [system_monitor.py:probe():214] Collecting system info
+2024-04-25 15:30:45,412 INFO    SystemMonitor:291362 [interfaces.py:start():190] Started cpu monitoring
+2024-04-25 15:30:45,416 INFO    SystemMonitor:291362 [interfaces.py:start():190] Started disk monitoring
+2024-04-25 15:30:45,418 INFO    SystemMonitor:291362 [interfaces.py:start():190] Started gpu monitoring
+2024-04-25 15:30:45,419 INFO    SystemMonitor:291362 [interfaces.py:start():190] Started memory monitoring
+2024-04-25 15:30:45,422 INFO    SystemMonitor:291362 [interfaces.py:start():190] Started network monitoring
+2024-04-25 15:30:45,440 DEBUG   HandlerThread:291362 [system_info.py:probe():150] Probing system
+2024-04-25 15:30:45,485 DEBUG   HandlerThread:291362 [gitlib.py:_init_repo():56] git repository is invalid
+2024-04-25 15:30:45,485 DEBUG   HandlerThread:291362 [system_info.py:probe():198] Probing system done
+2024-04-25 15:30:45,485 DEBUG   HandlerThread:291362 [system_monitor.py:probe():223] {'os': 'Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-04-25T07:30:45.440432', 'startedAt': '2024-04-25T07:30:44.178739', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'Dudoo-Rog', 'username': 'zqf', 'executable': '/home/zqf/miniconda3/envs/FedDISC/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2304.0080000000007, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}, {'current': 2304.008, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 1006.853931427002, 'used': 22.82433319091797}}, 'gpu': 'NVIDIA GeForce RTX 2080 Super with Max-Q Design', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Super with Max-Q Design', 'memory_total': 8589934592}], 'memory': {'total': 15.54922866821289}}
+2024-04-25 15:30:45,485 INFO    HandlerThread:291362 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-25 15:30:45,485 INFO    HandlerThread:291362 [system_monitor.py:probe():227] Publishing system info
+2024-04-25 15:30:45,486 DEBUG   HandlerThread:291362 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-04-25 15:30:45,956 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_created():271] file/dir created: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/conda-environment.yaml
+2024-04-25 15:30:47,410 DEBUG   HandlerThread:291362 [system_info.py:_save_conda():222] Saving conda packages done
+2024-04-25 15:30:47,411 INFO    HandlerThread:291362 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-25 15:30:47,415 DEBUG   SenderThread:291362 [sender.py:send():379] send: files
+2024-04-25 15:30:47,416 INFO    SenderThread:291362 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-04-25 15:30:47,484 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-25 15:30:47,484 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: python_packages
+2024-04-25 15:30:47,485 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-25 15:30:47,485 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: stop_status
+2024-04-25 15:30:47,488 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-25 15:30:47,949 DEBUG   SenderThread:291362 [sender.py:send():379] send: telemetry
+2024-04-25 15:30:47,955 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/conda-environment.yaml
+2024-04-25 15:30:47,955 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_created():271] file/dir created: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/requirements.txt
+2024-04-25 15:30:47,955 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_created():271] file/dir created: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/wandb-metadata.json
+2024-04-25 15:30:47,964 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-metadata.json?Expires=1714116648&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Y7BCfmoVaWxGWzS52Oq8SgKbqfqU9EPLQsKTtH2ae2iP1ckRl1g8nanThF6YcqB%2FN1ZbTYU%2BxLObc8dZxSiZdcgpf0tLteWbHBf1TGjjw0iocOF%2F%2BOvlw1wMuvhznjl5CNWZlRFvMWkFKimREkEPZS0UiAUx6hnjA%2BumxY%2BGIgPPLzIwf%2FSsfDYcvaDl7HKx6VuTMkEWqjBAqT6iw%2FoCVQcOGvgdP%2BZKdejl42nremuqkJU5IlW75VlnBQ4KAJUfUKPN55%2FAzsrafbmbUzzJGzIxq%2FQdmJSMafnKyZV7on5eOQwA0Ix38EKe4rftzAujHmrmBmi0WNcKGu3albvnkg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:30:47,965 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2702'}
+2024-04-25 15:30:47,965 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:30:49,470 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-metadata.json?Expires=1714116648&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Y7BCfmoVaWxGWzS52Oq8SgKbqfqU9EPLQsKTtH2ae2iP1ckRl1g8nanThF6YcqB%2FN1ZbTYU%2BxLObc8dZxSiZdcgpf0tLteWbHBf1TGjjw0iocOF%2F%2BOvlw1wMuvhznjl5CNWZlRFvMWkFKimREkEPZS0UiAUx6hnjA%2BumxY%2BGIgPPLzIwf%2FSsfDYcvaDl7HKx6VuTMkEWqjBAqT6iw%2FoCVQcOGvgdP%2BZKdejl42nremuqkJU5IlW75VlnBQ4KAJUfUKPN55%2FAzsrafbmbUzzJGzIxq%2FQdmJSMafnKyZV7on5eOQwA0Ix38EKe4rftzAujHmrmBmi0WNcKGu3albvnkg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:30:49,470 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2702'}
+2024-04-25 15:30:49,471 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:30:49,950 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:30:52,088 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-metadata.json?Expires=1714116648&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Y7BCfmoVaWxGWzS52Oq8SgKbqfqU9EPLQsKTtH2ae2iP1ckRl1g8nanThF6YcqB%2FN1ZbTYU%2BxLObc8dZxSiZdcgpf0tLteWbHBf1TGjjw0iocOF%2F%2BOvlw1wMuvhznjl5CNWZlRFvMWkFKimREkEPZS0UiAUx6hnjA%2BumxY%2BGIgPPLzIwf%2FSsfDYcvaDl7HKx6VuTMkEWqjBAqT6iw%2FoCVQcOGvgdP%2BZKdejl42nremuqkJU5IlW75VlnBQ4KAJUfUKPN55%2FAzsrafbmbUzzJGzIxq%2FQdmJSMafnKyZV7on5eOQwA0Ix38EKe4rftzAujHmrmBmi0WNcKGu3albvnkg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:30:52,088 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2702'}
+2024-04-25 15:30:52,088 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:30:52,088 INFO    wandb-upload_0:291362 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+    conn.connect()
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connection.py", line 653, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connection.py", line 806, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 465, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 509, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+    conn.connect()
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connection.py", line 653, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/connection.py", line 806, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 465, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 509, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2760, in upload_file
+    response = self._upload_file_session.put(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2791, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2760, in upload_file
+    response = self._upload_file_session.put(
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2024-04-25 15:30:54,958 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_created():271] file/dir created: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/output.log
+2024-04-25 15:30:55,791 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:30:56,278 DEBUG   SenderThread:291362 [sender.py:send():379] send: exit
+2024-04-25 15:30:56,278 INFO    SenderThread:291362 [sender.py:send_exit():586] handling exit code: 1
+2024-04-25 15:30:56,279 INFO    SenderThread:291362 [sender.py:send_exit():588] handling runtime: 10
+2024-04-25 15:30:56,281 INFO    SenderThread:291362 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-25 15:30:56,282 INFO    SenderThread:291362 [sender.py:send_exit():594] send defer
+2024-04-25 15:30:56,282 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,282 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-25 15:30:56,283 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,283 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-04-25 15:30:56,283 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 1
+2024-04-25 15:30:56,283 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,283 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-25 15:30:56,284 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,284 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-04-25 15:30:56,284 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 2
+2024-04-25 15:30:56,284 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,285 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-25 15:30:56,285 INFO    HandlerThread:291362 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-25 15:30:56,285 DEBUG   SystemMonitor:291362 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-25 15:30:56,286 INFO    HandlerThread:291362 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-25 15:30:56,286 DEBUG   SystemMonitor:291362 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-25 15:30:56,287 INFO    HandlerThread:291362 [interfaces.py:finish():202] Joined disk monitor
+2024-04-25 15:30:56,287 DEBUG   SystemMonitor:291362 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-25 15:30:56,314 INFO    HandlerThread:291362 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-25 15:30:56,314 INFO    HandlerThread:291362 [interfaces.py:finish():202] Joined memory monitor
+2024-04-25 15:30:56,315 INFO    HandlerThread:291362 [interfaces.py:finish():202] Joined network monitor
+2024-04-25 15:30:56,315 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,315 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-04-25 15:30:56,315 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 3
+2024-04-25 15:30:56,316 DEBUG   SenderThread:291362 [sender.py:send():379] send: stats
+2024-04-25 15:30:56,316 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,318 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-25 15:30:56,319 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,319 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-04-25 15:30:56,319 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 4
+2024-04-25 15:30:56,319 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,319 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-25 15:30:56,320 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,320 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-04-25 15:30:56,320 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 5
+2024-04-25 15:30:56,320 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,320 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-25 15:30:56,322 DEBUG   SenderThread:291362 [sender.py:send():379] send: summary
+2024-04-25 15:30:56,322 INFO    SenderThread:291362 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-25 15:30:56,323 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,323 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-04-25 15:30:56,323 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 6
+2024-04-25 15:30:56,323 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,323 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-25 15:30:56,324 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,324 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-04-25 15:30:56,328 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:30:56,613 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 7
+2024-04-25 15:30:56,613 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:30:56,614 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-25 15:30:56,615 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:30:56,615 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-04-25 15:30:56,959 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/config.yaml
+2024-04-25 15:30:56,959 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/output.log
+2024-04-25 15:30:56,959 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_created():271] file/dir created: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/wandb-summary.json
+2024-04-25 15:30:57,075 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-metadata.json?Expires=1714116648&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Y7BCfmoVaWxGWzS52Oq8SgKbqfqU9EPLQsKTtH2ae2iP1ckRl1g8nanThF6YcqB%2FN1ZbTYU%2BxLObc8dZxSiZdcgpf0tLteWbHBf1TGjjw0iocOF%2F%2BOvlw1wMuvhznjl5CNWZlRFvMWkFKimREkEPZS0UiAUx6hnjA%2BumxY%2BGIgPPLzIwf%2FSsfDYcvaDl7HKx6VuTMkEWqjBAqT6iw%2FoCVQcOGvgdP%2BZKdejl42nremuqkJU5IlW75VlnBQ4KAJUfUKPN55%2FAzsrafbmbUzzJGzIxq%2FQdmJSMafnKyZV7on5eOQwA0Ix38EKe4rftzAujHmrmBmi0WNcKGu3albvnkg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:30:57,076 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2702'}
+2024-04-25 15:30:57,076 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:30:57,278 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:30:58,959 INFO    Thread-12 :291362 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/output.log
+2024-04-25 15:31:00,285 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 8
+2024-04-25 15:31:00,285 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:00,285 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:31:00,285 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-25 15:31:00,286 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:31:00,286 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-04-25 15:31:00,286 INFO    SenderThread:291362 [job_builder.py:build():318] Attempting to build job artifact
+2024-04-25 15:31:00,286 INFO    SenderThread:291362 [job_builder.py:_get_source_type():466] no source found
+2024-04-25 15:31:00,286 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 9
+2024-04-25 15:31:00,287 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:31:00,287 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-25 15:31:00,287 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:31:00,287 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-04-25 15:31:00,287 INFO    SenderThread:291362 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-25 15:31:00,961 INFO    SenderThread:291362 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/output.log
+2024-04-25 15:31:00,961 INFO    SenderThread:291362 [dir_watcher.py:finish():388] scan: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files
+2024-04-25 15:31:00,961 INFO    SenderThread:291362 [dir_watcher.py:finish():402] scan save: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/requirements.txt requirements.txt
+2024-04-25 15:31:00,962 INFO    SenderThread:291362 [dir_watcher.py:finish():402] scan save: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/wandb-metadata.json wandb-metadata.json
+2024-04-25 15:31:00,962 INFO    SenderThread:291362 [dir_watcher.py:finish():402] scan save: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/wandb-summary.json wandb-summary.json
+2024-04-25 15:31:00,965 INFO    SenderThread:291362 [dir_watcher.py:finish():402] scan save: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/output.log output.log
+2024-04-25 15:31:00,966 INFO    SenderThread:291362 [dir_watcher.py:finish():402] scan save: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/conda-environment.yaml conda-environment.yaml
+2024-04-25 15:31:00,971 INFO    SenderThread:291362 [dir_watcher.py:finish():402] scan save: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/config.yaml config.yaml
+2024-04-25 15:31:00,973 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 10
+2024-04-25 15:31:00,978 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:31:00,978 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 10
+2024-04-25 15:31:00,987 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:31:00,988 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-04-25 15:31:00,988 INFO    SenderThread:291362 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-25 15:31:01,281 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:01,283 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:01,461 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-summary.json?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=i9yNQNRfZVBRtMeParfIVhkAnmW90oI7eycq2ShNHk8sqy%2B2M5qV0J%2B%2FP2mB5r779SjWLZ%2BU9JR74httmqtCPoNsFS5bzFBJI94VClTJOfT8fHQlCzrEWxDmf8NA9KWYfOEJ03hwBcTPd48kadhDMBCSAD%2FxMKGheHhD9BThoU5d1Vb2Xc7c09gD59us4jGqYtLB5fc1H0Edt52M6UoNU4YbOKMoVHgu7his14fglLsxwJkUiRO%2F4QoNnCPTy6AtE2DKI0lAQNN7yLjO%2FJ%2BLJ8og4TZegVFMzZ3tzzmHX2oOh2wl2UXoPLH6Ll47rnFYh71GTXeq08OPjZYff32c7A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:01,462 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27'}
+2024-04-25 15:31:01,462 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:01,464 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/requirements.txt?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=wnsKdaGYxypNQV2vqT2OJxzzrO5eQf1ZjTbh%2BHagtQym4O0MvqgINk6u6MPgZIPwg01Fkg%2Fv2SkmhbIB2Sq12V5hWC8BDWkqQpZUYvFa59LzC2PBnJyTh7T%2BKQvrfk%2BPLyInvE%2FfxPA4oAIFHQnkLCRKoLEXCLc%2BmASgc4zqSbtqiXNDUl8Q%2FnTb1jZ8WwwZxImrtRbd%2F%2BRZNn%2FZzkHGHSrT7YwVLqYB90G6K%2Bs9mDRMHo7Zo9RNobmJl9wyVmPpS%2BqlR%2BhioB3gbMXbUO%2FcCQyle9cQgvPmh%2F1GgS0DdetZtCgG3O33ifoHJWW0bTopoveWXvgW5DrNwdx6%2F65s4A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:01,464 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '903'}
+2024-04-25 15:31:01,464 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:01,593 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/output.log?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=myCsob6bJ8IrTPSacYvsp65KcnqPOXvkjGBkbVzgAqYUClvzW6wmCbJoup%2FVt%2BntZAhFm12pI8fKbR%2F4%2BFSTMAs7Vtl7DBSDYupQhxI4OaGA0zx96QfJReGjf4AIG5Fx8NTXteoMTM2ekbB00mEcMduc6hq6fU%2Fx8229MRoZMOmXoxV%2FTta551eQewF9qBaMR5HzY31BTBRk306nmX8K%2BLbp%2Fs%2B8AHwW%2BV8x1K30Hqx8hkmjxJ4AyOnwz%2FPjUIDIPFmeXrVcBLa2yfCAuIPpVIFGUXajPsZmBjPdrKvsctHnK1VW%2FP0TwnYYz4wB6Yl%2FQLZBVAPcZVV9YeyXVheUCA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:01,593 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2034'}
+2024-04-25 15:31:01,593 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:01,611 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/conda-environment.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GAKvA0GEcXPz0dl%2BECGUtfu8PssVT78rJjDS9IytBq9HM7kuammAkWVxH7kxYW%2BEaw%2BVNgYlI5RbhNnpApctMP%2BpDCK1UZZdGr0Azp97LXiPEXIISTqDpczVNtLHkrNIxnQwGzGdp5BeWlPZP5PZVdKYam0bMSFKhoS%2F59q5ju0fkqkWCoB8oEYZt7jw2X7MB2S2G70lwkwz8MveOkII4KXn2iGa8Lc0doH4JURC2mf5Sg7VeB1C8Mqpr%2BYZhPr5eogiMNjPioQRSKax2hpFty23YnOOIH9dOU%2FIQTVdV8ss5WtnJpgQOVKtdUVqjxFccyk8IrhaM2HN2hXf4%2FOIcA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:01,611 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3103'}
+2024-04-25 15:31:01,611 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:01,645 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/config.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Ts3cwINeiSI23i2KHWPvo8rz8jeDgTB7OkpG%2FRIi8FLNkof19ME4lGb2jR4LKm5CA08Pp2v8y4r1BKHvJMUtXluQrLiAhyV6mVv6IAeN8hAUXO%2F7vn2fQC1LND9c0JiKzIM7bk3O7JU7VcrX6O5BxvzCYqQJas%2BdzZAY5KJOSm%2F2EwVifNJUJ3pFFc5F6B9ymFPjfJ3y6m7wKjggPkBWiLesX5voLRhvM7ZIA1Z66bzvWczuupkz1xRwVnZUFTFEefccKZOKGDReArHV3ELI9311VqWAIUxKc1INNNRmd5%2BFF2a01b7VpmE6vMILXWrU5qTf%2FmVSLwGnsoK6e34t9A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:01,645 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '386'}
+2024-04-25 15:31:01,645 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:02,283 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:02,284 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:02,735 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-summary.json?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=i9yNQNRfZVBRtMeParfIVhkAnmW90oI7eycq2ShNHk8sqy%2B2M5qV0J%2B%2FP2mB5r779SjWLZ%2BU9JR74httmqtCPoNsFS5bzFBJI94VClTJOfT8fHQlCzrEWxDmf8NA9KWYfOEJ03hwBcTPd48kadhDMBCSAD%2FxMKGheHhD9BThoU5d1Vb2Xc7c09gD59us4jGqYtLB5fc1H0Edt52M6UoNU4YbOKMoVHgu7his14fglLsxwJkUiRO%2F4QoNnCPTy6AtE2DKI0lAQNN7yLjO%2FJ%2BLJ8og4TZegVFMzZ3tzzmHX2oOh2wl2UXoPLH6Ll47rnFYh71GTXeq08OPjZYff32c7A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:02,735 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27'}
+2024-04-25 15:31:02,735 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:02,868 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/requirements.txt?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=wnsKdaGYxypNQV2vqT2OJxzzrO5eQf1ZjTbh%2BHagtQym4O0MvqgINk6u6MPgZIPwg01Fkg%2Fv2SkmhbIB2Sq12V5hWC8BDWkqQpZUYvFa59LzC2PBnJyTh7T%2BKQvrfk%2BPLyInvE%2FfxPA4oAIFHQnkLCRKoLEXCLc%2BmASgc4zqSbtqiXNDUl8Q%2FnTb1jZ8WwwZxImrtRbd%2F%2BRZNn%2FZzkHGHSrT7YwVLqYB90G6K%2Bs9mDRMHo7Zo9RNobmJl9wyVmPpS%2BqlR%2BhioB3gbMXbUO%2FcCQyle9cQgvPmh%2F1GgS0DdetZtCgG3O33ifoHJWW0bTopoveWXvgW5DrNwdx6%2F65s4A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:02,868 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '903'}
+2024-04-25 15:31:02,869 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:02,922 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/config.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Ts3cwINeiSI23i2KHWPvo8rz8jeDgTB7OkpG%2FRIi8FLNkof19ME4lGb2jR4LKm5CA08Pp2v8y4r1BKHvJMUtXluQrLiAhyV6mVv6IAeN8hAUXO%2F7vn2fQC1LND9c0JiKzIM7bk3O7JU7VcrX6O5BxvzCYqQJas%2BdzZAY5KJOSm%2F2EwVifNJUJ3pFFc5F6B9ymFPjfJ3y6m7wKjggPkBWiLesX5voLRhvM7ZIA1Z66bzvWczuupkz1xRwVnZUFTFEefccKZOKGDReArHV3ELI9311VqWAIUxKc1INNNRmd5%2BFF2a01b7VpmE6vMILXWrU5qTf%2FmVSLwGnsoK6e34t9A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:02,922 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '386'}
+2024-04-25 15:31:02,922 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:02,941 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/output.log?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=myCsob6bJ8IrTPSacYvsp65KcnqPOXvkjGBkbVzgAqYUClvzW6wmCbJoup%2FVt%2BntZAhFm12pI8fKbR%2F4%2BFSTMAs7Vtl7DBSDYupQhxI4OaGA0zx96QfJReGjf4AIG5Fx8NTXteoMTM2ekbB00mEcMduc6hq6fU%2Fx8229MRoZMOmXoxV%2FTta551eQewF9qBaMR5HzY31BTBRk306nmX8K%2BLbp%2Fs%2B8AHwW%2BV8x1K30Hqx8hkmjxJ4AyOnwz%2FPjUIDIPFmeXrVcBLa2yfCAuIPpVIFGUXajPsZmBjPdrKvsctHnK1VW%2FP0TwnYYz4wB6Yl%2FQLZBVAPcZVV9YeyXVheUCA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:02,942 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2034'}
+2024-04-25 15:31:02,942 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:02,981 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/conda-environment.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GAKvA0GEcXPz0dl%2BECGUtfu8PssVT78rJjDS9IytBq9HM7kuammAkWVxH7kxYW%2BEaw%2BVNgYlI5RbhNnpApctMP%2BpDCK1UZZdGr0Azp97LXiPEXIISTqDpczVNtLHkrNIxnQwGzGdp5BeWlPZP5PZVdKYam0bMSFKhoS%2F59q5ju0fkqkWCoB8oEYZt7jw2X7MB2S2G70lwkwz8MveOkII4KXn2iGa8Lc0doH4JURC2mf5Sg7VeB1C8Mqpr%2BYZhPr5eogiMNjPioQRSKax2hpFty23YnOOIH9dOU%2FIQTVdV8ss5WtnJpgQOVKtdUVqjxFccyk8IrhaM2HN2hXf4%2FOIcA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:02,981 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3103'}
+2024-04-25 15:31:02,981 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:03,284 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:03,285 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:04,285 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:04,286 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:05,227 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-summary.json?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=i9yNQNRfZVBRtMeParfIVhkAnmW90oI7eycq2ShNHk8sqy%2B2M5qV0J%2B%2FP2mB5r779SjWLZ%2BU9JR74httmqtCPoNsFS5bzFBJI94VClTJOfT8fHQlCzrEWxDmf8NA9KWYfOEJ03hwBcTPd48kadhDMBCSAD%2FxMKGheHhD9BThoU5d1Vb2Xc7c09gD59us4jGqYtLB5fc1H0Edt52M6UoNU4YbOKMoVHgu7his14fglLsxwJkUiRO%2F4QoNnCPTy6AtE2DKI0lAQNN7yLjO%2FJ%2BLJ8og4TZegVFMzZ3tzzmHX2oOh2wl2UXoPLH6Ll47rnFYh71GTXeq08OPjZYff32c7A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:05,227 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27'}
+2024-04-25 15:31:05,227 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:05,286 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:05,287 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:05,299 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/output.log?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=myCsob6bJ8IrTPSacYvsp65KcnqPOXvkjGBkbVzgAqYUClvzW6wmCbJoup%2FVt%2BntZAhFm12pI8fKbR%2F4%2BFSTMAs7Vtl7DBSDYupQhxI4OaGA0zx96QfJReGjf4AIG5Fx8NTXteoMTM2ekbB00mEcMduc6hq6fU%2Fx8229MRoZMOmXoxV%2FTta551eQewF9qBaMR5HzY31BTBRk306nmX8K%2BLbp%2Fs%2B8AHwW%2BV8x1K30Hqx8hkmjxJ4AyOnwz%2FPjUIDIPFmeXrVcBLa2yfCAuIPpVIFGUXajPsZmBjPdrKvsctHnK1VW%2FP0TwnYYz4wB6Yl%2FQLZBVAPcZVV9YeyXVheUCA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:05,299 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2034'}
+2024-04-25 15:31:05,300 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:05,383 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/requirements.txt?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=wnsKdaGYxypNQV2vqT2OJxzzrO5eQf1ZjTbh%2BHagtQym4O0MvqgINk6u6MPgZIPwg01Fkg%2Fv2SkmhbIB2Sq12V5hWC8BDWkqQpZUYvFa59LzC2PBnJyTh7T%2BKQvrfk%2BPLyInvE%2FfxPA4oAIFHQnkLCRKoLEXCLc%2BmASgc4zqSbtqiXNDUl8Q%2FnTb1jZ8WwwZxImrtRbd%2F%2BRZNn%2FZzkHGHSrT7YwVLqYB90G6K%2Bs9mDRMHo7Zo9RNobmJl9wyVmPpS%2BqlR%2BhioB3gbMXbUO%2FcCQyle9cQgvPmh%2F1GgS0DdetZtCgG3O33ifoHJWW0bTopoveWXvgW5DrNwdx6%2F65s4A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:05,383 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '903'}
+2024-04-25 15:31:05,383 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:05,535 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/config.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Ts3cwINeiSI23i2KHWPvo8rz8jeDgTB7OkpG%2FRIi8FLNkof19ME4lGb2jR4LKm5CA08Pp2v8y4r1BKHvJMUtXluQrLiAhyV6mVv6IAeN8hAUXO%2F7vn2fQC1LND9c0JiKzIM7bk3O7JU7VcrX6O5BxvzCYqQJas%2BdzZAY5KJOSm%2F2EwVifNJUJ3pFFc5F6B9ymFPjfJ3y6m7wKjggPkBWiLesX5voLRhvM7ZIA1Z66bzvWczuupkz1xRwVnZUFTFEefccKZOKGDReArHV3ELI9311VqWAIUxKc1INNNRmd5%2BFF2a01b7VpmE6vMILXWrU5qTf%2FmVSLwGnsoK6e34t9A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:05,535 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '386'}
+2024-04-25 15:31:05,535 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:05,559 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/conda-environment.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GAKvA0GEcXPz0dl%2BECGUtfu8PssVT78rJjDS9IytBq9HM7kuammAkWVxH7kxYW%2BEaw%2BVNgYlI5RbhNnpApctMP%2BpDCK1UZZdGr0Azp97LXiPEXIISTqDpczVNtLHkrNIxnQwGzGdp5BeWlPZP5PZVdKYam0bMSFKhoS%2F59q5ju0fkqkWCoB8oEYZt7jw2X7MB2S2G70lwkwz8MveOkII4KXn2iGa8Lc0doH4JURC2mf5Sg7VeB1C8Mqpr%2BYZhPr5eogiMNjPioQRSKax2hpFty23YnOOIH9dOU%2FIQTVdV8ss5WtnJpgQOVKtdUVqjxFccyk8IrhaM2HN2hXf4%2FOIcA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:05,559 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3103'}
+2024-04-25 15:31:05,559 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:06,288 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:06,289 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:06,289 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:06,790 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-metadata.json?Expires=1714116648&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Y7BCfmoVaWxGWzS52Oq8SgKbqfqU9EPLQsKTtH2ae2iP1ckRl1g8nanThF6YcqB%2FN1ZbTYU%2BxLObc8dZxSiZdcgpf0tLteWbHBf1TGjjw0iocOF%2F%2BOvlw1wMuvhznjl5CNWZlRFvMWkFKimREkEPZS0UiAUx6hnjA%2BumxY%2BGIgPPLzIwf%2FSsfDYcvaDl7HKx6VuTMkEWqjBAqT6iw%2FoCVQcOGvgdP%2BZKdejl42nremuqkJU5IlW75VlnBQ4KAJUfUKPN55%2FAzsrafbmbUzzJGzIxq%2FQdmJSMafnKyZV7on5eOQwA0Ix38EKe4rftzAujHmrmBmi0WNcKGu3albvnkg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:06,791 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2702'}
+2024-04-25 15:31:06,791 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:07,289 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:07,290 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:08,291 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:08,292 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:09,292 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:09,293 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:09,789 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/config.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Ts3cwINeiSI23i2KHWPvo8rz8jeDgTB7OkpG%2FRIi8FLNkof19ME4lGb2jR4LKm5CA08Pp2v8y4r1BKHvJMUtXluQrLiAhyV6mVv6IAeN8hAUXO%2F7vn2fQC1LND9c0JiKzIM7bk3O7JU7VcrX6O5BxvzCYqQJas%2BdzZAY5KJOSm%2F2EwVifNJUJ3pFFc5F6B9ymFPjfJ3y6m7wKjggPkBWiLesX5voLRhvM7ZIA1Z66bzvWczuupkz1xRwVnZUFTFEefccKZOKGDReArHV3ELI9311VqWAIUxKc1INNNRmd5%2BFF2a01b7VpmE6vMILXWrU5qTf%2FmVSLwGnsoK6e34t9A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:09,789 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '386'}
+2024-04-25 15:31:09,789 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:09,866 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/output.log?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=myCsob6bJ8IrTPSacYvsp65KcnqPOXvkjGBkbVzgAqYUClvzW6wmCbJoup%2FVt%2BntZAhFm12pI8fKbR%2F4%2BFSTMAs7Vtl7DBSDYupQhxI4OaGA0zx96QfJReGjf4AIG5Fx8NTXteoMTM2ekbB00mEcMduc6hq6fU%2Fx8229MRoZMOmXoxV%2FTta551eQewF9qBaMR5HzY31BTBRk306nmX8K%2BLbp%2Fs%2B8AHwW%2BV8x1K30Hqx8hkmjxJ4AyOnwz%2FPjUIDIPFmeXrVcBLa2yfCAuIPpVIFGUXajPsZmBjPdrKvsctHnK1VW%2FP0TwnYYz4wB6Yl%2FQLZBVAPcZVV9YeyXVheUCA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:09,867 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2034'}
+2024-04-25 15:31:09,867 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:09,977 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-summary.json?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=i9yNQNRfZVBRtMeParfIVhkAnmW90oI7eycq2ShNHk8sqy%2B2M5qV0J%2B%2FP2mB5r779SjWLZ%2BU9JR74httmqtCPoNsFS5bzFBJI94VClTJOfT8fHQlCzrEWxDmf8NA9KWYfOEJ03hwBcTPd48kadhDMBCSAD%2FxMKGheHhD9BThoU5d1Vb2Xc7c09gD59us4jGqYtLB5fc1H0Edt52M6UoNU4YbOKMoVHgu7his14fglLsxwJkUiRO%2F4QoNnCPTy6AtE2DKI0lAQNN7yLjO%2FJ%2BLJ8og4TZegVFMzZ3tzzmHX2oOh2wl2UXoPLH6Ll47rnFYh71GTXeq08OPjZYff32c7A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:09,977 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27'}
+2024-04-25 15:31:09,977 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:10,277 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/conda-environment.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GAKvA0GEcXPz0dl%2BECGUtfu8PssVT78rJjDS9IytBq9HM7kuammAkWVxH7kxYW%2BEaw%2BVNgYlI5RbhNnpApctMP%2BpDCK1UZZdGr0Azp97LXiPEXIISTqDpczVNtLHkrNIxnQwGzGdp5BeWlPZP5PZVdKYam0bMSFKhoS%2F59q5ju0fkqkWCoB8oEYZt7jw2X7MB2S2G70lwkwz8MveOkII4KXn2iGa8Lc0doH4JURC2mf5Sg7VeB1C8Mqpr%2BYZhPr5eogiMNjPioQRSKax2hpFty23YnOOIH9dOU%2FIQTVdV8ss5WtnJpgQOVKtdUVqjxFccyk8IrhaM2HN2hXf4%2FOIcA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:10,277 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3103'}
+2024-04-25 15:31:10,277 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:10,293 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:10,294 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:10,302 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/requirements.txt?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=wnsKdaGYxypNQV2vqT2OJxzzrO5eQf1ZjTbh%2BHagtQym4O0MvqgINk6u6MPgZIPwg01Fkg%2Fv2SkmhbIB2Sq12V5hWC8BDWkqQpZUYvFa59LzC2PBnJyTh7T%2BKQvrfk%2BPLyInvE%2FfxPA4oAIFHQnkLCRKoLEXCLc%2BmASgc4zqSbtqiXNDUl8Q%2FnTb1jZ8WwwZxImrtRbd%2F%2BRZNn%2FZzkHGHSrT7YwVLqYB90G6K%2Bs9mDRMHo7Zo9RNobmJl9wyVmPpS%2BqlR%2BhioB3gbMXbUO%2FcCQyle9cQgvPmh%2F1GgS0DdetZtCgG3O33ifoHJWW0bTopoveWXvgW5DrNwdx6%2F65s4A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:10,303 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '903'}
+2024-04-25 15:31:10,303 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:11,294 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:11,295 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:11,296 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:12,298 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:12,298 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:13,299 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:13,301 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:14,301 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:14,302 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:15,302 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:15,303 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:16,304 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:16,304 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:16,305 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:17,304 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:17,305 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:18,305 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:18,306 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:18,421 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/output.log?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=myCsob6bJ8IrTPSacYvsp65KcnqPOXvkjGBkbVzgAqYUClvzW6wmCbJoup%2FVt%2BntZAhFm12pI8fKbR%2F4%2BFSTMAs7Vtl7DBSDYupQhxI4OaGA0zx96QfJReGjf4AIG5Fx8NTXteoMTM2ekbB00mEcMduc6hq6fU%2Fx8229MRoZMOmXoxV%2FTta551eQewF9qBaMR5HzY31BTBRk306nmX8K%2BLbp%2Fs%2B8AHwW%2BV8x1K30Hqx8hkmjxJ4AyOnwz%2FPjUIDIPFmeXrVcBLa2yfCAuIPpVIFGUXajPsZmBjPdrKvsctHnK1VW%2FP0TwnYYz4wB6Yl%2FQLZBVAPcZVV9YeyXVheUCA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:18,423 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2034'}
+2024-04-25 15:31:18,424 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:18,679 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/config.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Ts3cwINeiSI23i2KHWPvo8rz8jeDgTB7OkpG%2FRIi8FLNkof19ME4lGb2jR4LKm5CA08Pp2v8y4r1BKHvJMUtXluQrLiAhyV6mVv6IAeN8hAUXO%2F7vn2fQC1LND9c0JiKzIM7bk3O7JU7VcrX6O5BxvzCYqQJas%2BdzZAY5KJOSm%2F2EwVifNJUJ3pFFc5F6B9ymFPjfJ3y6m7wKjggPkBWiLesX5voLRhvM7ZIA1Z66bzvWczuupkz1xRwVnZUFTFEefccKZOKGDReArHV3ELI9311VqWAIUxKc1INNNRmd5%2BFF2a01b7VpmE6vMILXWrU5qTf%2FmVSLwGnsoK6e34t9A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:18,680 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '386'}
+2024-04-25 15:31:18,680 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:18,680 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/conda-environment.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GAKvA0GEcXPz0dl%2BECGUtfu8PssVT78rJjDS9IytBq9HM7kuammAkWVxH7kxYW%2BEaw%2BVNgYlI5RbhNnpApctMP%2BpDCK1UZZdGr0Azp97LXiPEXIISTqDpczVNtLHkrNIxnQwGzGdp5BeWlPZP5PZVdKYam0bMSFKhoS%2F59q5ju0fkqkWCoB8oEYZt7jw2X7MB2S2G70lwkwz8MveOkII4KXn2iGa8Lc0doH4JURC2mf5Sg7VeB1C8Mqpr%2BYZhPr5eogiMNjPioQRSKax2hpFty23YnOOIH9dOU%2FIQTVdV8ss5WtnJpgQOVKtdUVqjxFccyk8IrhaM2HN2hXf4%2FOIcA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:18,680 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3103'}
+2024-04-25 15:31:18,680 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:19,306 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:19,308 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:19,998 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/requirements.txt?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=wnsKdaGYxypNQV2vqT2OJxzzrO5eQf1ZjTbh%2BHagtQym4O0MvqgINk6u6MPgZIPwg01Fkg%2Fv2SkmhbIB2Sq12V5hWC8BDWkqQpZUYvFa59LzC2PBnJyTh7T%2BKQvrfk%2BPLyInvE%2FfxPA4oAIFHQnkLCRKoLEXCLc%2BmASgc4zqSbtqiXNDUl8Q%2FnTb1jZ8WwwZxImrtRbd%2F%2BRZNn%2FZzkHGHSrT7YwVLqYB90G6K%2Bs9mDRMHo7Zo9RNobmJl9wyVmPpS%2BqlR%2BhioB3gbMXbUO%2FcCQyle9cQgvPmh%2F1GgS0DdetZtCgG3O33ifoHJWW0bTopoveWXvgW5DrNwdx6%2F65s4A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:19,999 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '903'}
+2024-04-25 15:31:19,999 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:20,090 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-summary.json?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=i9yNQNRfZVBRtMeParfIVhkAnmW90oI7eycq2ShNHk8sqy%2B2M5qV0J%2B%2FP2mB5r779SjWLZ%2BU9JR74httmqtCPoNsFS5bzFBJI94VClTJOfT8fHQlCzrEWxDmf8NA9KWYfOEJ03hwBcTPd48kadhDMBCSAD%2FxMKGheHhD9BThoU5d1Vb2Xc7c09gD59us4jGqYtLB5fc1H0Edt52M6UoNU4YbOKMoVHgu7his14fglLsxwJkUiRO%2F4QoNnCPTy6AtE2DKI0lAQNN7yLjO%2FJ%2BLJ8og4TZegVFMzZ3tzzmHX2oOh2wl2UXoPLH6Ll47rnFYh71GTXeq08OPjZYff32c7A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:20,091 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27'}
+2024-04-25 15:31:20,091 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:20,308 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:20,309 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:21,309 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:21,309 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:21,310 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:22,310 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:22,311 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:23,311 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:23,311 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:23,819 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-metadata.json?Expires=1714116648&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Y7BCfmoVaWxGWzS52Oq8SgKbqfqU9EPLQsKTtH2ae2iP1ckRl1g8nanThF6YcqB%2FN1ZbTYU%2BxLObc8dZxSiZdcgpf0tLteWbHBf1TGjjw0iocOF%2F%2BOvlw1wMuvhznjl5CNWZlRFvMWkFKimREkEPZS0UiAUx6hnjA%2BumxY%2BGIgPPLzIwf%2FSsfDYcvaDl7HKx6VuTMkEWqjBAqT6iw%2FoCVQcOGvgdP%2BZKdejl42nremuqkJU5IlW75VlnBQ4KAJUfUKPN55%2FAzsrafbmbUzzJGzIxq%2FQdmJSMafnKyZV7on5eOQwA0Ix38EKe4rftzAujHmrmBmi0WNcKGu3albvnkg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:23,819 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2702'}
+2024-04-25 15:31:23,819 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:24,312 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:24,313 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:25,313 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:25,314 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:26,314 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:26,314 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:26,315 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:27,315 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:27,315 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:28,316 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:28,322 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:29,322 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:29,322 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:30,324 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:30,324 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:31,324 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:31,325 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:31,325 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:32,326 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:32,327 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:33,327 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:33,328 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:34,329 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:34,330 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:35,330 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:35,331 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:36,332 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:36,333 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:36,334 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:36,845 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/output.log?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=myCsob6bJ8IrTPSacYvsp65KcnqPOXvkjGBkbVzgAqYUClvzW6wmCbJoup%2FVt%2BntZAhFm12pI8fKbR%2F4%2BFSTMAs7Vtl7DBSDYupQhxI4OaGA0zx96QfJReGjf4AIG5Fx8NTXteoMTM2ekbB00mEcMduc6hq6fU%2Fx8229MRoZMOmXoxV%2FTta551eQewF9qBaMR5HzY31BTBRk306nmX8K%2BLbp%2Fs%2B8AHwW%2BV8x1K30Hqx8hkmjxJ4AyOnwz%2FPjUIDIPFmeXrVcBLa2yfCAuIPpVIFGUXajPsZmBjPdrKvsctHnK1VW%2FP0TwnYYz4wB6Yl%2FQLZBVAPcZVV9YeyXVheUCA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:36,845 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2034'}
+2024-04-25 15:31:36,845 ERROR   wandb-upload_3:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:37,179 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/config.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Ts3cwINeiSI23i2KHWPvo8rz8jeDgTB7OkpG%2FRIi8FLNkof19ME4lGb2jR4LKm5CA08Pp2v8y4r1BKHvJMUtXluQrLiAhyV6mVv6IAeN8hAUXO%2F7vn2fQC1LND9c0JiKzIM7bk3O7JU7VcrX6O5BxvzCYqQJas%2BdzZAY5KJOSm%2F2EwVifNJUJ3pFFc5F6B9ymFPjfJ3y6m7wKjggPkBWiLesX5voLRhvM7ZIA1Z66bzvWczuupkz1xRwVnZUFTFEefccKZOKGDReArHV3ELI9311VqWAIUxKc1INNNRmd5%2BFF2a01b7VpmE6vMILXWrU5qTf%2FmVSLwGnsoK6e34t9A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:37,179 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '386'}
+2024-04-25 15:31:37,179 ERROR   wandb-upload_5:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:37,333 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:37,335 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:37,399 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/conda-environment.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GAKvA0GEcXPz0dl%2BECGUtfu8PssVT78rJjDS9IytBq9HM7kuammAkWVxH7kxYW%2BEaw%2BVNgYlI5RbhNnpApctMP%2BpDCK1UZZdGr0Azp97LXiPEXIISTqDpczVNtLHkrNIxnQwGzGdp5BeWlPZP5PZVdKYam0bMSFKhoS%2F59q5ju0fkqkWCoB8oEYZt7jw2X7MB2S2G70lwkwz8MveOkII4KXn2iGa8Lc0doH4JURC2mf5Sg7VeB1C8Mqpr%2BYZhPr5eogiMNjPioQRSKax2hpFty23YnOOIH9dOU%2FIQTVdV8ss5WtnJpgQOVKtdUVqjxFccyk8IrhaM2HN2hXf4%2FOIcA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:37,399 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3103'}
+2024-04-25 15:31:37,399 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:38,335 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:38,336 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:39,336 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:39,337 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:39,353 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-summary.json?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=i9yNQNRfZVBRtMeParfIVhkAnmW90oI7eycq2ShNHk8sqy%2B2M5qV0J%2B%2FP2mB5r779SjWLZ%2BU9JR74httmqtCPoNsFS5bzFBJI94VClTJOfT8fHQlCzrEWxDmf8NA9KWYfOEJ03hwBcTPd48kadhDMBCSAD%2FxMKGheHhD9BThoU5d1Vb2Xc7c09gD59us4jGqYtLB5fc1H0Edt52M6UoNU4YbOKMoVHgu7his14fglLsxwJkUiRO%2F4QoNnCPTy6AtE2DKI0lAQNN7yLjO%2FJ%2BLJ8og4TZegVFMzZ3tzzmHX2oOh2wl2UXoPLH6Ll47rnFYh71GTXeq08OPjZYff32c7A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:39,353 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '27'}
+2024-04-25 15:31:39,353 ERROR   wandb-upload_2:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:39,774 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/requirements.txt?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=wnsKdaGYxypNQV2vqT2OJxzzrO5eQf1ZjTbh%2BHagtQym4O0MvqgINk6u6MPgZIPwg01Fkg%2Fv2SkmhbIB2Sq12V5hWC8BDWkqQpZUYvFa59LzC2PBnJyTh7T%2BKQvrfk%2BPLyInvE%2FfxPA4oAIFHQnkLCRKoLEXCLc%2BmASgc4zqSbtqiXNDUl8Q%2FnTb1jZ8WwwZxImrtRbd%2F%2BRZNn%2FZzkHGHSrT7YwVLqYB90G6K%2Bs9mDRMHo7Zo9RNobmJl9wyVmPpS%2BqlR%2BhioB3gbMXbUO%2FcCQyle9cQgvPmh%2F1GgS0DdetZtCgG3O33ifoHJWW0bTopoveWXvgW5DrNwdx6%2F65s4A%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:39,774 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '903'}
+2024-04-25 15:31:39,774 ERROR   wandb-upload_1:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:31:40,337 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:40,338 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:41,340 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:41,340 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:41,341 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:42,342 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:42,343 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:43,343 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:43,345 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:44,345 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:44,346 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:45,346 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:45,348 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:46,348 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:46,349 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:46,349 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:47,349 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:47,350 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:48,350 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:48,351 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:49,351 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:49,352 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:50,352 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:50,352 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:51,353 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:51,353 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:51,354 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:52,353 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:52,354 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:53,353 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:53,354 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:54,355 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:54,355 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:55,356 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:55,357 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:56,358 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:56,358 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:31:56,359 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:57,359 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:57,360 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:58,360 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:58,361 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:59,361 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:31:59,362 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:31:59,514 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/wandb-metadata.json?Expires=1714116648&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Y7BCfmoVaWxGWzS52Oq8SgKbqfqU9EPLQsKTtH2ae2iP1ckRl1g8nanThF6YcqB%2FN1ZbTYU%2BxLObc8dZxSiZdcgpf0tLteWbHBf1TGjjw0iocOF%2F%2BOvlw1wMuvhznjl5CNWZlRFvMWkFKimREkEPZS0UiAUx6hnjA%2BumxY%2BGIgPPLzIwf%2FSsfDYcvaDl7HKx6VuTMkEWqjBAqT6iw%2FoCVQcOGvgdP%2BZKdejl42nremuqkJU5IlW75VlnBQ4KAJUfUKPN55%2FAzsrafbmbUzzJGzIxq%2FQdmJSMafnKyZV7on5eOQwA0Ix38EKe4rftzAujHmrmBmi0WNcKGu3albvnkg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:31:59,515 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2702'}
+2024-04-25 15:31:59,515 ERROR   wandb-upload_0:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:32:00,372 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:00,373 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:01,373 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:01,374 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:01,375 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:02,376 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:02,376 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:03,376 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:03,377 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:04,378 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:04,379 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:05,378 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:05,379 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:06,380 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:06,381 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:06,383 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:07,383 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:07,384 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:08,385 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:08,385 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:09,386 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:09,387 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:10,387 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:10,388 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:11,389 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:11,389 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:11,390 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:12,046 INFO    wandb-upload_5:291362 [upload_job.py:push():131] Uploaded file /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/config.yaml
+2024-04-25 15:32:12,390 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:12,391 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:13,391 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:13,392 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:13,503 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/zhangqufei945/my-awesome-project-1/bpj7lz0s/conda-environment.yaml?Expires=1714116661&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GAKvA0GEcXPz0dl%2BECGUtfu8PssVT78rJjDS9IytBq9HM7kuammAkWVxH7kxYW%2BEaw%2BVNgYlI5RbhNnpApctMP%2BpDCK1UZZdGr0Azp97LXiPEXIISTqDpczVNtLHkrNIxnQwGzGdp5BeWlPZP5PZVdKYam0bMSFKhoS%2F59q5ju0fkqkWCoB8oEYZt7jw2X7MB2S2G70lwkwz8MveOkII4KXn2iGa8Lc0doH4JURC2mf5Sg7VeB1C8Mqpr%2BYZhPr5eogiMNjPioQRSKax2hpFty23YnOOIH9dOU%2FIQTVdV8ss5WtnJpgQOVKtdUVqjxFccyk8IrhaM2HN2hXf4%2FOIcA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-04-25 15:32:13,504 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3103'}
+2024-04-25 15:32:13,504 ERROR   wandb-upload_4:291362 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-04-25 15:32:13,717 INFO    wandb-upload_3:291362 [upload_job.py:push():131] Uploaded file /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/output.log
+2024-04-25 15:32:14,393 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:14,393 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:15,169 INFO    wandb-upload_1:291362 [upload_job.py:push():131] Uploaded file /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/requirements.txt
+2024-04-25 15:32:15,393 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:15,394 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:16,396 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:16,396 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:16,397 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:16,997 INFO    wandb-upload_2:291362 [upload_job.py:push():131] Uploaded file /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/wandb-summary.json
+2024-04-25 15:32:17,396 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:17,397 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:18,398 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:18,399 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:19,399 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:19,400 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:20,400 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:20,401 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:21,401 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:21,402 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:21,402 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:22,402 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:22,403 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:23,403 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:23,406 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:24,408 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:24,409 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:25,408 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:25,409 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:26,409 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:26,410 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:26,411 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:27,411 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:27,412 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:28,413 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:28,413 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:29,414 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:29,414 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:30,415 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:30,416 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:31,417 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:31,417 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:31,418 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:32,417 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:32,417 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:33,418 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:33,420 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:34,420 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:34,421 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:35,420 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:35,421 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:36,421 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:36,422 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:36,422 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:37,422 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:37,423 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:38,423 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:38,424 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:39,424 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:39,424 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:40,425 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:40,427 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:41,426 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:41,426 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:41,427 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:42,427 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:42,428 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:43,429 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:43,430 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:44,430 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:44,431 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:45,431 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:45,432 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:46,433 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:46,433 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:46,434 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:47,433 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:47,434 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:48,434 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:48,435 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:49,435 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:49,436 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:50,436 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:50,437 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:51,438 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:51,438 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:51,439 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:52,440 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:52,441 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:53,441 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:53,442 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:54,443 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:54,444 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:55,444 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:55,444 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:56,446 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:32:56,446 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:56,447 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:57,447 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:57,448 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:58,449 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:58,449 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:32:59,449 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:32:59,450 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:00,450 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:00,451 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:01,451 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:01,452 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:33:01,453 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:02,453 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:02,453 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:03,453 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:03,454 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:04,455 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:04,456 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:05,290 INFO    wandb-upload_0:291362 [upload_job.py:push():131] Uploaded file /tmp/tmp_dm9k88dwandb/e2iqkcfw-wandb-metadata.json
+2024-04-25 15:33:05,456 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:05,457 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:06,457 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:06,458 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:33:06,458 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:07,457 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:07,458 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:08,458 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:08,459 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:09,459 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:09,460 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:10,460 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:10,461 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:11,461 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:11,462 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:33:11,463 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:12,463 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:12,464 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:13,464 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:13,464 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:14,465 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:14,466 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:15,466 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:15,471 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:16,467 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:16,467 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:16,468 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:33:17,467 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:17,468 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:18,469 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:18,470 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:19,470 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:19,471 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:20,471 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:20,472 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:21,472 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:21,472 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:21,473 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:33:22,473 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:22,474 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:23,474 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:23,476 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:24,476 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:24,478 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:25,477 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:25,478 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:26,478 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:26,478 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:26,479 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 15:33:27,478 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:27,479 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:28,479 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:28,480 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:28,840 INFO    wandb-upload_4:291362 [upload_job.py:push():131] Uploaded file /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/files/conda-environment.yaml
+2024-04-25 15:33:29,041 INFO    Thread-11 :291362 [sender.py:transition_state():614] send defer: 11
+2024-04-25 15:33:29,041 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:33:29,042 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 11
+2024-04-25 15:33:29,042 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:33:29,042 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-04-25 15:33:29,042 INFO    SenderThread:291362 [file_pusher.py:join():178] waiting for file pusher
+2024-04-25 15:33:29,043 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 12
+2024-04-25 15:33:29,043 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:33:29,043 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 12
+2024-04-25 15:33:29,044 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:33:29,044 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-04-25 15:33:29,044 INFO    SenderThread:291362 [file_stream.py:finish():614] file stream finish called
+2024-04-25 15:33:29,279 INFO    SenderThread:291362 [file_stream.py:finish():618] file stream finish is done
+2024-04-25 15:33:29,279 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 13
+2024-04-25 15:33:29,279 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:33:29,279 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 13
+2024-04-25 15:33:29,280 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:33:29,280 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-04-25 15:33:29,280 INFO    SenderThread:291362 [sender.py:transition_state():614] send defer: 14
+2024-04-25 15:33:29,280 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 15:33:29,281 INFO    HandlerThread:291362 [handler.py:handle_request_defer():172] handle defer: 14
+2024-04-25 15:33:29,281 DEBUG   SenderThread:291362 [sender.py:send():379] send: final
+2024-04-25 15:33:29,282 DEBUG   SenderThread:291362 [sender.py:send():379] send: footer
+2024-04-25 15:33:29,282 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: defer
+2024-04-25 15:33:29,282 INFO    SenderThread:291362 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-04-25 15:33:29,282 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:29,283 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:29,283 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 15:33:29,284 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: server_info
+2024-04-25 15:33:29,284 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 15:33:29,285 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: get_summary
+2024-04-25 15:33:29,286 DEBUG   SenderThread:291362 [sender.py:send_request():406] send_request: server_info
+2024-04-25 15:33:29,287 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: sampled_history
+2024-04-25 15:33:29,289 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-25 15:33:29,533 INFO    MainThread:291362 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-04-25 15:33:29,533 INFO    MainThread:291362 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-04-25 15:33:29,533 INFO    MainThread:291362 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-04-25 15:33:29,533 DEBUG   HandlerThread:291362 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-25 15:33:29,534 INFO    HandlerThread:291362 [handler.py:finish():866] shutting down handler
+2024-04-25 15:33:30,285 INFO    WriterThread:291362 [datastore.py:close():296] close: /home/zqf/projects/FLNONIID/wandb/run-20240425_153044-bpj7lz0s/run-bpj7lz0s.wandb
+2024-04-25 15:33:30,533 INFO    SenderThread:291362 [sender.py:finish():1546] shutting down sender
+2024-04-25 15:33:30,533 INFO    SenderThread:291362 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-25 15:33:30,542 INFO    SenderThread:291362 [file_pusher.py:join():178] waiting for file pusher

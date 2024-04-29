@@ -1,0 +1,78 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [  0 638 638   1   0   0   0   0   0   0]
+ - Client 1: [  0 522 522   1   0   0   0   0   0   0]
+ - Client 2: [  0   0   0   0 348 348   0   0   0   0]
+ - Client 3: [  0   0 580 580   1   0   0   0   0   0]
+ - Client 4: [  0   0 580 580   1   0   0   0   0   0]
+ - Client 5: [  0 696 696   1   0   0   0   0   0   0]
+ - Client 6: [  0   0   0   0   0   0 754 754   1   0]
+ - Client 7: [  0   0   0   0 319 319   0   0   0   0]
+ - Client 8: [2322 2322    1    0    0    0    0    0    0    0]
+ - Client 9: [493   1   0   0   0   0   0   0   0 493]
+ - Client 10: [   0    0    0    0    0    0    0 2235 2235    1]
+ - Client 11: [   0  821 1074  253    0    0    0    0    0    0]
+ - Client 12: [   0    0  909 1190  281    0    0    0    0    0]
+ - Client 13: [   0    0    0 2394 2497  103    0    0    0    0]
+ - Client 14: [   0    0    0    0 1553 2613 1060    0    0    0]
+ - Client 15: [   0    0    0    0    0 1617 2874 1258    0    0]
+ - Client 16: [2185    0    0    0    0    0  312  290    0 2787]
+ - Client 17: [   0    0    0    0    0    0    0  226 1945 1719]
+ - Client 18: [  0   0   0   0   0   0   0 237 808   0]
+ - Client 19: [ 0  0  0  0  0  0  0  0 11  0]
+Client 0 data shape: (1277, 3, 32, 32)
+Client 0 labels shape: (1277,)
+Client 1 data shape: (1045, 3, 32, 32)
+Client 1 labels shape: (1045,)
+Client 2 data shape: (696, 3, 32, 32)
+Client 2 labels shape: (696,)
+Client 3 data shape: (1161, 3, 32, 32)
+Client 3 labels shape: (1161,)
+Client 4 data shape: (1161, 3, 32, 32)
+Client 4 labels shape: (1161,)
+Client 5 data shape: (1393, 3, 32, 32)
+Client 5 labels shape: (1393,)
+Client 6 data shape: (1509, 3, 32, 32)
+Client 6 labels shape: (1509,)
+Client 7 data shape: (638, 3, 32, 32)
+Client 7 labels shape: (638,)
+Client 8 data shape: (4645, 3, 32, 32)
+Client 8 labels shape: (4645,)
+Client 9 data shape: (987, 3, 32, 32)
+Client 9 labels shape: (987,)
+Client 10 data shape: (4471, 3, 32, 32)
+Client 10 labels shape: (4471,)
+Client 11 data shape: (2148, 3, 32, 32)
+Client 11 labels shape: (2148,)
+Client 12 data shape: (2380, 3, 32, 32)
+Client 12 labels shape: (2380,)
+Client 13 data shape: (4994, 3, 32, 32)
+Client 13 labels shape: (4994,)
+Client 14 data shape: (5226, 3, 32, 32)
+Client 14 labels shape: (5226,)
+Client 15 data shape: (5749, 3, 32, 32)
+Client 15 labels shape: (5749,)
+Client 16 data shape: (5574, 3, 32, 32)
+Client 16 labels shape: (5574,)
+Client 17 data shape: (3890, 3, 32, 32)
+Client 17 labels shape: (3890,)
+Client 18 data shape: (1045, 3, 32, 32)
+Client 18 labels shape: (1045,)
+Client 19 data shape: (11, 3, 32, 32)
+Client 19 labels shape: (11,)
+
+ 17%|████████████████████████████▊                                                                                                                                                | 1/6 [00:19<01:37, 19.44s/it]
+Traceback (most recent call last):
+  File "train.py", line 75, in <module>
+    loss += client_update(client_models[i], opt[i], train_loader[client_idx[i]], epochs)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 498, in client_update
+    loss.backward()
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/autograd/__init__.py", line 154, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt

@@ -1,0 +1,74 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [238 245 261 261 235 265 244 261 241 249]
+ - Client 1: [234 272 236 236 265 266 245 236 249 261]
+ - Client 2: [227 266 248 232 276 241 259 261 261 229]
+ - Client 3: [256 276 228 235 244 239 271 253 270 228]
+ - Client 4: [243 243 268 233 257 255 262 256 241 242]
+ - Client 5: [259 270 236 258 248 239 219 274 251 246]
+ - Client 6: [261 241 254 245 239 246 242 253 267 252]
+ - Client 7: [223 243 235 275 261 247 278 243 246 249]
+ - Client 8: [244 239 241 258 238 270 271 229 257 253]
+ - Client 9: [267 248 247 254 253 246 244 249 240 252]
+ - Client 10: [   0    0    0    0 1282    0    0    0    0 1218]
+ - Client 11: [   0    0    0  404    0 2096    0    0    0    0]
+ - Client 12: [   0  952    0 1548    0    0    0    0    0    0]
+ - Client 13: [   0    0    0   18 2482    0    0    0    0    0]
+ - Client 14: [   0 1265 1235    0    0    0    0    0    0    0]
+ - Client 15: [   0    0    0    0    0    0  186 2314    0    0]
+ - Client 16: [   0  333    0    0 2167    0    0    0    0    0]
+ - Client 17: [   0    0    0    0  241    0    0    0 2259    0]
+ - Client 18: [   0    0    0    0    0    0 1912    0    0  588]
+ - Client 19: [   0    0    0    0    0  717    0    0    0 1783]
+Client 0 data shape: (2500, 3, 32, 32)
+Client 0 labels shape: (2500,)
+Client 1 data shape: (2500, 3, 32, 32)
+Client 1 labels shape: (2500,)
+Client 2 data shape: (2500, 3, 32, 32)
+Client 2 labels shape: (2500,)
+Client 3 data shape: (2500, 3, 32, 32)
+Client 3 labels shape: (2500,)
+Client 4 data shape: (2500, 3, 32, 32)
+Client 4 labels shape: (2500,)
+Client 5 data shape: (2500, 3, 32, 32)
+Client 5 labels shape: (2500,)
+Client 6 data shape: (2500, 3, 32, 32)
+Client 6 labels shape: (2500,)
+Client 7 data shape: (2500, 3, 32, 32)
+Client 7 labels shape: (2500,)
+Client 8 data shape: (2500, 3, 32, 32)
+Client 8 labels shape: (2500,)
+Client 9 data shape: (2500, 3, 32, 32)
+Client 9 labels shape: (2500,)
+Client 10 data shape: (2500, 3, 32, 32)
+Client 10 labels shape: (2500,)
+Client 11 data shape: (2500, 3, 32, 32)
+Client 11 labels shape: (2500,)
+Client 12 data shape: (2500, 3, 32, 32)
+Client 12 labels shape: (2500,)
+Client 13 data shape: (2500, 3, 32, 32)
+Client 13 labels shape: (2500,)
+Client 14 data shape: (2500, 3, 32, 32)
+Client 14 labels shape: (2500,)
+Client 15 data shape: (2500, 3, 32, 32)
+Client 15 labels shape: (2500,)
+Client 16 data shape: (2500, 3, 32, 32)
+Client 16 labels shape: (2500,)
+Client 17 data shape: (2500, 3, 32, 32)
+Client 17 labels shape: (2500,)
+Client 18 data shape: (2500, 3, 32, 32)
+Client 18 labels shape: (2500,)
+Client 19 data shape: (2500, 3, 32, 32)
+Client 19 labels shape: (2500,)
+Traceback (most recent call last):
+  File "train.py", line 57, in <module>
+    train_loader, test_loader = get_data_loaders(classes_pc=classes_pc, nclients= num_clients,
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 389, in get_data_loaders
+    split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=10)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 466, in split_balanced_non_iid
+    clients_split = np.array(clients_split, dtype=object)
+ValueError: could not broadcast input array from shape (2500,3,32,32) into shape (2500,)

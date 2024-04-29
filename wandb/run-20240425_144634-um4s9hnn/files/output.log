@@ -1,0 +1,61 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [26:19<00:00, 263.29s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+0-th round
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:02<00:00, 10.35s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+1-th round
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:00<00:00, 10.10s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+2-th round
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:21<00:00, 13.52s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+3-th round
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:12<00:00, 12.06s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+4-th round
+  0%|                                                                                                                                                                                     | 0/6 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 75, in <module>
+    loss += client_update(client_models[i], opt[i], train_loader[client_idx[i]], epochs)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 404, in client_update
+    loss.backward()
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/autograd/__init__.py", line 154, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt

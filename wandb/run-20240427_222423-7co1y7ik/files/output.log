@@ -1,0 +1,1674 @@
+Start training
+The aggregation algorithm chose is: client-client
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [   0    0    0    0 1230 1230    1    0    0    0]
+ - Client 1: [1857    1    0    0    0    0    0    0    0 1857]
+ - Client 2: [   0    0    0    0    0    0    0    0 1544 1544]
+ - Client 3: [  1   0   0   0   0   0   0   0 335 335]
+ - Client 4: [   0 1969 1969    1    0    0    0    0    0    0]
+ - Client 5: [   0    0    0    0    0    0 1857 1857    1    0]
+ - Client 6: [   0    0    0    0 1410 1410    0    0    0    0]
+ - Client 7: [   0    0    0 2193 2193    0    0    0    0    0]
+ - Client 8: [  0   0 425 425   0   0   0   0   0   0]
+ - Client 9: [626   1   0   0   0   0   0   0   0 626]
+ - Client 10: [   0    0    0    0    0    0 1812 1812    1    0]
+ - Client 11: [   0    0    0    0    0    0 1208 1208    1    0]
+ - Client 12: [   0    0    0    0  167 1163  122  123  752    0]
+ - Client 13: [   0    0 1723 1723    0    0    0    0    0    0]
+ - Client 14: [ 369    0    0    0    0    0    0    0 1007  638]
+ - Client 15: [1589 1589    0    0    0    0    0    0    0    0]
+ - Client 16: [  0   0 872 658   0 215   0   0   0   0]
+ - Client 17: [558 962  11   0   0 393   0   0   0   0]
+ - Client 18: [   0  478    0    0    0  589    0    0 1350    0]
+ - Client 19: [0 0 0 0 0 0 0 0 9 0]
+Client 0 data shape: (2461, 3, 32, 32)
+Client 0 labels shape: (2461,)
+Client 1 data shape: (3715, 3, 32, 32)
+Client 1 labels shape: (3715,)
+Client 2 data shape: (3088, 3, 32, 32)
+Client 2 labels shape: (3088,)
+Client 3 data shape: (671, 3, 32, 32)
+Client 3 labels shape: (671,)
+Client 4 data shape: (3939, 3, 32, 32)
+Client 4 labels shape: (3939,)
+Client 5 data shape: (3715, 3, 32, 32)
+Client 5 labels shape: (3715,)
+Client 6 data shape: (2820, 3, 32, 32)
+Client 6 labels shape: (2820,)
+Client 7 data shape: (4386, 3, 32, 32)
+Client 7 labels shape: (4386,)
+Client 8 data shape: (850, 3, 32, 32)
+Client 8 labels shape: (850,)
+Client 9 data shape: (1253, 3, 32, 32)
+Client 9 labels shape: (1253,)
+Client 10 data shape: (3625, 3, 32, 32)
+Client 10 labels shape: (3625,)
+Client 11 data shape: (2417, 3, 32, 32)
+Client 11 labels shape: (2417,)
+Client 12 data shape: (2327, 3, 32, 32)
+Client 12 labels shape: (2327,)
+Client 13 data shape: (3446, 3, 32, 32)
+Client 13 labels shape: (3446,)
+Client 14 data shape: (2014, 3, 32, 32)
+Client 14 labels shape: (2014,)
+Client 15 data shape: (3178, 3, 32, 32)
+Client 15 labels shape: (3178,)
+Client 16 data shape: (1745, 3, 32, 32)
+Client 16 labels shape: (1745,)
+Client 17 data shape: (1924, 3, 32, 32)
+Client 17 labels shape: (1924,)
+Client 18 data shape: (2417, 3, 32, 32)
+Client 18 labels shape: (2417,)
+Client 19 data shape: (9, 3, 32, 32)
+Client 19 labels shape: (9,)
+Slected clinets:  [14  9 16 19  2  4]
+Each train_loader's length:  [63, 40, 55, 1, 97, 124]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:56<00:00,  9.41s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+0-th round completed!
+loss_train 4.49 | loss_test 3.45 | acc_test: 0.100
+Slected clinets:  [19  9 10 16  1 14]
+
+
+
+
+
+100%|██████████| 6/6 [00:38<00:00,  6.42s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+1-th round completed!
+loss_train 2.89 | loss_test 3.06 | acc_test: 0.233
+Slected clinets:  [13 16  0  1  8 18]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.49s/it]
+2-th round completed!
+loss_train 4.55 | loss_test 3.34 | acc_test: 0.100
+Slected clinets:  [12  9  3 19 11 16]
+Each train_loader's length:  [73, 40, 21, 1, 76, 55]
+
+
+
+
+
+100%|██████████| 6/6 [00:30<00:00,  5.07s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+3-th round completed!
+loss_train 1.47 | loss_test 2.7 | acc_test: 0.181
+Slected clinets:  [16 17 15  6  9 12]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:43<00:00,  7.30s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+4-th round completed!
+loss_train 5.84 | loss_test 2.34 | acc_test: 0.184
+Slected clinets:  [13 17  8  3  2 14]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:37<00:00,  6.23s/it]
+5-th round completed!
+loss_train 3.11 | loss_test 3.48 | acc_test: 0.246
+Slected clinets:  [ 9  1  2  5 12 18]
+Each train_loader's length:  [40, 117, 97, 117, 73, 76]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.85s/it]
+6-th round completed!
+loss_train 4.17 | loss_test 2.31 | acc_test: 0.194
+Slected clinets:  [11 14  1  5 16  0]
+Each train_loader's length:  [76, 63, 117, 117, 55, 77]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.46s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+7-th round completed!
+loss_train 1.97 | loss_test 2.43 | acc_test: 0.182
+Slected clinets:  [ 4  0 15  3 19  8]
+
+
+
+
+
+100%|██████████| 6/6 [00:34<00:00,  5.69s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+8-th round completed!
+loss_train 0.951 | loss_test 2.16 | acc_test: 0.189
+Slected clinets:  [11 14 17  3  5  2]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:43<00:00,  7.26s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+9-th round completed!
+loss_train 4.15 | loss_test 2.36 | acc_test: 0.190
+Slected clinets:  [15  9 14 18  6  1]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:48<00:00,  8.06s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+10-th round completed!
+loss_train 0.829 | loss_test 2.53 | acc_test: 0.280
+Slected clinets:  [ 2 15 10 13 11 14]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:55<00:00,  9.22s/it]
+11-th round completed!
+loss_train 0.679 | loss_test 2.64 | acc_test: 0.218
+Slected clinets:  [ 5 17 18 19  6 12]
+Each train_loader's length:  [117, 61, 76, 1, 89, 73]
+
+
+
+
+
+100%|██████████| 6/6 [00:41<00:00,  6.85s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+12-th round completed!
+loss_train 1.09 | loss_test 2.63 | acc_test: 0.217
+Slected clinets:  [ 6 15  3  8  5 11]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:42<00:00,  7.12s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+13-th round completed!
+loss_train 3.81 | loss_test 3.55 | acc_test: 0.188
+Slected clinets:  [13 14 15  0  6 12]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.48s/it]
+14-th round completed!
+loss_train 1.27 | loss_test 3.16 | acc_test: 0.188
+Slected clinets:  [16  0  3 14 10  1]
+Each train_loader's length:  [55, 77, 21, 63, 114, 117]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:42<00:00,  7.16s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+15-th round completed!
+loss_train 1.96 | loss_test 2.55 | acc_test: 0.205
+Slected clinets:  [11  1 10  8 17  3]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:41<00:00,  6.86s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+16-th round completed!
+loss_train 0.475 | loss_test 2.17 | acc_test: 0.239
+Slected clinets:  [ 6 17  1  9 18  7]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.87s/it]
+17-th round completed!
+loss_train 2.77 | loss_test 2.9 | acc_test: 0.151
+Slected clinets:  [ 1 19 12 17 18 11]
+Each train_loader's length:  [117, 1, 73, 61, 76, 76]
+
+
+
+
+
+100%|██████████| 6/6 [00:40<00:00,  6.67s/it]
+18-th round completed!
+loss_train 5.33 | loss_test 2.39 | acc_test: 0.255
+Slected clinets:  [ 0 13  8  1 15 18]
+Each train_loader's length:  [77, 108, 27, 117, 100, 76]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:49<00:00,  8.32s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+19-th round completed!
+loss_train 3.56 | loss_test 2.37 | acc_test: 0.234
+Slected clinets:  [18 16 11  3  8  1]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:38<00:00,  6.35s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+20-th round completed!
+loss_train 1.05 | loss_test 2.25 | acc_test: 0.164
+Slected clinets:  [ 3 18  1  9 19 10]
+
+
+
+
+
+100%|██████████| 6/6 [00:36<00:00,  6.09s/it]
+21-th round completed!
+loss_train 1.17 | loss_test 2.92 | acc_test: 0.241
+Slected clinets:  [10 15 17  0 16  9]
+Each train_loader's length:  [114, 100, 61, 77, 55, 40]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.36s/it]
+22-th round completed!
+loss_train 0.406 | loss_test 3.24 | acc_test: 0.185
+Slected clinets:  [ 4 14  7 18 10  3]
+Each train_loader's length:  [124, 63, 138, 76, 114, 21]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:51<00:00,  8.63s/it]
+23-th round completed!
+loss_train 2.51 | loss_test 2.2 | acc_test: 0.281
+Slected clinets:  [14  4 18  2  8  5]
+Each train_loader's length:  [63, 124, 76, 97, 27, 117]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:49<00:00,  8.31s/it]
+24-th round completed!
+loss_train 0.482 | loss_test 2.75 | acc_test: 0.255
+Slected clinets:  [ 1 11  4 14 18 15]
+Each train_loader's length:  [117, 76, 124, 63, 76, 100]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:54<00:00,  9.14s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+25-th round completed!
+loss_train 0.203 | loss_test 2.6 | acc_test: 0.215
+Slected clinets:  [18  9 11  2 10 14]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:45<00:00,  7.53s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+26-th round completed!
+loss_train 0.652 | loss_test 2.93 | acc_test: 0.215
+Slected clinets:  [19  2  5 13 10 11]
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.39s/it]
+27-th round completed!
+loss_train 1.09 | loss_test 2.43 | acc_test: 0.189
+Slected clinets:  [16 17 10  0 15  7]
+Each train_loader's length:  [55, 61, 114, 77, 100, 138]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:54<00:00,  9.01s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+28-th round completed!
+loss_train 1.97 | loss_test 2.1 | acc_test: 0.277
+Slected clinets:  [12  6 14  5  7  0]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:55<00:00,  9.22s/it]
+29-th round completed!
+loss_train 1.55 | loss_test 3.91 | acc_test: 0.165
+Slected clinets:  [18  7 10  6  3  2]
+Each train_loader's length:  [76, 138, 114, 89, 21, 97]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:51<00:00,  8.55s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+30-th round completed!
+loss_train 0.529 | loss_test 2.68 | acc_test: 0.144
+Slected clinets:  [ 1 16 12 17 14  9]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:40<00:00,  6.74s/it]
+31-th round completed!
+loss_train 1.26 | loss_test 2.13 | acc_test: 0.298
+Slected clinets:  [13  1  0 18  3  5]
+Each train_loader's length:  [108, 117, 77, 76, 21, 117]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.41s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+32-th round completed!
+loss_train 2.64 | loss_test 2.36 | acc_test: 0.222
+Slected clinets:  [17 14 10 16  4  8]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:42<00:00,  7.11s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+33-th round completed!
+loss_train 2.07 | loss_test 2.21 | acc_test: 0.275
+Slected clinets:  [ 5  6 19 10 13 14]
+
+
+
+
+
+100%|██████████| 6/6 [00:49<00:00,  8.18s/it]
+34-th round completed!
+loss_train 0.763 | loss_test 2.31 | acc_test: 0.216
+Slected clinets:  [ 1 14  6  7  5 11]
+Each train_loader's length:  [117, 63, 89, 138, 117, 76]
+
+
+
+
+
+
+100%|██████████| 6/6 [01:00<00:00, 10.03s/it]
+35-th round completed!
+loss_train 3.6 | loss_test 2.26 | acc_test: 0.293
+Slected clinets:  [ 7  2 16  1  6 18]
+Each train_loader's length:  [138, 97, 55, 117, 89, 76]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:56<00:00,  9.50s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+36-th round completed!
+loss_train 3.3 | loss_test 3.77 | acc_test: 0.185
+Slected clinets:  [14 16  9 18  6 10]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.43s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+37-th round completed!
+loss_train 3.84 | loss_test 2.77 | acc_test: 0.288
+Slected clinets:  [ 4  7 11 15  2  1]
+
+
+
+
+
+
+100%|██████████| 6/6 [01:05<00:00, 10.97s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+38-th round completed!
+loss_train 0.598 | loss_test 2.53 | acc_test: 0.192
+Slected clinets:  [ 3 14 11  6  7  4]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:51<00:00,  8.52s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+39-th round completed!
+loss_train 3.42 | loss_test 2.73 | acc_test: 0.172
+Slected clinets:  [ 7  5  0 15  4  2]
+
+
+
+
+
+
+100%|██████████| 6/6 [01:04<00:00, 10.74s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+40-th round completed!
+loss_train 0.0822 | loss_test 2.23 | acc_test: 0.159
+Slected clinets:  [13 17  6  3 19 16]
+
+
+
+
+
+100%|██████████| 6/6 [00:33<00:00,  5.59s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+41-th round completed!
+loss_train 1.68 | loss_test 4.44 | acc_test: 0.174
+Slected clinets:  [ 9  6  7 16  4 10]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:55<00:00,  9.26s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+42-th round completed!
+loss_train 0.513 | loss_test 2.96 | acc_test: 0.189
+Slected clinets:  [ 0  6 12 16 18  2]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.48s/it]
+43-th round completed!
+loss_train 1.68 | loss_test 2.7 | acc_test: 0.267
+Slected clinets:  [ 4 11  2 12  7 14]
+Each train_loader's length:  [124, 76, 97, 73, 138, 63]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:59<00:00,  9.90s/it]
+44-th round completed!
+loss_train 0.33 | loss_test 4.14 | acc_test: 0.194
+Slected clinets:  [11  8  2  3 19 18]
+Each train_loader's length:  [76, 27, 97, 21, 1, 76]
+
+
+
+
+
+100%|██████████| 6/6 [00:30<00:00,  5.14s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+45-th round completed!
+loss_train 0.192 | loss_test 2.02 | acc_test: 0.217
+Slected clinets:  [17 13  6 12 15 18]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.46s/it]
+46-th round completed!
+loss_train 0.386 | loss_test 2.54 | acc_test: 0.345
+Slected clinets:  [ 5 19  7 15 18 12]
+Each train_loader's length:  [117, 1, 138, 100, 76, 73]
+
+
+
+
+
+100%|██████████| 6/6 [00:49<00:00,  8.24s/it]
+47-th round completed!
+loss_train 0.455 | loss_test 2.76 | acc_test: 0.282
+Slected clinets:  [ 3  8 15 10  1  9]
+Each train_loader's length:  [21, 27, 100, 114, 117, 40]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:41<00:00,  6.96s/it]
+48-th round completed!
+loss_train 0.0645 | loss_test 2.89 | acc_test: 0.226
+Slected clinets:  [ 2  0 17 13  9 15]
+Each train_loader's length:  [97, 77, 61, 108, 40, 100]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:48<00:00,  8.05s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+49-th round completed!
+loss_train 0.228 | loss_test 2.42 | acc_test: 0.217
+Slected clinets:  [ 1  2  5  9 11  8]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:46<00:00,  7.70s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+50-th round completed!
+loss_train 0.251 | loss_test 4.29 | acc_test: 0.192
+Slected clinets:  [19 16  5 12 13 18]
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.33s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+51-th round completed!
+loss_train 0.692 | loss_test 2.87 | acc_test: 0.326
+Slected clinets:  [ 8  7  5  6 15 18]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:54<00:00,  9.10s/it]
+52-th round completed!
+loss_train 6.43 | loss_test 3.04 | acc_test: 0.223
+Slected clinets:  [17  6 16 15 19  2]
+Each train_loader's length:  [61, 89, 55, 100, 1, 97]
+
+
+
+
+
+100%|██████████| 6/6 [00:39<00:00,  6.50s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+53-th round completed!
+loss_train 0.473 | loss_test 2.83 | acc_test: 0.291
+Slected clinets:  [12 18  0 19  8  2]
+
+
+
+
+
+100%|██████████| 6/6 [00:35<00:00,  5.87s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+54-th round completed!
+loss_train 0.244 | loss_test 2.54 | acc_test: 0.297
+Slected clinets:  [7 2 5 8 1 0]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:57<00:00,  9.65s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+55-th round completed!
+loss_train 2.79 | loss_test 4.05 | acc_test: 0.193
+Slected clinets:  [ 6  9 18  0  2 12]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.44s/it]
+56-th round completed!
+loss_train 2.93 | loss_test 3.44 | acc_test: 0.323
+Slected clinets:  [14  7 15  5  3 19]
+Each train_loader's length:  [63, 138, 100, 117, 21, 1]
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.36s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+57-th round completed!
+loss_train 0.105 | loss_test 3.16 | acc_test: 0.253
+Slected clinets:  [14 10 17  9  3  4]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:42<00:00,  7.03s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+58-th round completed!
+loss_train 6.2 | loss_test 2.89 | acc_test: 0.224
+Slected clinets:  [ 6  4 18 11  1  0]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:55<00:00,  9.21s/it]
+59-th round completed!
+loss_train 0.74 | loss_test 2.97 | acc_test: 0.185
+Slected clinets:  [ 9  3 19 14  5  6]
+Each train_loader's length:  [40, 21, 1, 63, 117, 89]
+
+
+
+
+
+100%|██████████| 6/6 [00:33<00:00,  5.52s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+60-th round completed!
+loss_train 0.237 | loss_test 3.68 | acc_test: 0.267
+Slected clinets:  [ 4 17  0 14 12  1]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:51<00:00,  8.59s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+61-th round completed!
+loss_train 0.185 | loss_test 2.21 | acc_test: 0.289
+Slected clinets:  [11 10  3  0  6  9]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:41<00:00,  6.89s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+62-th round completed!
+loss_train 3.66 | loss_test 2.88 | acc_test: 0.299
+Slected clinets:  [ 2  4 13 16 12  0]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.92s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+63-th round completed!
+loss_train 0.978 | loss_test 1.88 | acc_test: 0.354
+Slected clinets:  [14  2 17  3  0  4]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.49s/it]
+64-th round completed!
+loss_train 0.158 | loss_test 2.25 | acc_test: 0.342
+Slected clinets:  [16  2  6  8 10  1]
+Each train_loader's length:  [55, 97, 89, 27, 114, 117]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:49<00:00,  8.32s/it]
+65-th round completed!
+loss_train 0.28 | loss_test 2.05 | acc_test: 0.349
+Slected clinets:  [18  8  9  1  2 13]
+Each train_loader's length:  [76, 27, 40, 117, 97, 108]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:45<00:00,  7.53s/it]
+66-th round completed!
+loss_train 0.268 | loss_test 3.93 | acc_test: 0.290
+Slected clinets:  [14  3  1  7 10 15]
+Each train_loader's length:  [63, 21, 117, 138, 114, 100]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:57<00:00,  9.63s/it]
+67-th round completed!
+loss_train 0.0449 | loss_test 2.93 | acc_test: 0.249
+Slected clinets:  [ 0 10 14  9 12 13]
+Each train_loader's length:  [77, 114, 63, 40, 73, 108]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:49<00:00,  8.18s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+68-th round completed!
+loss_train 0.375 | loss_test 3.17 | acc_test: 0.290
+Slected clinets:  [ 9  6 19  5  2 18]
+
+
+
+
+
+100%|██████████| 6/6 [00:41<00:00,  6.96s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+69-th round completed!
+loss_train 0.00912 | loss_test 3.19 | acc_test: 0.283
+Slected clinets:  [16  5  9  6  8 17]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:38<00:00,  6.46s/it]
+70-th round completed!
+loss_train 0.998 | loss_test 2.7 | acc_test: 0.303
+Slected clinets:  [ 6 15 11 12  9  7]
+Each train_loader's length:  [89, 100, 76, 73, 40, 138]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.88s/it]
+71-th round completed!
+loss_train 0.537 | loss_test 2.73 | acc_test: 0.198
+Slected clinets:  [ 0 12 18  9 15 10]
+Each train_loader's length:  [77, 73, 76, 40, 100, 114]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:48<00:00,  8.10s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+72-th round completed!
+loss_train 0.0152 | loss_test 2.74 | acc_test: 0.391
+Slected clinets:  [ 9  7  6 17  4 14]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.43s/it]
+73-th round completed!
+loss_train 2 | loss_test 3.25 | acc_test: 0.204
+Slected clinets:  [ 3  4  9 19 11 18]
+Each train_loader's length:  [21, 124, 40, 1, 76, 76]
+
+
+
+
+
+100%|██████████| 6/6 [00:35<00:00,  5.86s/it]
+74-th round completed!
+loss_train 0.504 | loss_test 2.34 | acc_test: 0.255
+Slected clinets:  [ 4  7 18  1  3 11]
+Each train_loader's length:  [124, 138, 76, 117, 21, 76]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:58<00:00,  9.67s/it]
+75-th round completed!
+loss_train 0.00227 | loss_test 2.05 | acc_test: 0.319
+Slected clinets:  [13 18  6 10  3  7]
+Each train_loader's length:  [108, 76, 89, 114, 21, 138]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.98s/it]
+76-th round completed!
+loss_train 0.631 | loss_test 3.15 | acc_test: 0.262
+Slected clinets:  [ 4 18  9 17 11 12]
+Each train_loader's length:  [124, 76, 40, 61, 76, 73]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.36s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+77-th round completed!
+loss_train 0.26 | loss_test 2.63 | acc_test: 0.346
+Slected clinets:  [ 7 18  6 14 15  4]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:57<00:00,  9.61s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+78-th round completed!
+loss_train 5.05 | loss_test 3.72 | acc_test: 0.240
+Slected clinets:  [18 14  0  4  3 17]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:41<00:00,  6.94s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+79-th round completed!
+loss_train 0.0564 | loss_test 2.33 | acc_test: 0.324
+Slected clinets:  [17  0  6 15  2 13]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:52<00:00,  8.76s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+80-th round completed!
+loss_train 0.286 | loss_test 3.98 | acc_test: 0.258
+Slected clinets:  [ 0 16 17 13 14  8]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:38<00:00,  6.46s/it]
+81-th round completed!
+loss_train 1.68 | loss_test 2.32 | acc_test: 0.339
+Slected clinets:  [11  2  6 10  0  7]
+Each train_loader's length:  [76, 97, 89, 114, 77, 138]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:57<00:00,  9.63s/it]
+82-th round completed!
+loss_train 0.0188 | loss_test 2.54 | acc_test: 0.281
+Slected clinets:  [13 18 17  8  0  6]
+Each train_loader's length:  [108, 76, 61, 27, 77, 89]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:42<00:00,  7.12s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+83-th round completed!
+loss_train 0.809 | loss_test 2.36 | acc_test: 0.297
+Slected clinets:  [ 4  3  1 17  7  6]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.98s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+84-th round completed!
+loss_train 0.138 | loss_test 3.15 | acc_test: 0.271
+Slected clinets:  [14 16 18 11  1  8]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:40<00:00,  6.76s/it]
+85-th round completed!
+loss_train 0.724 | loss_test 2.27 | acc_test: 0.305
+Slected clinets:  [18 11 10 16  8  4]
+Each train_loader's length:  [76, 76, 114, 55, 27, 124]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:46<00:00,  7.69s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+86-th round completed!
+loss_train 0.427 | loss_test 2.93 | acc_test: 0.256
+Slected clinets:  [17  2 12 13  5 19]
+
+
+
+
+
+100%|██████████| 6/6 [00:44<00:00,  7.48s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+87-th round completed!
+loss_train 0.645 | loss_test 2.19 | acc_test: 0.388
+Slected clinets:  [14 19  3  2  1 18]
+
+
+
+
+
+100%|██████████| 6/6 [00:36<00:00,  6.10s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+88-th round completed!
+loss_train 0.00788 | loss_test 6.11 | acc_test: 0.278
+Slected clinets:  [11 12 10  1 18  2]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:54<00:00,  9.12s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+89-th round completed!
+loss_train 0.125 | loss_test 2.15 | acc_test: 0.267
+Slected clinets:  [16 14 12  1  4 19]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:42<00:00,  7.08s/it]
+90-th round completed!
+loss_train 0.146 | loss_test 2.5 | acc_test: 0.417
+Slected clinets:  [16 15  7  2 17 19]
+Each train_loader's length:  [55, 100, 138, 97, 61, 1]
+
+
+
+
+
+100%|██████████| 6/6 [00:43<00:00,  7.30s/it]
+91-th round completed!
+loss_train 3.66 | loss_test 2.19 | acc_test: 0.313
+Slected clinets:  [ 9 18 14  6 16  8]
+Each train_loader's length:  [40, 76, 63, 89, 55, 27]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:34<00:00,  5.75s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+92-th round completed!
+loss_train 0.0572 | loss_test 2.5 | acc_test: 0.298
+Slected clinets:  [ 7 15  9  3 17 19]
+
+
+
+
+
+100%|██████████| 6/6 [00:35<00:00,  5.86s/it]
+93-th round completed!
+loss_train 4.04 | loss_test 4.84 | acc_test: 0.296
+Slected clinets:  [11  1 13 14  7 18]
+Each train_loader's length:  [76, 117, 108, 63, 138, 76]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:56<00:00,  9.47s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+94-th round completed!
+loss_train 0.717 | loss_test 1.82 | acc_test: 0.336
+Slected clinets:  [19 12 16 17  1 14]
+
+
+
+
+
+100%|██████████| 6/6 [00:36<00:00,  6.05s/it]
+95-th round completed!
+loss_train 0.484 | loss_test 2.21 | acc_test: 0.373
+Slected clinets:  [ 3 17 11 16  2  8]
+Each train_loader's length:  [21, 61, 76, 55, 97, 27]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:33<00:00,  5.57s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+96-th round completed!
+loss_train 0.317 | loss_test 3.78 | acc_test: 0.229
+Slected clinets:  [10  2 11 19  5  9]
+
+
+
+
+
+100%|██████████| 6/6 [00:43<00:00,  7.21s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+97-th round completed!
+loss_train 0.0193 | loss_test 4.94 | acc_test: 0.196
+Slected clinets:  [ 8 18 16  1  7  3]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:42<00:00,  7.06s/it]
+98-th round completed!
+loss_train 0.216 | loss_test 2.74 | acc_test: 0.293
+Slected clinets:  [ 6 17 14 16  1 11]
+Each train_loader's length:  [89, 61, 63, 55, 117, 76]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:45<00:00,  7.54s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+99-th round completed!
+loss_train 0.0623 | loss_test 2.93 | acc_test: 0.215
+Slected clinets:  [19  3 13 10 18 12]
+ 33%|███▎      | 2/6 [00:01<00:03,  1.01it/s]
+ 50%|█████     | 3/6 [00:12<00:14,  5.00s/it]
+ 67%|██████▋   | 4/6 [00:23<00:14,  7.27s/it]
+ 83%|████████▎ | 5/6 [00:31<00:07,  7.37s/it]
+100%|██████████| 6/6 [00:38<00:00,  6.37s/it]
+100%|██████████| 6/6 [00:38<00:00,  6.37s/it]
+100-th round completed!
+loss_train 0.274 | loss_test 2.39 | acc_test: 0.344
+Slected clinets:  [18  5  1 17  3 10]
+  0%|          | 0/6 [00:00<?, ?it/s].37s/it]
+ 17%|█▋        | 1/6 [00:07<00:37,  7.48s/it]
+ 33%|███▎      | 2/6 [00:18<00:39,  9.84s/it]
+ 50%|█████     | 3/6 [00:30<00:31, 10.54s/it]
+ 67%|██████▋   | 4/6 [00:36<00:17,  8.76s/it]
+ 83%|████████▎ | 5/6 [00:38<00:06,  6.35s/it]
+100%|██████████| 6/6 [00:49<00:00,  8.26s/it]
+100%|██████████| 6/6 [00:49<00:00,  8.26s/it]
+101-th round completed!
+loss_train 1.83 | loss_test 2.23 | acc_test: 0.381
+Slected clinets:  [ 5 16  4  7  2  0]
+  0%|          | 0/6 [00:00<?, ?it/s].26s/it]
+ 17%|█▋        | 1/6 [00:11<00:57, 11.45s/it]
+ 33%|███▎      | 2/6 [00:16<00:31,  7.95s/it]
+ 50%|█████     | 3/6 [00:29<00:30, 10.02s/it]
+ 67%|██████▋   | 4/6 [00:42<00:22, 11.36s/it]
+ 83%|████████▎ | 5/6 [00:52<00:10, 10.75s/it]
+100%|██████████| 6/6 [01:00<00:00, 10.03s/it]
+100%|██████████| 6/6 [01:00<00:00, 10.03s/it]
+102-th round completed!
+loss_train 0.22 | loss_test 2.31 | acc_test: 0.278
+Slected clinets:  [19  7 18 10 11 15]
+  0%|          | 0/6 [00:00<?, ?it/s].03s/it]
+ 33%|███▎      | 2/6 [00:13<00:27,  6.84s/it]
+ 50%|█████     | 3/6 [00:21<00:21,  7.16s/it]
+ 67%|██████▋   | 4/6 [00:32<00:17,  8.71s/it]
+ 83%|████████▎ | 5/6 [00:40<00:08,  8.26s/it]
+100%|██████████| 6/6 [00:49<00:00,  8.31s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].31s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].31s/it]
+103-th round completed!
+loss_train 0.00787 | loss_test 2.13 | acc_test: 0.358
+Slected clinets:  [ 8 12  1 19  4 14]
+ 17%|█▋        | 1/6 [00:02<00:13,  2.61s/it]
+ 33%|███▎      | 2/6 [00:09<00:21,  5.26s/it]
+ 50%|█████     | 3/6 [00:21<00:24,  8.27s/it]
+ 83%|████████▎ | 5/6 [00:33<00:07,  7.09s/it]
+100%|██████████| 6/6 [00:40<00:00,  6.70s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].70s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].70s/it]
+104-th round completed!
+loss_train 0.237 | loss_test 1.98 | acc_test: 0.339
+Slected clinets:  [ 7 12  9 17 13  4]
+ 17%|█▋        | 1/6 [00:13<01:08, 13.65s/it]
+ 33%|███▎      | 2/6 [00:20<00:39,  9.88s/it]
+ 50%|█████     | 3/6 [00:24<00:21,  7.21s/it]
+ 67%|██████▋   | 4/6 [00:30<00:13,  6.71s/it]
+ 83%|████████▎ | 5/6 [00:41<00:08,  8.14s/it]
+100%|██████████| 6/6 [00:53<00:00,  8.94s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].94s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].94s/it]
+105-th round completed!
+loss_train 0.0726 | loss_test 1.77 | acc_test: 0.303
+Slected clinets:  [ 0  6 12 18 11 13]
+ 17%|█▋        | 1/6 [00:07<00:39,  7.81s/it]
+ 33%|███▎      | 2/6 [00:16<00:33,  8.49s/it]
+ 50%|█████     | 3/6 [00:24<00:23,  7.93s/it]
+ 67%|██████▋   | 4/6 [00:31<00:15,  7.74s/it]
+ 83%|████████▎ | 5/6 [00:38<00:07,  7.59s/it]
+100%|██████████| 6/6 [00:49<00:00,  8.28s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].28s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].28s/it]
+106-th round completed!
+loss_train 0.177 | loss_test 2.67 | acc_test: 0.371
+Slected clinets:  [ 7 18  2  6 17 19]
+ 17%|█▋        | 1/6 [00:13<01:06, 13.38s/it]
+ 33%|███▎      | 2/6 [00:20<00:39,  9.95s/it]
+ 50%|█████     | 3/6 [00:30<00:29,  9.77s/it]
+ 67%|██████▋   | 4/6 [00:39<00:18,  9.36s/it]
+100%|██████████| 6/6 [00:45<00:00,  7.52s/it]
+100%|██████████| 6/6 [00:45<00:00,  7.52s/it]
+107-th round completed!
+loss_train 0.75 | loss_test 2.87 | acc_test: 0.303
+Slected clinets:  [16  2  5  9 17 18]
+  0%|          | 0/6 [00:00<?, ?it/s].52s/it]
+ 17%|█▋        | 1/6 [00:05<00:27,  5.47s/it]
+ 33%|███▎      | 2/6 [00:14<00:31,  7.80s/it]
+ 50%|█████     | 3/6 [00:26<00:28,  9.38s/it]
+ 67%|██████▋   | 4/6 [00:30<00:14,  7.23s/it]
+ 83%|████████▎ | 5/6 [00:36<00:06,  6.82s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.26s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.26s/it]
+108-th round completed!
+loss_train 2.81 | loss_test 3.72 | acc_test: 0.294
+Slected clinets:  [12  8 15  0 11 17]
+  0%|          | 0/6 [00:00<?, ?it/s].26s/it]
+ 17%|█▋        | 1/6 [00:07<00:35,  7.15s/it]
+ 33%|███▎      | 2/6 [00:09<00:17,  4.42s/it]
+ 50%|█████     | 3/6 [00:19<00:20,  6.87s/it]
+ 67%|██████▋   | 4/6 [00:26<00:14,  7.13s/it]
+ 83%|████████▎ | 5/6 [00:34<00:07,  7.25s/it]
+100%|██████████| 6/6 [00:40<00:00,  6.73s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].73s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].73s/it]
+109-th round completed!
+loss_train 0.104 | loss_test 2.15 | acc_test: 0.399
+Slected clinets:  [ 2 19  7 10  3 17]
+ 17%|█▋        | 1/6 [00:09<00:47,  9.48s/it]
+ 50%|█████     | 3/6 [00:22<00:22,  7.44s/it]
+ 67%|██████▋   | 4/6 [00:34<00:17,  8.70s/it]
+ 83%|████████▎ | 5/6 [00:36<00:06,  6.51s/it]
+100%|██████████| 6/6 [00:42<00:00,  7.02s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].02s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].02s/it]
+110-th round completed!
+loss_train 0.623 | loss_test 1.94 | acc_test: 0.426
+Slected clinets:  [10  7 13  3  9  2]
+ 17%|█▋        | 1/6 [00:10<00:54, 10.96s/it]
+ 33%|███▎      | 2/6 [00:24<00:49, 12.49s/it]
+ 50%|█████     | 3/6 [00:35<00:34, 11.58s/it]
+ 67%|██████▋   | 4/6 [00:37<00:15,  7.84s/it]
+ 83%|████████▎ | 5/6 [00:41<00:06,  6.41s/it]
+100%|██████████| 6/6 [00:50<00:00,  8.42s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].42s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].42s/it]
+111-th round completed!
+loss_train 0.134 | loss_test 2.3 | acc_test: 0.306
+Slected clinets:  [ 1 10  0 17  2 15]
+ 17%|█▋        | 1/6 [00:11<00:57, 11.42s/it]
+ 33%|███▎      | 2/6 [00:22<00:45, 11.35s/it]
+ 50%|█████     | 3/6 [00:30<00:28,  9.59s/it]
+ 67%|██████▋   | 4/6 [00:36<00:16,  8.25s/it]
+ 83%|████████▎ | 5/6 [00:45<00:08,  8.71s/it]
+100%|██████████| 6/6 [00:55<00:00,  9.28s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].28s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].28s/it]
+112-th round completed!
+loss_train 0.0229 | loss_test 2.59 | acc_test: 0.332
+Slected clinets:  [ 1 11 18 10  7 15]
+ 17%|█▋        | 1/6 [00:11<00:58, 11.63s/it]
+ 33%|███▎      | 2/6 [00:18<00:36,  9.09s/it]
+ 50%|█████     | 3/6 [00:26<00:25,  8.45s/it]
+ 67%|██████▋   | 4/6 [00:37<00:18,  9.48s/it]
+ 83%|████████▎ | 5/6 [00:50<00:10, 10.84s/it]
+100%|██████████| 6/6 [01:00<00:00, 10.13s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].13s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].13s/it]
+113-th round completed!
+loss_train 0.0792 | loss_test 2.42 | acc_test: 0.322
+Slected clinets:  [ 1  8 10 19  4 14]
+ 17%|█▋        | 1/6 [00:11<00:57, 11.46s/it]
+ 33%|███▎      | 2/6 [00:14<00:25,  6.29s/it]
+ 50%|█████     | 3/6 [00:25<00:25,  8.56s/it]
+ 83%|████████▎ | 5/6 [00:37<00:07,  7.13s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.27s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].27s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].27s/it]
+114-th round completed!
+loss_train 0.0485 | loss_test 2.38 | acc_test: 0.281
+Slected clinets:  [ 4 10  6  9  1 11]
+ 17%|█▋        | 1/6 [00:12<01:00, 12.00s/it]
+ 33%|███▎      | 2/6 [00:23<00:45, 11.50s/it]
+ 50%|█████     | 3/6 [00:31<00:30, 10.23s/it]
+ 67%|██████▋   | 4/6 [00:35<00:15,  7.71s/it]
+ 83%|████████▎ | 5/6 [00:47<00:09,  9.07s/it]
+100%|██████████| 6/6 [00:54<00:00,  9.10s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].10s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].10s/it]
+115-th round completed!
+loss_train 0.00467 | loss_test 2.13 | acc_test: 0.327
+Slected clinets:  [ 9 17 18  0 13 11]
+ 17%|█▋        | 1/6 [00:03<00:19,  3.84s/it]
+ 33%|███▎      | 2/6 [00:09<00:20,  5.08s/it]
+ 50%|█████     | 3/6 [00:17<00:18,  6.16s/it]
+ 67%|██████▋   | 4/6 [00:24<00:13,  6.73s/it]
+ 83%|████████▎ | 5/6 [00:35<00:08,  8.09s/it]
+100%|██████████| 6/6 [00:42<00:00,  7.12s/it]
+100%|██████████| 6/6 [00:42<00:00,  7.12s/it]
+116-th round completed!
+loss_train 0.188 | loss_test 1.92 | acc_test: 0.430
+Slected clinets:  [ 6 16 17 18 13  7]
+  0%|          | 0/6 [00:00<?, ?it/s].12s/it]
+ 17%|█▋        | 1/6 [00:08<00:44,  8.95s/it]
+ 33%|███▎      | 2/6 [00:14<00:27,  6.82s/it]
+ 50%|█████     | 3/6 [00:20<00:19,  6.41s/it]
+ 67%|██████▋   | 4/6 [00:27<00:13,  6.89s/it]
+ 83%|████████▎ | 5/6 [00:38<00:08,  8.24s/it]
+100%|██████████| 6/6 [00:52<00:00,  8.68s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].68s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].68s/it]
+117-th round completed!
+loss_train 0.333 | loss_test 3.28 | acc_test: 0.281
+Slected clinets:  [15  3 19 17 13 10]
+ 17%|█▋        | 1/6 [00:09<00:48,  9.76s/it]
+ 33%|███▎      | 2/6 [00:11<00:21,  5.28s/it]
+ 67%|██████▋   | 4/6 [00:17<00:07,  3.86s/it]
+ 83%|████████▎ | 5/6 [00:28<00:05,  5.98s/it]
+100%|██████████| 6/6 [00:39<00:00,  6.62s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].62s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].62s/it]
+118-th round completed!
+loss_train 0.349 | loss_test 3.11 | acc_test: 0.314
+Slected clinets:  [ 3 16  9 12 19 11]
+ 17%|█▋        | 1/6 [00:02<00:10,  2.13s/it]
+ 33%|███▎      | 2/6 [00:07<00:16,  4.04s/it]
+ 50%|█████     | 3/6 [00:11<00:12,  4.05s/it]
+ 67%|██████▋   | 4/6 [00:18<00:10,  5.29s/it]
+100%|██████████| 6/6 [00:26<00:00,  4.37s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].37s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].37s/it]
+119-th round completed!
+loss_train 0.489 | loss_test 2.69 | acc_test: 0.329
+Slected clinets:  [ 2  5 18 10 16 11]
+ 17%|█▋        | 1/6 [00:09<00:47,  9.59s/it]
+ 33%|███▎      | 2/6 [00:21<00:42, 10.72s/it]
+ 50%|█████     | 3/6 [00:28<00:27,  9.18s/it]
+ 67%|██████▋   | 4/6 [00:39<00:20, 10.07s/it]
+ 83%|████████▎ | 5/6 [00:45<00:08,  8.42s/it]
+100%|██████████| 6/6 [00:52<00:00,  8.80s/it]
+100%|██████████| 6/6 [00:52<00:00,  8.80s/it]
+120-th round completed!
+loss_train 0.2 | loss_test 2.28 | acc_test: 0.361
+Slected clinets:  [ 1  5  0  9 17 18]
+  0%|          | 0/6 [00:00<?, ?it/s].80s/it]
+ 17%|█▋        | 1/6 [00:11<00:56, 11.35s/it]
+ 33%|███▎      | 2/6 [00:22<00:45, 11.41s/it]
+ 50%|█████     | 3/6 [00:30<00:28,  9.66s/it]
+ 67%|██████▋   | 4/6 [00:34<00:14,  7.39s/it]
+ 83%|████████▎ | 5/6 [00:40<00:06,  6.94s/it]
+100%|██████████| 6/6 [00:47<00:00,  7.99s/it]
+100%|██████████| 6/6 [00:47<00:00,  7.99s/it]
+121-th round completed!
+loss_train 1.46 | loss_test 2 | acc_test: 0.427
+Slected clinets:  [ 5 11  2 14  7 16]
+  0%|          | 0/6 [00:00<?, ?it/s].99s/it]
+ 17%|█▋        | 1/6 [00:11<00:56, 11.38s/it]
+ 33%|███▎      | 2/6 [00:18<00:36,  9.13s/it]
+ 50%|█████     | 3/6 [00:28<00:28,  9.41s/it]
+ 67%|██████▋   | 4/6 [00:35<00:16,  8.19s/it]
+ 83%|████████▎ | 5/6 [00:48<00:10, 10.08s/it]
+100%|██████████| 6/6 [00:53<00:00,  8.99s/it]
+100%|██████████| 6/6 [00:53<00:00,  8.99s/it]
+122-th round completed!
+loss_train 0.495 | loss_test 2.41 | acc_test: 0.264
+Slected clinets:  [ 6  2  5 12 16  3]
+  0%|          | 0/6 [00:00<?, ?it/s].99s/it]
+ 17%|█▋        | 1/6 [00:08<00:43,  8.74s/it]
+ 33%|███▎      | 2/6 [00:18<00:36,  9.12s/it]
+ 50%|█████     | 3/6 [00:29<00:30, 10.20s/it]
+ 67%|██████▋   | 4/6 [00:36<00:18,  9.09s/it]
+ 83%|████████▎ | 5/6 [00:42<00:07,  7.73s/it]
+100%|██████████| 6/6 [00:44<00:00,  7.39s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].39s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].39s/it]
+123-th round completed!
+loss_train 0.206 | loss_test 2.81 | acc_test: 0.429
+Slected clinets:  [ 1 14 12 13 17 15]
+ 17%|█▋        | 1/6 [00:11<00:58, 11.66s/it]
+ 33%|███▎      | 2/6 [00:17<00:33,  8.35s/it]
+ 50%|█████     | 3/6 [00:24<00:23,  7.75s/it]
+ 67%|██████▋   | 4/6 [00:35<00:17,  8.93s/it]
+ 83%|████████▎ | 5/6 [00:41<00:07,  7.90s/it]
+100%|██████████| 6/6 [00:51<00:00,  8.55s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].55s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].55s/it]
+124-th round completed!
+loss_train 0.229 | loss_test 2.26 | acc_test: 0.281
+Slected clinets:  [19  6  1 15 18 10]
+ 33%|███▎      | 2/6 [00:08<00:17,  4.39s/it]
+ 50%|█████     | 3/6 [00:20<00:22,  7.36s/it]
+ 67%|██████▋   | 4/6 [00:30<00:16,  8.24s/it]
+ 83%|████████▎ | 5/6 [00:37<00:07,  7.99s/it]
+100%|██████████| 6/6 [00:48<00:00,  8.13s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].13s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].13s/it]
+125-th round completed!
+loss_train 0.439 | loss_test 2.04 | acc_test: 0.425
+Slected clinets:  [16  3 17  6 15  9]
+ 17%|█▋        | 1/6 [00:05<00:26,  5.27s/it]
+ 33%|███▎      | 2/6 [00:07<00:13,  3.33s/it]
+ 50%|█████     | 3/6 [00:13<00:13,  4.47s/it]
+ 67%|██████▋   | 4/6 [00:21<00:12,  6.20s/it]
+ 83%|████████▎ | 5/6 [00:31<00:07,  7.48s/it]
+100%|██████████| 6/6 [00:35<00:00,  5.92s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].92s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].92s/it]
+126-th round completed!
+loss_train 0.0224 | loss_test 4.32 | acc_test: 0.303
+Slected clinets:  [ 1 19 18  4  8  2]
+ 17%|█▋        | 1/6 [00:11<00:58, 11.61s/it]
+ 50%|█████     | 3/6 [00:19<00:17,  5.80s/it]
+ 67%|██████▋   | 4/6 [00:31<00:16,  8.02s/it]
+ 83%|████████▎ | 5/6 [00:33<00:06,  6.23s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.27s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].27s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].27s/it]
+127-th round completed!
+loss_train 0.234 | loss_test 4.5 | acc_test: 0.291
+Slected clinets:  [18  5  7  8 19  3]
+ 17%|█▋        | 1/6 [00:07<00:37,  7.42s/it]
+ 33%|███▎      | 2/6 [00:18<00:39,  9.76s/it]
+ 50%|█████     | 3/6 [00:32<00:34, 11.45s/it]
+ 67%|██████▋   | 4/6 [00:34<00:15,  7.95s/it]
+100%|██████████| 6/6 [00:37<00:00,  6.17s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].17s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].17s/it]
+128-th round completed!
+loss_train 0.0102 | loss_test 2.41 | acc_test: 0.291
+Slected clinets:  [16  0  8  2 14  6]
+ 17%|█▋        | 1/6 [00:05<00:26,  5.37s/it]
+ 33%|███▎      | 2/6 [00:12<00:26,  6.61s/it]
+ 50%|█████     | 3/6 [00:15<00:14,  4.81s/it]
+ 67%|██████▋   | 4/6 [00:24<00:13,  6.62s/it]
+ 83%|████████▎ | 5/6 [00:31<00:06,  6.49s/it]
+100%|██████████| 6/6 [00:39<00:00,  6.61s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].61s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].61s/it]
+129-th round completed!
+loss_train 0.109 | loss_test 1.96 | acc_test: 0.360
+Slected clinets:  [10 15 13  0  1 11]
+ 17%|█▋        | 1/6 [00:11<00:55, 11.20s/it]
+ 33%|███▎      | 2/6 [00:20<00:41, 10.36s/it]
+ 50%|█████     | 3/6 [00:31<00:31, 10.48s/it]
+ 67%|██████▋   | 4/6 [00:39<00:18,  9.30s/it]
+ 83%|████████▎ | 5/6 [00:50<00:10, 10.14s/it]
+100%|██████████| 6/6 [00:58<00:00,  9.70s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].70s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].70s/it]
+130-th round completed!
+loss_train 0.0632 | loss_test 3.13 | acc_test: 0.258
+Slected clinets:  [14 18  3 19  8  6]
+ 17%|█▋        | 1/6 [00:06<00:30,  6.20s/it]
+ 33%|███▎      | 2/6 [00:13<00:27,  6.91s/it]
+ 50%|█████     | 3/6 [00:15<00:14,  4.68s/it]
+ 83%|████████▎ | 5/6 [00:18<00:02,  2.79s/it]
+100%|██████████| 6/6 [00:27<00:00,  4.50s/it]
+100%|██████████| 6/6 [00:27<00:00,  4.50s/it]
+131-th round completed!
+loss_train 0.0129 | loss_test 2.2 | acc_test: 0.237
+Slected clinets:  [19 13 18 10 12  9]
+  0%|          | 0/6 [00:00<?, ?it/s].50s/it]
+ 33%|███▎      | 2/6 [00:10<00:21,  5.31s/it]
+ 50%|█████     | 3/6 [00:18<00:18,  6.18s/it]
+ 67%|██████▋   | 4/6 [00:29<00:16,  8.13s/it]
+ 83%|████████▎ | 5/6 [00:36<00:07,  7.90s/it]
+100%|██████████| 6/6 [00:40<00:00,  6.80s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].80s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].80s/it]
+132-th round completed!
+loss_train 0.0373 | loss_test 2.14 | acc_test: 0.389
+Slected clinets:  [5 1 9 3 8 0]
+ 17%|█▋        | 1/6 [00:11<00:57, 11.45s/it]
+ 33%|███▎      | 2/6 [00:22<00:45, 11.46s/it]
+ 50%|█████     | 3/6 [00:26<00:23,  7.99s/it]
+ 67%|██████▋   | 4/6 [00:28<00:11,  5.67s/it]
+ 83%|████████▎ | 5/6 [00:31<00:04,  4.57s/it]
+100%|██████████| 6/6 [00:39<00:00,  6.51s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].51s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].51s/it]
+133-th round completed!
+loss_train 0.0877 | loss_test 1.73 | acc_test: 0.373
+Slected clinets:  [14  8  2 18  9  1]
+ 17%|█▋        | 1/6 [00:06<00:30,  6.20s/it]
+ 33%|███▎      | 2/6 [00:08<00:16,  4.10s/it]
+ 50%|█████     | 3/6 [00:18<00:19,  6.55s/it]
+ 67%|██████▋   | 4/6 [00:25<00:13,  6.89s/it]
+ 83%|████████▎ | 5/6 [00:29<00:05,  5.81s/it]
+100%|██████████| 6/6 [00:41<00:00,  6.86s/it]
+100%|██████████| 6/6 [00:41<00:00,  6.86s/it]
+134-th round completed!
+loss_train 0.0172 | loss_test 3.63 | acc_test: 0.341
+Slected clinets:  [13 12  6 19  0  1]
+  0%|          | 0/6 [00:00<?, ?it/s].86s/it]
+ 17%|█▋        | 1/6 [00:10<00:53, 10.73s/it]
+ 33%|███▎      | 2/6 [00:17<00:34,  8.67s/it]
+ 50%|█████     | 3/6 [00:26<00:25,  8.66s/it]
+ 83%|████████▎ | 5/6 [00:34<00:05,  5.95s/it]
+100%|██████████| 6/6 [00:45<00:00,  7.63s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].63s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].63s/it]
+135-th round completed!
+loss_train 0.445 | loss_test 5.43 | acc_test: 0.228
+Slected clinets:  [ 9  5  0 12 15  6]
+ 17%|█▋        | 1/6 [00:03<00:19,  3.86s/it]
+ 33%|███▎      | 2/6 [00:15<00:34,  8.58s/it]
+ 50%|█████     | 3/6 [00:23<00:24,  8.18s/it]
+ 67%|██████▋   | 4/6 [00:30<00:15,  7.72s/it]
+ 83%|████████▎ | 5/6 [00:40<00:08,  8.51s/it]
+100%|██████████| 6/6 [00:49<00:00,  8.26s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].26s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].26s/it]
+136-th round completed!
+loss_train 2.47 | loss_test 2.86 | acc_test: 0.337
+Slected clinets:  [18  6 19  9 13  0]
+ 17%|█▋        | 1/6 [00:07<00:38,  7.77s/it]
+ 33%|███▎      | 2/6 [00:16<00:33,  8.30s/it]
+ 67%|██████▋   | 4/6 [00:20<00:08,  4.28s/it]
+ 83%|████████▎ | 5/6 [00:31<00:06,  6.35s/it]
+100%|██████████| 6/6 [00:39<00:00,  6.51s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].51s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].51s/it]
+137-th round completed!
+loss_train 0.13 | loss_test 2.22 | acc_test: 0.409
+Slected clinets:  [ 0  3 17 14  6 13]
+ 17%|█▋        | 1/6 [00:08<00:40,  8.20s/it]
+ 33%|███▎      | 2/6 [00:10<00:18,  4.63s/it]
+ 50%|█████     | 3/6 [00:16<00:15,  5.32s/it]
+ 67%|██████▋   | 4/6 [00:23<00:11,  5.86s/it]
+ 83%|████████▎ | 5/6 [00:32<00:07,  7.12s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.28s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].28s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].28s/it]
+138-th round completed!
+loss_train 1.39 | loss_test 2.16 | acc_test: 0.392
+Slected clinets:  [10 16  4  3 13  2]
+ 17%|█▋        | 1/6 [00:11<00:59, 11.91s/it]
+ 33%|███▎      | 2/6 [00:17<00:33,  8.27s/it]
+ 50%|█████     | 3/6 [00:30<00:31, 10.38s/it]
+ 67%|██████▋   | 4/6 [00:32<00:14,  7.17s/it]
+ 83%|████████▎ | 5/6 [00:44<00:08,  8.66s/it]
+100%|██████████| 6/6 [00:53<00:00,  9.00s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].00s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].00s/it]
+139-th round completed!
+loss_train 0.031 | loss_test 2.26 | acc_test: 0.296
+Slected clinets:  [10 15 19 17  4 13]
+ 17%|█▋        | 1/6 [00:12<01:00, 12.04s/it]
+ 33%|███▎      | 2/6 [00:22<00:43, 10.97s/it]
+ 67%|██████▋   | 4/6 [00:28<00:12,  6.02s/it]
+ 83%|████████▎ | 5/6 [00:41<00:08,  8.14s/it]
+100%|██████████| 6/6 [00:52<00:00,  8.71s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].71s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].71s/it]
+140-th round completed!
+loss_train 2.6 | loss_test 2.63 | acc_test: 0.236
+Slected clinets:  [18 13 12 15 19  0]
+ 17%|█▋        | 1/6 [00:07<00:36,  7.27s/it]
+ 33%|███▎      | 2/6 [00:17<00:37,  9.26s/it]
+ 50%|█████     | 3/6 [00:25<00:24,  8.28s/it]
+ 67%|██████▋   | 4/6 [00:34<00:17,  8.85s/it]
+100%|██████████| 6/6 [00:42<00:00,  7.07s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].07s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].07s/it]
+141-th round completed!
+loss_train 0.0839 | loss_test 3.01 | acc_test: 0.428
+Slected clinets:  [1 2 5 4 7 3]
+ 17%|█▋        | 1/6 [00:11<00:56, 11.37s/it]
+ 33%|███▎      | 2/6 [00:20<00:40, 10.17s/it]
+ 50%|█████     | 3/6 [00:32<00:32, 10.80s/it]
+ 67%|██████▋   | 4/6 [00:44<00:22, 11.36s/it]
+ 83%|████████▎ | 5/6 [00:58<00:12, 12.15s/it]
+100%|██████████| 6/6 [01:00<00:00, 10.01s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].01s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].01s/it]
+142-th round completed!
+loss_train 0.689 | loss_test 2.95 | acc_test: 0.292
+Slected clinets:  [19  8  9 15  1  2]
+ 33%|███▎      | 2/6 [00:02<00:05,  1.26s/it]
+ 50%|█████     | 3/6 [00:06<00:07,  2.36s/it]
+ 67%|██████▋   | 4/6 [00:16<00:10,  5.08s/it]
+ 83%|████████▎ | 5/6 [00:27<00:07,  7.28s/it]
+100%|██████████| 6/6 [00:37<00:00,  6.18s/it]
+100%|██████████| 6/6 [00:37<00:00,  6.18s/it]
+143-th round completed!
+loss_train 0.024 | loss_test 2.94 | acc_test: 0.226
+Slected clinets:  [18  0 19 10 16  4]
+  0%|          | 0/6 [00:00<?, ?it/s].18s/it]
+ 17%|█▋        | 1/6 [00:07<00:36,  7.31s/it]
+ 33%|███▎      | 2/6 [00:14<00:29,  7.41s/it]
+ 67%|██████▋   | 4/6 [00:25<00:12,  6.26s/it]
+ 83%|████████▎ | 5/6 [00:31<00:05,  5.98s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.23s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].23s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].23s/it]
+144-th round completed!
+loss_train 0.0232 | loss_test 2.45 | acc_test: 0.399
+Slected clinets:  [19  0  3  8 10 17]
+ 33%|███▎      | 2/6 [00:07<00:15,  3.82s/it]
+ 50%|█████     | 3/6 [00:09<00:09,  3.10s/it]
+ 67%|██████▋   | 4/6 [00:12<00:05,  2.93s/it]
+ 83%|████████▎ | 5/6 [00:23<00:05,  5.75s/it]
+100%|██████████| 6/6 [00:29<00:00,  4.88s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].88s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].88s/it]
+145-th round completed!
+loss_train 0.335 | loss_test 1.89 | acc_test: 0.393
+Slected clinets:  [ 0  4 16  8 13  6]
+ 17%|█▋        | 1/6 [00:07<00:37,  7.53s/it]
+ 33%|███▎      | 2/6 [00:19<00:40, 10.20s/it]
+ 50%|█████     | 3/6 [00:25<00:24,  8.05s/it]
+ 67%|██████▋   | 4/6 [00:27<00:11,  5.89s/it]
+ 83%|████████▎ | 5/6 [00:38<00:07,  7.61s/it]
+100%|██████████| 6/6 [00:47<00:00,  7.85s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].85s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].85s/it]
+146-th round completed!
+loss_train 1.12 | loss_test 3.9 | acc_test: 0.262
+Slected clinets:  [10 17 11 18  9  0]
+ 17%|█▋        | 1/6 [00:10<00:54, 10.99s/it]
+ 33%|███▎      | 2/6 [00:16<00:31,  7.92s/it]
+ 50%|█████     | 3/6 [00:24<00:23,  7.68s/it]
+ 67%|██████▋   | 4/6 [00:31<00:15,  7.65s/it]
+ 83%|████████▎ | 5/6 [00:35<00:06,  6.30s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.23s/it]
+100%|██████████| 6/6 [00:43<00:00,  7.23s/it]
+147-th round completed!
+loss_train 0.585 | loss_test 2.35 | acc_test: 0.351
+Slected clinets:  [10 15  1  3  2  0]
+  0%|          | 0/6 [00:00<?, ?it/s].23s/it]
+ 17%|█▋        | 1/6 [00:10<00:54, 11.00s/it]
+ 33%|███▎      | 2/6 [00:20<00:40, 10.22s/it]
+ 50%|█████     | 3/6 [00:31<00:32, 10.69s/it]
+ 67%|██████▋   | 4/6 [00:33<00:14,  7.27s/it]
+ 83%|████████▎ | 5/6 [00:43<00:08,  8.12s/it]
+100%|██████████| 6/6 [00:50<00:00,  8.49s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].49s/it]
+  0%|          | 0/6 [00:00<?, ?it/s].49s/it]
+148-th round completed!
+loss_train 0.355 | loss_test 2.27 | acc_test: 0.409
+Slected clinets:  [12 15 19  3  5 17]
+ 17%|█▋        | 1/6 [00:06<00:34,  6.95s/it]
+ 33%|███▎      | 2/6 [00:16<00:34,  8.52s/it]
+ 67%|██████▋   | 4/6 [00:18<00:07,  3.83s/it]
+ 83%|████████▎ | 5/6 [00:29<00:05,  5.97s/it]
+100%|██████████| 6/6 [00:34<00:00,  5.82s/it]
+100%|██████████| 6/6 [00:34<00:00,  5.82s/it]
+149-th round completed!
+loss_train 0.0179 | loss_test 3.78 | acc_test: 0.313
+Finish training

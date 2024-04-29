@@ -1,0 +1,71 @@
+wandb_version: 1
+
+user:
+  desc: null
+  value: gsli
+agg_mth:
+  desc: null
+  value: FA
+retrain:
+  desc: null
+  value: false
+real_world:
+  desc: null
+  value: 2
+num_clients:
+  desc: null
+  value: 20
+num_selected:
+  desc: null
+  value: 6
+classes_pc:
+  desc: null
+  value: 6
+baseline_num:
+  desc: null
+  value: 100
+num_rounds:
+  desc: null
+  value: 150
+epochs:
+  desc: null
+  value: 5
+lr:
+  desc: null
+  value: 0.1
+batch_size:
+  desc: null
+  value: 32
+retrain_epochs:
+  desc: null
+  value: 5
+verbose:
+  desc: null
+  value: true
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.18
+    cli_version: 0.16.6
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1714286136.0
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.8.18
+      5: 0.16.6
+      8:
+      - 5
+      13: linux-x86_64

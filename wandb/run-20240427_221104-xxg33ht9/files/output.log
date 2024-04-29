@@ -1,0 +1,108 @@
+Start training
+The aggregation algorithm chose is: client-client
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [266 256 283 285 241 239 226 224 230 250]
+ - Client 1: [262 253 232 231 241 256 266 268 245 246]
+ - Client 2: [251 264 263 229 264 241 236 252 235 265]
+ - Client 3: [254 237 235 261 253 249 270 270 238 233]
+ - Client 4: [232 269 224 251 247 278 261 238 258 242]
+ - Client 5: [241 258 224 243 231 295 252 256 238 262]
+ - Client 6: [258 248 238 265 228 244 249 254 262 254]
+ - Client 7: [241 253 252 258 236 244 224 248 262 282]
+ - Client 8: [249 257 251 258 260 227 252 247 259 240]
+ - Client 9: [251 242 259 234 269 264 266 226 259 230]
+ - Client 10: [   0    0  148    0    0    0 2352    0    0    0]
+ - Client 11: [   0    0    0    0 2071    0  429    0    0    0]
+ - Client 12: [   0    0    0 2463    0    0   37    0    0    0]
+ - Client 13: [   0 2305    0    0    0    0    0    0  195    0]
+ - Client 14: [  81    0    0    0    0 2419    0    0    0    0]
+ - Client 15: [   0    0    0    0    0    0    0 1326 1174    0]
+ - Client 16: [   0    0    0    0    0 1244    0    0    0 1256]
+ - Client 17: [   0    0    0 1109    0    0    0 1391    0    0]
+ - Client 18: [   0    0    0    0   11    0    0    0 2489    0]
+ - Client 19: [   0   21 2479    0    0    0    0    0    0    0]
+Client 0 data shape: (2500, 3, 32, 32)
+Client 0 labels shape: (2500,)
+Client 1 data shape: (2500, 3, 32, 32)
+Client 1 labels shape: (2500,)
+Client 2 data shape: (2500, 3, 32, 32)
+Client 2 labels shape: (2500,)
+Client 3 data shape: (2500, 3, 32, 32)
+Client 3 labels shape: (2500,)
+Client 4 data shape: (2500, 3, 32, 32)
+Client 4 labels shape: (2500,)
+Client 5 data shape: (2500, 3, 32, 32)
+Client 5 labels shape: (2500,)
+Client 6 data shape: (2500, 3, 32, 32)
+Client 6 labels shape: (2500,)
+Client 7 data shape: (2500, 3, 32, 32)
+Client 7 labels shape: (2500,)
+Client 8 data shape: (2500, 3, 32, 32)
+Client 8 labels shape: (2500,)
+Client 9 data shape: (2500, 3, 32, 32)
+Client 9 labels shape: (2500,)
+Client 10 data shape: (2500, 3, 32, 32)
+Client 10 labels shape: (2500,)
+Client 11 data shape: (2500, 3, 32, 32)
+Client 11 labels shape: (2500,)
+Client 12 data shape: (2500, 3, 32, 32)
+Client 12 labels shape: (2500,)
+Client 13 data shape: (2500, 3, 32, 32)
+Client 13 labels shape: (2500,)
+Client 14 data shape: (2500, 3, 32, 32)
+Client 14 labels shape: (2500,)
+Client 15 data shape: (2500, 3, 32, 32)
+Client 15 labels shape: (2500,)
+Client 16 data shape: (2500, 3, 32, 32)
+Client 16 labels shape: (2500,)
+Client 17 data shape: (2500, 3, 32, 32)
+Client 17 labels shape: (2500,)
+Client 18 data shape: (2500, 3, 32, 32)
+Client 18 labels shape: (2500,)
+Client 19 data shape: (2500, 3, 32, 32)
+Client 19 labels shape: (2500,)
+  0%|          | 0/6 [00:00<?, ?it/s]
+Slected clinets:  [10  9 13 18 12 16]
+
+
+
+
+
+
+100%|██████████| 6/6 [01:04<00:00, 10.82s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+0-th round completed!
+loss_train 2.25 | loss_test 2.32 | acc_test: 0.083
+Slected clinets:  [ 4  2 16  9 17 12]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:55<00:00,  9.17s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+1-th round completed!
+loss_train 7.47 | loss_test 2.32 | acc_test: 0.100
+Slected clinets:  [ 5  2  8 12 17 15]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:54<00:00,  9.11s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+2-th round completed!
+loss_train 6.49 | loss_test 2.12 | acc_test: 0.188
+Slected clinets:  [14  4  1 11 10  8]
+
+
+
+
+

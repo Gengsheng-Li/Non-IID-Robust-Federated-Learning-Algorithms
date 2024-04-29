@@ -1,0 +1,100 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [  0   0   0   0   0   0 787 787   1   0]
+ - Client 1: [  0   0   0   0   0   0   0   0 745 745]
+ - Client 2: [1192    1    0    0    0    0    0    0    0 1192]
+ - Client 3: [   0 1511 1511    1    0    0    0    0    0    0]
+ - Client 4: [  0   0   0 425 425   1   0   0   0   0]
+ - Client 5: [   0    0    0 1086 1086    0    0    0    0    0]
+ - Client 6: [  0   0   0   0   0   0   0   0 724 724]
+ - Client 7: [  0 702 702   1   0   0   0   0   0   0]
+ - Client 8: [1554 1554    1    0    0    0    0    0    0    0]
+ - Client 9: [   0    0    0    0    0 2044 2044    0    0    0]
+ - Client 10: [   0 1232 2022  791    0    0    0    0    0    0]
+ - Client 11: [   0    0  764 1213  450    0    0    0    0    0]
+ - Client 12: [  0   0   0   0   0 553 553   1   0   0]
+ - Client 13: [   0    0    0 1235 1235    0    0    0    0    0]
+ - Client 14: [1746    0    0    0    0    0    0    0    0 1746]
+ - Client 15: [   0    0    0    0    0    0    0 2129 2129    0]
+ - Client 16: [ 508    0    0  248 1804 1187    0    0    0    0]
+ - Client 17: [   0    0    0    0    0    0 1597 1597    0    0]
+ - Client 18: [   0    0    0    0    0 1215   19  486 1401  584]
+ - Client 19: [0 0 0 0 0 0 0 0 0 9]
+Client 0 data shape: (1575, 3, 32, 32)
+Client 0 labels shape: (1575,)
+Client 1 data shape: (1490, 3, 32, 32)
+Client 1 labels shape: (1490,)
+Client 2 data shape: (2385, 3, 32, 32)
+Client 2 labels shape: (2385,)
+Client 3 data shape: (3023, 3, 32, 32)
+Client 3 labels shape: (3023,)
+Client 4 data shape: (851, 3, 32, 32)
+Client 4 labels shape: (851,)
+Client 5 data shape: (2172, 3, 32, 32)
+Client 5 labels shape: (2172,)
+Client 6 data shape: (1448, 3, 32, 32)
+Client 6 labels shape: (1448,)
+Client 7 data shape: (1405, 3, 32, 32)
+Client 7 labels shape: (1405,)
+Client 8 data shape: (3109, 3, 32, 32)
+Client 8 labels shape: (3109,)
+Client 9 data shape: (4088, 3, 32, 32)
+Client 9 labels shape: (4088,)
+Client 10 data shape: (4045, 3, 32, 32)
+Client 10 labels shape: (4045,)
+Client 11 data shape: (2427, 3, 32, 32)
+Client 11 labels shape: (2427,)
+Client 12 data shape: (1107, 3, 32, 32)
+Client 12 labels shape: (1107,)
+Client 13 data shape: (2470, 3, 32, 32)
+Client 13 labels shape: (2470,)
+Client 14 data shape: (3492, 3, 32, 32)
+Client 14 labels shape: (3492,)
+Client 15 data shape: (4258, 3, 32, 32)
+Client 15 labels shape: (4258,)
+Client 16 data shape: (3747, 3, 32, 32)
+Client 16 labels shape: (3747,)
+Client 17 data shape: (3194, 3, 32, 32)
+Client 17 labels shape: (3194,)
+Client 18 data shape: (3705, 3, 32, 32)
+Client 18 labels shape: (3705,)
+Client 19 data shape: (9, 3, 32, 32)
+Client 19 labels shape: (9,)
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:19<00:00, 13.31s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+0-th round
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:21<00:00, 13.53s/it]
+1-th round
+average train loss 1.51 | test loss 3.15 | test acc: 0.168
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:28<00:00, 14.80s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 75, in <module>
+    loss += client_update(client_models[i], opt[i], train_loader[client_idx[i]], epochs)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 494, in client_update
+    data, target = data.cuda(), target.cuda()
+KeyboardInterrupt
+2-th round
+average train loss 2.89 | test loss 3.35 | test acc: 0.162

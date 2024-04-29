@@ -1,0 +1,212 @@
+2024-04-27 22:10:42,911 INFO    StreamThr :1935600 [internal.py:wandb_internal():86] W&B internal server running at pid: 1935600, started at: 2024-04-27 22:10:42.832697
+2024-04-27 22:10:42,913 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status
+2024-04-27 22:10:42,915 INFO    WriterThread:1935600 [datastore.py:open_for_write():87] open: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/run-bbyv8h4s.wandb
+2024-04-27 22:10:42,925 DEBUG   SenderThread:1935600 [sender.py:send():379] send: header
+2024-04-27 22:10:42,925 DEBUG   SenderThread:1935600 [sender.py:send():379] send: run
+2024-04-27 22:10:43,876 INFO    SenderThread:1935600 [dir_watcher.py:__init__():211] watching files in: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files
+2024-04-27 22:10:43,877 INFO    SenderThread:1935600 [sender.py:_start_run_threads():1124] run started: bbyv8h4s with start time 1714227042.832893
+2024-04-27 22:10:43,903 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: check_version
+2024-04-27 22:10:43,904 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: check_version
+2024-04-27 22:10:44,608 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: run_start
+2024-04-27 22:10:44,625 DEBUG   HandlerThread:1935600 [system_info.py:__init__():26] System info init
+2024-04-27 22:10:44,625 DEBUG   HandlerThread:1935600 [system_info.py:__init__():41] System info init done
+2024-04-27 22:10:44,625 INFO    HandlerThread:1935600 [system_monitor.py:start():194] Starting system monitor
+2024-04-27 22:10:44,626 INFO    SystemMonitor:1935600 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-27 22:10:44,626 INFO    HandlerThread:1935600 [system_monitor.py:probe():214] Collecting system info
+2024-04-27 22:10:44,627 INFO    SystemMonitor:1935600 [interfaces.py:start():190] Started cpu monitoring
+2024-04-27 22:10:44,628 INFO    SystemMonitor:1935600 [interfaces.py:start():190] Started disk monitoring
+2024-04-27 22:10:44,629 INFO    SystemMonitor:1935600 [interfaces.py:start():190] Started gpu monitoring
+2024-04-27 22:10:44,633 INFO    SystemMonitor:1935600 [interfaces.py:start():190] Started memory monitoring
+2024-04-27 22:10:44,635 INFO    SystemMonitor:1935600 [interfaces.py:start():190] Started network monitoring
+2024-04-27 22:10:44,709 DEBUG   HandlerThread:1935600 [system_info.py:probe():150] Probing system
+2024-04-27 22:10:44,758 DEBUG   HandlerThread:1935600 [gitlib.py:_init_repo():56] git repository is invalid
+2024-04-27 22:10:44,758 DEBUG   HandlerThread:1935600 [system_info.py:probe():198] Probing system done
+2024-04-27 22:10:44,758 DEBUG   HandlerThread:1935600 [system_monitor.py:probe():223] {'os': 'Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-04-27T14:10:44.709552', 'startedAt': '2024-04-27T14:10:42.561346', 'docker': None, 'cuda': None, 'args': ('--user', 'gsli', '--agg_mth', 'client-server', '--real_world', '2', '--num_clients', '20', '--num_selected', '6', '--classes_pc', '2', '--baseline_num', '100', '--num_rounds', '150', '--epochs', '5', '--lr', '0.1', '--batch_size', '32', '--retrain_epochs', '5', '--verbose'), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'gpu01', 'username': 'gsli', 'executable': '/data0/user/gsli/.conda/envs/FLlearner/bin/python', 'cpu_count': 56, 'cpu_count_logical': 112, 'cpu_freq': {'current': 2937.5, 'min': 800.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 1100.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 1200.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 2200.0, 'min': 800.0, 'max': 3500.0}, {'current': 1400.0, 'min': 800.0, 'max': 3500.0}, {'current': 2100.0, 'min': 800.0, 'max': 3500.0}, {'current': 1100.0, 'min': 800.0, 'max': 3500.0}, {'current': 2000.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.0, 'min': 800.0, 'max': 3500.0}, {'current': 1100.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2600.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2600.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 1400.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 900.0, 'min': 800.0, 'max': 3500.0}, {'current': 900.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2100.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2100.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2100.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 1800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}], 'disk': {'/': {'total': 428.8891143798828, 'used': 31.53418731689453}}, 'gpu': 'NVIDIA A40', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA A40', 'memory_total': 48305799168}, {'name': 'NVIDIA A40', 'memory_total': 48305799168}], 'memory': {'total': 503.37942123413086}}
+2024-04-27 22:10:44,759 INFO    HandlerThread:1935600 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-27 22:10:44,759 INFO    HandlerThread:1935600 [system_monitor.py:probe():227] Publishing system info
+2024-04-27 22:10:44,759 DEBUG   HandlerThread:1935600 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-04-27 22:10:44,879 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/conda-environment.yaml
+2024-04-27 22:10:47,129 DEBUG   HandlerThread:1935600 [system_info.py:_save_conda():222] Saving conda packages done
+2024-04-27 22:10:47,133 INFO    HandlerThread:1935600 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-27 22:10:47,136 DEBUG   SenderThread:1935600 [sender.py:send():379] send: files
+2024-04-27 22:10:47,136 INFO    SenderThread:1935600 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-04-27 22:10:47,208 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-27 22:10:47,208 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:10:47,208 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: python_packages
+2024-04-27 22:10:47,209 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:10:47,223 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:10:47,713 DEBUG   SenderThread:1935600 [sender.py:send():379] send: telemetry
+2024-04-27 22:10:47,879 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/conda-environment.yaml
+2024-04-27 22:10:47,879 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/wandb-metadata.json
+2024-04-27 22:10:47,880 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:10:47,880 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/requirements.txt
+2024-04-27 22:10:48,186 INFO    wandb-upload_0:1935600 [upload_job.py:push():131] Uploaded file /tmp/tmpgwk63olqwandb/zehjlp0s-wandb-metadata.json
+2024-04-27 22:10:48,752 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:10:49,911 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:10:53,767 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:10:53,923 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:10:55,944 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:10:56,947 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:10:59,159 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:02,208 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:11:02,209 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:11:02,211 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:11:04,484 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:09,486 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:15,258 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:15,979 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/config.yaml
+2024-04-27 22:11:17,009 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:11:17,209 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:11:17,210 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:11:17,212 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:11:21,446 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:25,095 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:11:26,955 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:31,956 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:32,209 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:11:32,209 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:11:32,211 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:11:37,432 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:41,181 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:11:43,284 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:44,638 DEBUG   SystemMonitor:1935600 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-27 22:11:44,642 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:11:47,209 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:11:47,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:11:47,210 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:11:48,536 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:49,224 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:11:53,537 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:56,233 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:11:58,582 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:11:59,220 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-27 22:11:59,224 DEBUG   SenderThread:1935600 [sender.py:send():379] send: history
+2024-04-27 22:11:59,224 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: summary_record
+2024-04-27 22:11:59,302 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/wandb-summary.json
+2024-04-27 22:11:59,302 INFO    SenderThread:1935600 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-27 22:12:00,357 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:12:02,209 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:12:02,209 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:12:02,211 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:12:04,476 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:09,477 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:14,644 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:12:14,646 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:16,421 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:12:17,209 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:12:17,209 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:12:17,212 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:12:20,437 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:26,131 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:26,454 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:12:31,133 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:32,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:12:32,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:12:32,210 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:12:36,495 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:41,605 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:42,496 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:12:44,645 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:12:46,647 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:47,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:12:47,210 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:12:47,212 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:12:50,509 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:12:52,325 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:56,514 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:12:57,767 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:12:58,934 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-27 22:12:58,936 DEBUG   SenderThread:1935600 [sender.py:send():379] send: history
+2024-04-27 22:12:58,936 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: summary_record
+2024-04-27 22:12:59,021 INFO    SenderThread:1935600 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-27 22:12:59,526 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/wandb-summary.json
+2024-04-27 22:13:00,529 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:02,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:13:02,210 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:13:02,213 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:13:03,512 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:06,897 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:08,754 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:13,755 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:14,647 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:13:16,940 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:17,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:13:17,210 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:13:17,214 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:13:19,481 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:24,948 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:24,969 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:29,949 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:32,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:13:32,211 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:13:32,214 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:13:35,525 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:39,033 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:40,562 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:43,053 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:43,904 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-27 22:13:43,908 DEBUG   SenderThread:1935600 [sender.py:send():379] send: history
+2024-04-27 22:13:43,908 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: summary_record
+2024-04-27 22:13:44,055 INFO    SenderThread:1935600 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-27 22:13:44,056 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/wandb-summary.json
+2024-04-27 22:13:44,650 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:13:45,652 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:46,062 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:47,064 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:47,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:13:47,210 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:13:47,213 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:13:51,493 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:13:53,076 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:13:56,818 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:01,818 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:02,211 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:14:02,211 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:14:02,212 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:14:07,357 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:09,117 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:14:12,358 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:14,654 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:14:17,144 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:14:17,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:14:17,211 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:14:17,212 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:14:17,508 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:22,509 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:27,160 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:14:28,046 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:32,210 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:14:32,213 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:14:32,214 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:14:33,538 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:38,539 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:43,236 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:14:43,926 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:44,656 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:14:47,211 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:14:47,212 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:14:47,214 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:14:49,328 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:14:49,650 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:14:50,982 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-27 22:14:50,999 DEBUG   SenderThread:1935600 [sender.py:send():379] send: history
+2024-04-27 22:14:50,999 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: summary_record
+2024-04-27 22:14:51,090 INFO    SenderThread:1935600 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-27 22:14:51,341 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/wandb-summary.json
+2024-04-27 22:14:52,453 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:14:53,454 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:14:55,092 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:15:00,094 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:15:02,211 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:15:02,212 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:15:02,214 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:15:04,611 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:15:05,537 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:15:10,886 INFO    Thread-12 :1935600 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/user/gsli/FLNONIID/wandb/run-20240427_221042-bbyv8h4s/files/output.log
+2024-04-27 22:15:11,054 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:15:14,658 DEBUG   SenderThread:1935600 [sender.py:send():379] send: stats
+2024-04-27 22:15:16,659 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report
+2024-04-27 22:15:17,211 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-27 22:15:17,211 DEBUG   SenderThread:1935600 [sender.py:send_request():406] send_request: stop_status
+2024-04-27 22:15:17,214 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-27 22:15:22,511 DEBUG   HandlerThread:1935600 [handler.py:handle_request():146] handle_request: status_report

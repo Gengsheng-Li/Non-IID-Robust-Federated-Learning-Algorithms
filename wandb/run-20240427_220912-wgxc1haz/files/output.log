@@ -1,0 +1,99 @@
+Start training
+The aggregation algorithm chose is: client-server
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [555 714   0 416 357 625 833 384   0 416]
+ - Client 1: [  0   0   0 416 357   0   0 384   0   0]
+ - Client 2: [555 714   0 416 357 625   0 384   0 416]
+ - Client 3: [  0   0   0   0 357   0   0 384   0   0]
+ - Client 4: [555   0 833 416 357 625   0 384   0 416]
+ - Client 5: [555   0   0 417 357 625   0 385 833 416]
+ - Client 6: [  0   0   0   0 357   0   0   0   0 417]
+ - Client 7: [556   0 833 417 357   0   0 385 833 417]
+ - Client 8: [  0   0   0   0 357   0   0   0   0   0]
+ - Client 9: [556 714   0 417 357   0 833 385 833 417]
+ - Client 10: [  0   0   0 417   0   0   0 385   0 417]
+ - Client 11: [556 714 833 417 357 625 833 385   0 417]
+ - Client 12: [  0 714   0 417 357   0   0 385   0 417]
+ - Client 13: [  0   0   0   0   0   0 833   0   0   0]
+ - Client 14: [  0 715 833 417 358 625 834 385 833 417]
+ - Client 15: [  0   0 834   0   0   0   0   0   0   0]
+ - Client 16: [  0   0   0   0   0 625   0   0 834   0]
+ - Client 17: [556   0 834   0   0 625 834   0 834   0]
+ - Client 18: [556   0   0   0   0   0   0   0   0   0]
+ - Client 19: [  0 715   0 417 358   0   0 385   0 417]
+Slected clinets:  [ 7 10  0 18  5 19]
+Each train_loader's length:  [119, 39, 135, 18, 113, 72]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:54<00:00,  9.01s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+0-th round completed!
+loss_train 5.96 | loss_test 2.36 | acc_test: 0.100
+Slected clinets:  [ 6  2 19 16  4 11]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.95s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+1-th round completed!
+loss_train 7.79 | loss_test 2.46 | acc_test: 0.100
+Slected clinets:  [10  4 12 19 17  6]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:45<00:00,  7.54s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+2-th round completed!
+loss_train 6.7 | loss_test 2.77 | acc_test: 0.174
+Slected clinets:  [ 2  5  3 15 19  0]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:50<00:00,  8.42s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+3-th round completed!
+loss_train 5.15 | loss_test 2.39 | acc_test: 0.186
+Slected clinets:  [15 10  1  0 12  2]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:46<00:00,  7.71s/it]
+4-th round completed!
+loss_train 5.57 | loss_test 2.31 | acc_test: 0.148
+Slected clinets:  [ 4  2 12  3 15 11]
+Each train_loader's length:  [113, 109, 72, 24, 27, 161]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:53<00:00,  8.93s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+5-th round completed!
+loss_train 5.44 | loss_test 2.3 | acc_test: 0.164
+Slected clinets:  [ 0  2  5  4 19 13]
+
+
+

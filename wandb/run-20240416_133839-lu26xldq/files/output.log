@@ -1,0 +1,50 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data preprocessing:
+ - ToPILImage()
+ - RandomCrop(size=(32, 32), padding=4)
+ - RandomHorizontalFlip(p=0.5)
+ - ToTensor()
+ - Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+Data split:
+ - Client 0: [   0    0 1447 1447    1    0    0    0    0    0]
+ - Client 1: [   0    0    0    0 2087 2087    1    0    0    0]
+ - Client 2: [556 556   1   0   0   0   0   0   0   0]
+ - Client 3: [   1    0    0    0    0    0    0    0 1642 1642]
+ - Client 4: [  0   0   0 863 863   0   0   0   0   0]
+ - Client 5: [417   1   0   0   0   0   0   0   0 417]
+ - Client 6: [  0   0   0   0   0   0 528 528   1   0]
+ - Client 7: [   1    0    0    0    0    0    0    0 2644 2644]
+ - Client 8: [   0    0    0    0    0 2338 2338    1    0    0]
+ - Client 9: [779 779   1   0   0   0   0   0   0   0]
+ - Client 10: [   0    0    0    0    0    0 1893 1893    0    0]
+ - Client 11: [   0    0    0 2143 2049   95    0    0    0    0]
+ - Client 12: [946 946   1   0   0   0   0   0   0   0]
+ - Client 13: [   0 2394 2394    0    0    0    0    0    0    0]
+ - Client 14: [  0   0   0 547   0 480  86   0   0   0]
+ - Client 15: [612 324 288   0   0   0   0   0   0   0]
+ - Client 16: [  33    0    0    0    0    0  154 1197  713  297]
+ - Client 17: [863   0   0   0   0   0   0 863   0   0]
+ - Client 18: [792   0 861   0   0   0   0 518   0   0]
+ - Client 19: [0 0 7 0 0 0 0 0 0 0]
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:48<00:00,  8.03s/it]
+Traceback (most recent call last):
+  File "train.py", line 86, in <module>
+    server_aggregate(global_model, client_models,client_lens)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 320, in server_aggregate
+    deviation = sum((model.state_dict()[k] - global_dict[k]).norm(2) for k in global_dict.keys())
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 320, in <genexpr>
+    deviation = sum((model.state_dict()[k] - global_dict[k]).norm(2) for k in global_dict.keys())
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/_tensor.py", line 442, in norm
+    return torch.norm(self, p, dim, keepdim, dtype=dtype)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/functional.py", line 1421, in norm
+    return _VF.norm(input, p, dim=_dim, keepdim=keepdim)  # type: ignore[attr-defined]
+RuntimeError: norm(): input dtype should be either floating point or complex dtypes. Got Long instead.

@@ -1,0 +1,559 @@
+
+import os
+import random
+from tqdm import tqdm
+import numpy as np
+import torch, torchvision
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+from torchvision import datasets, transforms
+from torch.utils.data.dataset import Dataset
+from torchvision import transforms 
+from torchvision.transforms import Compose 
+torch.backends.cudnn.benchmark=True
+
+
+#### get cifar dataset in x and y form
+
+def get_cifar10():
+  '''Return CIFAR10 train/test data and labels as numpy arrays'''
+  data_train = torchvision.datasets.CIFAR10('./data', train=True, download=True)
+  data_test = torchvision.datasets.CIFAR10('./data', train=False, download=True) 
+  
+  x_train, y_train = data_train.data.transpose((0,3,1,2)), np.array(data_train.targets)
+  x_test, y_test = data_test.data.transpose((0,3,1,2)), np.array(data_test.targets)
+  
+  return x_train, y_train, x_test, y_test
+
+def print_image_data_stats(data_train, labels_train, data_test, labels_test):
+  print("\nData: ")
+  print(" - Train Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
+    data_train.shape, labels_train.shape, np.min(data_train), np.max(data_train),
+      np.min(labels_train), np.max(labels_train)))
+  print(" - Test Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
+    data_test.shape, labels_test.shape, np.min(data_train), np.max(data_train),
+      np.min(labels_test), np.max(labels_test)))
+  
+  
+def clients_rand(train_len, nclients):
+  '''
+  train_len: size of the train data
+  nclients: number of clients
+  
+  Returns: to_ret
+  
+  This function creates a random distribution 
+  for the clients, i.e. number of images each client 
+  possess.
+  '''
+  client_tmp=[]
+  sum_=0
+  #### creating random values for each client ####
+  for i in range(nclients-1):
+    tmp=random.randint(10,100)
+    sum_+=tmp
+    client_tmp.append(tmp)
+
+  client_tmp= np.array(client_tmp)
+  #### using those random values as weights ####
+  clients_dist= ((client_tmp/sum_)*train_len).astype(int)
+  num  = train_len - clients_dist.sum()
+  to_ret = list(clients_dist)
+  to_ret.append(num)
+  return to_ret
+
+def split_image_data_realwd(data, labels, n_clients=100, verbose=True):
+  '''
+  Splits (data, labels) among 'n_clients s.t. every client can holds any number of classes which is trying to simulate real world dataset
+  Input:
+    data : [n_data x shape]
+    labels : [n_data (x 1)] from 0 to n_labels(10)
+    n_clients : number of clients
+    verbose : True/False => True for printing some info, False otherwise
+  Output:
+    clients_split : splitted client data into desired format
+  '''
+
+  n_labels = np.max(labels) + 1
+
+  def break_into(n,m):
+    ''' 
+    return m random integers with sum equal to n 
+    '''
+    to_ret = [1 for i in range(m)]
+    for i in range(n-m):
+        ind = random.randint(0,m-1)
+        to_ret[ind] += 1
+    return to_ret
+
+  #### constants ####
+  n_classes = len(set(labels))
+  classes = list(range(n_classes))
+  np.random.shuffle(classes)
+  label_indcs  = [list(np.where(labels==class_)[0]) for class_ in classes]
+  
+  #### classes for each client ####
+  tmp = [np.random.randint(1,10) for i in range(n_clients)]
+  total_partition = sum(tmp)
+
+  #### create partition among classes to fulfill criteria for clients ####
+  class_partition = break_into(total_partition, len(classes))
+
+  #### applying greedy approach first come and first serve ####
+  class_partition = sorted(class_partition,reverse=True)
+  class_partition_split = {}
+
+  #### based on class partition, partitioning the label indexes ###
+  for ind, class_ in enumerate(classes):
+      class_partition_split[class_] = [list(i) for i in np.array_split(label_indcs[ind],class_partition[ind])]
+      
+#   print([len(class_partition_split[key]) for key in  class_partition_split.keys()])
+
+  clients_split = []
+  count = 0
+  for i in range(n_clients):
+    n = tmp[i]
+    j = 0
+    indcs = []
+
+    while n>0:
+        class_ = classes[j]
+        if len(class_partition_split[class_])>0:
+            indcs.extend(class_partition_split[class_][-1])
+            count+=len(class_partition_split[class_][-1])
+            class_partition_split[class_].pop()
+            n-=1
+        j+=1
+
+    ##### sorting classes based on the number of examples it has #####
+    classes = sorted(classes,key=lambda x:len(class_partition_split[x]),reverse=True)
+    if n>0:
+        raise ValueError(" Unable to fulfill the criteria ")
+    clients_split.append([data[indcs], labels[indcs]])
+#   print(class_partition_split)
+#   print("total example ",count)
+
+
+  def print_split(clients_split): 
+    print("Data split:")
+    for i, client in enumerate(clients_split):
+      split = np.sum(client[1].reshape(1,-1)==np.arange(n_labels).reshape(-1,1), axis=1)
+      print(" - Client {}: {}".format(i,split))
+    print()
+      
+  if verbose:
+    print_split(clients_split)
+  
+  clients_split = np.array(clients_split, dtype=object)
+  
+  return clients_split
+
+
+def split_image_data(data, labels, n_clients, classes_per_client, shuffle, verbose):
+  '''
+  Splits (data, labels) among 'n_clients s.t. every client can holds 'classes_per_client' number of classes
+  Input:
+    data : [n_data x shape]
+    labels : [n_data (x 1)] from 0 to n_labels
+    n_clients : number of clients
+    classes_per_client : number of classes per client
+    shuffle : True/False => True for shuffling the dataset, False otherwise
+    verbose : True/False => True for printing some info, False otherwise
+  Output:
+    clients_split : client data into desired format
+  '''
+
+  n_labels = np.max(labels) + 1
+
+  ### client distribution ####
+  data_per_client = clients_rand(len(data), n_clients)
+  data_per_client_per_class = [np.maximum(1, nd // classes_per_client) for nd in data_per_client]
+  
+  # sort for labels
+  data_idcs = [[] for i in range(n_labels)]
+  for j, label in enumerate(labels):
+    data_idcs[label] += [j]
+  if shuffle:
+    for idcs in data_idcs:
+      np.random.shuffle(idcs)
+    
+  # split data among clients
+  clients_split = []
+  c = 0
+  for i in range(n_clients):
+    client_idcs = []
+        
+    budget = data_per_client[i]
+    c = np.random.randint(n_labels)
+    while budget > 0:
+      take = min(data_per_client_per_class[i], len(data_idcs[c]), budget)
+      
+      client_idcs += data_idcs[c][:take]
+      data_idcs[c] = data_idcs[c][take:]
+      
+      budget -= take
+      c = (c + 1) % n_labels
+      
+    clients_split += [(data[client_idcs], labels[client_idcs])]
+
+  def print_split(clients_split): 
+    print("Data split:")
+    for i, client in enumerate(clients_split):
+      split = np.sum(client[1].reshape(1,-1)==np.arange(n_labels).reshape(-1,1), axis=1)
+      print(" - Client {}: {}".format(i,split))
+    print()
+
+    # Assuming clients_split is already populated and is in scope
+    for idx, (client_data, client_labels) in enumerate(clients_split):
+        print(f"Client {idx} data shape: {client_data.shape}")
+        print(f"Client {idx} labels shape: {client_labels.shape}")
+
+      
+  if verbose:
+    print_split(clients_split)
+  
+  clients_split = np.array(clients_split, dtype=object)
+  
+  return clients_split
+
+def split_balanced_non_iid(data, labels, n_clients, n_iid, skewness=0.5, max_classes_per_client=2, verbose=True):
+    data_per_client = [len(data) // n_clients] * n_clients
+    data_per_client[-1] += len(data) - sum(data_per_client)  # 处理不能整除的情况
+
+     #### constants #### 
+    n_data = data.shape[0]
+    n_labels = np.max(labels) + 1
+
+    clients_split = []
+
+    # 分配IID数据
+    data_indices = np.arange(len(data))
+    np.random.shuffle(data_indices)
+    start = 0
+    for i in range(n_iid):
+        end = start + data_per_client[i]
+        client_indices = data_indices[start:end]
+        clients_split.append((data[client_indices], labels[client_indices]))
+        start = end
+
+    # 分配non-IID数据
+    num_classes = len(np.unique(labels))
+    for i in range(n_iid, n_clients):
+        # 选择这个客户端将拥有的类别
+        if max_classes_per_client is not None and max_classes_per_client < num_classes:
+            chosen_classes = np.random.choice(num_classes, max_classes_per_client, replace=False)
+        else:
+            chosen_classes = range(num_classes)
+
+        # 每个类别的数据量按照随机比例分配，但确保每个类别至少有一个样本
+        proportions = np.random.dirichlet(np.repeat(skewness, len(chosen_classes)))
+        proportions = proportions / proportions.sum() * data_per_client[i]
+        proportions = np.ceil(proportions).astype(int)  # 向上取整，确保至少有一个样本
+
+        # 调整比例以确保总数与data_per_client[i]一致
+        while proportions.sum() > data_per_client[i]:
+            proportions[np.argmax(proportions)] -= 1
+
+        client_indices = []
+        for j, class_idx in enumerate(chosen_classes):
+            class_indices = np.where(labels == class_idx)[0]
+            class_choices = np.random.choice(class_indices, proportions[j], replace=False)
+            client_indices.extend(class_choices)
+
+        #clients_split.append((data[client_indices], labels[client_indices]))
+        clients_split += [(data[client_indices], labels[client_indices])]
+
+    def print_split(clients_split): 
+      print("Data split:")
+      for i, client in enumerate(clients_split):
+        split = np.sum(client[1].reshape(1,-1)==np.arange(n_labels).reshape(-1,1), axis=1)
+        print(" - Client {}: {}".format(i,split))
+      print()
+      # Assuming clients_split is already populated and is in scope
+      for idx, (client_data, client_labels) in enumerate(clients_split):
+          print(f"Client {idx} data shape: {client_data.shape}")
+          print(f"Client {idx} labels shape: {client_labels.shape}")
+
+      
+    if verbose:
+      print_split(clients_split)
+
+    #clients_split = np.array(clients_split, dtype=object)
+
+    return clients_split
+
+
+# def shuffle_list(data):
+#   '''
+#   This function returns the shuffled data
+#   '''
+#   for i in range(len(data)):
+#     tmp_len= len(data[i][0])
+#     index = [i for i in range(tmp_len)]
+#     random.shuffle(index)
+#     data[i][0],data[i][1] = shuffle_list_data(data[i][0],data[i][1])
+#   return data
+
+# def shuffle_list_data(x, y):
+#   '''
+#   This function is a helper function, shuffles an
+#   array while maintaining the mapping between x and y
+#   '''
+#   inds = list(range(len(x)))
+#   random.shuffle(inds)
+#   return x[inds],y[inds]
+
+
+def shuffle_list(clients_data):
+    '''
+    This function shuffles each client's data and labels.
+    '''
+    for i in range(len(clients_data)):
+        clients_data[i] = shuffle_list_data(clients_data[i][0], clients_data[i][1])
+    return clients_data
+
+def shuffle_list_data(x, y):
+    '''
+    This helper function shuffles an array while maintaining the mapping between x and y.
+    '''
+    inds = list(range(len(x)))
+    random.shuffle(inds)
+    x_shuffled = x[inds]
+    y_shuffled = y[inds]
+    return x_shuffled, y_shuffled
+
+
+class CustomImageDataset(Dataset):
+  '''
+  A custom Dataset class for images
+  inputs : numpy array [n_data x shape]
+  labels : numpy array [n_data (x 1)]
+  '''
+  def __init__(self, inputs, labels, transforms=None):
+      assert inputs.shape[0] == labels.shape[0]
+      self.inputs = torch.Tensor(inputs)
+      self.labels = torch.Tensor(labels).long()
+      self.transforms = transforms 
+
+  def __getitem__(self, index):
+      img, label = self.inputs[index], self.labels[index]
+
+      if self.transforms is not None:
+        img = self.transforms(img)
+
+      return (img, label)
+
+  def __len__(self):
+      return self.inputs.shape[0]
+          
+
+def get_default_data_transforms(train=True, verbose=True):
+  transforms_train = {
+  'cifar10' : transforms.Compose([
+    transforms.ToPILImage(),
+    transforms.RandomCrop(32, padding=4),
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))]),#(0.24703223, 0.24348513, 0.26158784)
+  }
+  transforms_eval = {    
+  'cifar10' : transforms.Compose([
+    transforms.ToPILImage(),
+    transforms.ToTensor(),
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
+  }
+  if verbose:
+    print("\nData preprocessing: ")
+    for transformation in transforms_train['cifar10'].transforms:
+      print(' -', transformation)
+    print()
+
+  return (transforms_train['cifar10'], transforms_eval['cifar10'])
+
+# def get_data_loaders(nclients,batch_size,classes_pc=10 ,verbose=True ):
+  
+#   x_train, y_train, x_test, y_test = get_cifar10()
+
+#   if verbose:
+#     print_image_data_stats(x_train, y_train, x_test, y_test)
+
+#   transforms_train, transforms_eval = get_default_data_transforms(verbose=True)
+  
+#   split = split_image_data(x_train, y_train, n_clients=nclients, 
+#         classes_per_client=classes_pc, verbose=verbose)
+  
+#   split_tmp = shuffle_list(split)
+  
+#   client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train), 
+#                                                                 batch_size=batch_size, shuffle=True) for x, y in split_tmp]
+
+#   test_loader  = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False) 
+
+#   return client_loaders, test_loader
+
+def get_data_loaders(nclients, batch_size, classes_pc, real_wd, verbose=True ):
+  
+  x_train, y_train, x_test, y_test = get_cifar10()
+
+  if verbose:
+    print_image_data_stats(x_train, y_train, x_test, y_test)
+
+  transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
+  
+  if real_wd == 0:
+    # 全随机
+    split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
+  elif real_wd == 1:
+    # 自定义iid数量
+    split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=10)
+  else:  
+    # 最极端
+    split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
+  
+  split_tmp = shuffle_list(split)
+  
+  client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train), batch_size=batch_size, shuffle=True) 
+                    for x, y in split_tmp]
+
+  test_loader  = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False) 
+
+  return client_loaders, test_loader
+
+def baseline_data(num):
+  '''
+  Returns baseline data loader to be used on retraining on global server
+  Input:
+        num : size of baseline data
+  Output:
+        loader: baseline data loader
+  '''
+  xtrain, ytrain, _, _ = get_cifar10()
+  x, y = shuffle_list_data(xtrain, ytrain)
+
+  x, y = x[:num], y[:num]
+  transform, _ = get_default_data_transforms(train=True, verbose=True)
+  loader = torch.utils.data.DataLoader(CustomImageDataset(x, y, transform), batch_size=16, shuffle=True)
+
+  return loader
+
+def client_update(client_model, optimizer, train_loader, epoch=5):
+    """
+    This function updates/trains client model on client data
+    """
+    client_model.train()
+    for e in range(epoch):
+        for batch_idx, (data, target) in enumerate(train_loader):
+            data, target = data.cuda(), target.cuda()
+            optimizer.zero_grad()
+            output = client_model(data)
+            loss = F.nll_loss(output, target)
+            loss.backward()
+            optimizer.step()
+    return loss.item()
+
+def client_syn(client_model, global_model):
+  '''
+  This function synchronizes the client model with global model
+  '''
+  client_model.load_state_dict(global_model.state_dict())
+
+def server_aggregate_weightedsize(global_model, client_models, client_lens):
+    """
+    This function has aggregation method 'wmean'
+    wmean takes the weighted mean of the weights of models
+    """
+    total = sum(client_lens)
+    n = len(client_models)
+    global_dict = global_model.state_dict()
+    for k in global_dict.keys():
+
+        global_dict[k] = torch.stack([client_models[i].state_dict()[k].float()*(n*client_lens[i]/total) for i in range(len(client_models))], 0).mean(0)
+        
+
+    global_model.load_state_dict(global_dict)
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
+
+def server_aggregate_FA(global_model, client_models, client_lens):
+    """
+    This function has aggregation method 'mean'
+    """
+    ### This will take simple mean of the weights of models ###
+    global_dict = global_model.state_dict()
+    for k in global_dict.keys():
+        global_dict[k] = torch.stack([client_models[i].state_dict()[k].float() for i in range(len(client_models))], 0).mean(0)
+    global_model.load_state_dict(global_dict)
+    
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
+    
+def server_aggregate_mean(global_model, client_models, client_lens):
+    n = len(client_models)
+    global_dict = global_model.state_dict()
+    mean_model_dict = {k: torch.stack([client_models[i].state_dict()[k].float() for i in range(n)], 0).mean(0) for k in global_dict.keys()}
+    
+    # Calculate deviations and determine weights
+    deviations = []
+    for model in client_models:
+        deviation = sum((model.state_dict()[k] - mean_model_dict[k]).norm(2) for k in global_dict.keys())
+        deviations.append(deviation)
+    weights = [1/d if d != 0 else 0 for d in deviations]  # Prevent division by zero
+    weight_sum = sum(weights)
+    normalized_weights = [w / weight_sum for w in weights]
+
+    # Weighted aggregation of models
+    for k in global_dict.keys():
+        weighted_params = torch.stack([client_models[i].state_dict()[k].float() * normalized_weights[i] for i in range(n)], 0).sum(0)
+        global_dict[k] = weighted_params
+
+    global_model.load_state_dict(global_dict)
+
+    # Optionally update client models
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
+
+def server_aggregate_tocenter(global_model, client_models, client_lens):
+    n = len(client_models)
+    global_dict = global_model.state_dict()
+
+    # Calculate deviations from the global model
+    deviations = []
+    for model in client_models:
+        deviation = sum((model.state_dict()[k].float() - global_dict[k].float()).norm(2) for k in global_dict.keys())
+        deviations.append(deviation)
+    weights = [1/d if d != 0 else 0 for d in deviations]  # Prevent division by zero
+    weight_sum = sum(weights)
+    normalized_weights = [w / weight_sum for w in weights]
+
+    # Weighted aggregation of models
+    for k in global_dict.keys():
+        weighted_params = torch.stack([client_models[i].state_dict()[k].float() * normalized_weights[i] for i in range(n)], 0).sum(0)
+        global_dict[k] = weighted_params
+
+    global_model.load_state_dict(global_dict)
+
+    # Optionally update client models
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
+
+def test(global_model, test_loader):
+    """
+    This function test the global model on test 
+    data and returns test loss and test accuracy 
+    """
+    global_model.eval()
+    test_loss = 0
+    correct = 0
+    with torch.no_grad():
+        for data, target in test_loader:
+            data, target = data.cuda(), target.cuda()
+            output = global_model(data)
+            test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
+            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
+            correct += pred.eq(target.view_as(pred)).sum().item()
+
+    test_loss /= len(test_loader.dataset)
+    acc = correct / len(test_loader.dataset)
+
+    return test_loss, acc

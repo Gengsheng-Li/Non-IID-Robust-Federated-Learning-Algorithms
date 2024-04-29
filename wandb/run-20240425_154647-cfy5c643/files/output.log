@@ -1,0 +1,59 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [  0   0   0   0   0   0 431 431   1   0]
+ - Client 1: [2537    1    0    0    0    0    0    0    0 2537]
+ - Client 2: [  0   0   0   0   0   0 512 512   1   0]
+ - Client 3: [   0    0    0    0    0 1970 1970    1    0    0]
+ - Client 4: [2463 2672  210    0    0    0    0    0    0    0]
+ - Client 5: [   0    0    0    0    0    0    0 1214 1214    1]
+ - Client 6: [  0 836 836   1   0   0   0   0   0   0]
+ - Client 7: [   0    0    0 1403 1403    1    0    0    0    0]
+ - Client 8: [   0    0    0 1646 1646    1    0    0    0    0]
+ - Client 9: [   0 1295 1295    1    0    0    0    0    0    0]
+ - Client 10: [  0   0   0   0 836 836   1   0   0   0]
+ - Client 11: [   0    1    0    0    0    0    0    0 1295 1295]
+ - Client 12: [  0   0   0   0   0   0   0 728 728   1]
+ - Client 13: [   0    0    0    0    0 1187 1187    1    0    0]
+ - Client 14: [  0   0   0   0 971 971   1   0   0   0]
+ - Client 15: [   0    0 2645 1949  144   34  519    0    0    0]
+ - Client 16: [  0   0   0   0   0   0   0 971 971   1]
+ - Client 17: [   0    0    0    0    0    0  379 1142  790   64]
+ - Client 18: [   0  195   14    0    0    0    0    0    0 1086]
+ - Client 19: [ 0  0  0  0  0  0  0  0  0 15]
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:27<00:00, 14.50s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+0-th round
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:19<00:00, 13.26s/it]
+  0%|                                                                                                                                                                                     | 0/6 [00:00<?, ?it/s]
+1-th round
+
+
+
+
+ 67%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                         | 4/6 [01:11<00:35, 17.94s/it]
+Traceback (most recent call last):
+  File "train.py", line 75, in <module>
+    loss += client_update(client_models[i], opt[i], train_loader[client_idx[i]], epochs)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 481, in client_update
+    def client_update(client_model, optimizer, train_loader, epoch=5):
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/zqf/miniconda3/envs/FedDISC/lib/python3.8/site-packages/torch/autograd/__init__.py", line 154, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt

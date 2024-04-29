@@ -1,0 +1,13 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Traceback (most recent call last):
+  File "train.py", line 57, in <module>
+    train_loader, test_loader = get_data_loaders(classes_pc=classes_pc, nclients= num_clients,
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 312, in get_data_loaders
+    split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose = verbose)
+  File "/home/zqf/projects/FLNONIID/ultils.py", line 145, in split_image_data_realwd
+    clients_split = np.array(clients_split)
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 2 dimensions. The detected shape was (20, 2) + inhomogeneous part.

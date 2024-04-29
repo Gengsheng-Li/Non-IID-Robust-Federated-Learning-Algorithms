@@ -1,0 +1,42 @@
+Start training
+The aggregation algorithm chose is: client-server
+Files already downloaded and verified
+Files already downloaded and verified
+Data:
+ - Train Set: ((50000, 3, 32, 32),(50000,)), Range: [0.000, 255.000], Labels: 0,..,9
+ - Test Set: ((10000, 3, 32, 32),(10000,)), Range: [0.000, 255.000], Labels: 0,..,9
+Data split:
+ - Client 0: [  0   0   0   0   0   0 357   0   0   0]
+ - Client 1: [  0 416 555   0 500 500 357   0 500   0]
+ - Client 2: [625 416 555   0 500 500 357 833 500 625]
+ - Client 3: [  0 416 555   0 500 500 357   0 500   0]
+ - Client 4: [625 416 555   0 500 500 357   0 500 625]
+ - Client 5: [  0   0   0   0   0   0 357   0   0   0]
+ - Client 6: [  0   0   0   0   0   0 357   0   0   0]
+ - Client 7: [625 417   0   0 500 500 357   0 500   0]
+ - Client 8: [  0 417   0   0   0   0 357   0   0 625]
+ - Client 9: [  0 417   0   0   0   0 357   0   0   0]
+ - Client 10: [  0 417   0   0   0   0   0   0   0 625]
+ - Client 11: [625   0 556   0 500 500   0 833 500   0]
+ - Client 12: [ 625    0    0 1000  500  500    0    0  500    0]
+ - Client 13: [   0    0    0 1000    0    0    0    0    0    0]
+ - Client 14: [  0 417 556   0   0   0 357 833   0 625]
+ - Client 15: [   0  417  556 1000    0  500  357  833    0  625]
+ - Client 16: [ 625  417  556 1000  500    0  358  834  500  625]
+ - Client 17: [625   0 556   0 500 500   0 834 500   0]
+ - Client 18: [  0   0   0   0 500   0   0   0 500   0]
+ - Client 19: [ 625  417    0 1000    0  500  358    0    0  625]
+Slected clinets:  [ 8  6 18  5 17  2]
+Each train_loader's length:  [44, 12, 32, 12, 110, 154]
+
+
+
+
+
+
+100%|██████████| 6/6 [00:45<00:00,  7.60s/it]
+  0%|          | 0/6 [00:00<?, ?it/s]
+0-th round completed!
+loss_train 3.46 | loss_test 2.37 | acc_test: 0.100
+Slected clinets:  [14  3  5  4  6  2]
+
