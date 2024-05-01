@@ -8,7 +8,6 @@ import torch.optim as optim
 
 from tqdm import tqdm
 from ultils import *
-from ultils_ys import server_aggregate_ligeng_wok, server_aggregate_ligeng_wk
 from model import VGG
 
 torch.backends.cudnn.benchmark=True
