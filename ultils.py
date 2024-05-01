@@ -471,7 +471,7 @@ def get_data_loaders_FA(nclients, batch_size, classes_pc, real_wd, verbose=True 
 
 
 
-def get_data_loaders_val(nclients, batch_size, classes_pc=10, real_wd=False, validation_split=0.1, verbose=True):
+def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, validation_split=0.1, verbose=True):
     
     
     x_train, y_train, x_test, y_test = get_cifar10()
@@ -843,6 +843,26 @@ def create_class_distribution_matrix(clients_data):
                                          index=[f'客户端 {i}' for i in range(num_clients)],
                                          columns=[f'类别 {i}' for i in range(num_classes)])
     return class_distribution_df
+
+
+# 统计每个客户端的类别分布
+def get_class_distribution(clients_split):
+    class_distribution = []
+    for client_data in clients_split:
+        _, labels = client_data
+        counts = np.bincount(labels, minlength=10)  # 假设有10个类别
+        counts = counts / counts.sum()  # 归一化
+        class_distribution.append(counts)
+    return np.array(class_distribution)
+
+
+def print_model_parameters(model, layer_name):
+    """打印指定层的参数"""
+    try:
+        param = next(model.state_dict()[layer_name].flatten().numpy())
+        print(f"Parameters of {layer_name}: {param}")
+    except KeyError:
+        print(f"Layer {layer_name} not found in model.")
 
 
 
