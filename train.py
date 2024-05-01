@@ -9,6 +9,7 @@ import torch.optim as optim
 from tqdm import tqdm
 from ultils import *
 from model import VGG
+from datetime import datetime
 
 torch.backends.cudnn.benchmark=True
 
@@ -41,11 +42,12 @@ def parse_args():
 
 def train(args):
   device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-  
+  current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    
   wandb.login()
   wandb.init(
       project="federated_learningg",
-      name=f"{args.user}_am{args.agg_mth}_r{args.retrain}_rw{args.real_world}_nc{args.num_clients}_ns{args.num_selected}_cpc{args.classes_pc}_nb{args.baseline_num}_lr{args.lr}_bs{args.batch_size}",
+      name=f"{args.user}_am{args.agg_mth}_r{args.retrain}_rw{args.real_world}_nc{args.num_clients}_ns{args.num_selected}_cpc{args.classes_pc}_nb{args.baseline_num}_lr{args.lr}_bs{args.batch_size}_t{current_time}",
       config=args
   )
 
