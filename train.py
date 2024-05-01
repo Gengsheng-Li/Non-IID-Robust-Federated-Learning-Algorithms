@@ -8,6 +8,7 @@ import torch.optim as optim
 
 from tqdm import tqdm
 from ultils import *
+from ultils_ys import server_aggregate_ligeng_wok, server_aggregate_ligeng_wk
 from model import VGG
 
 torch.backends.cudnn.benchmark=True
@@ -18,7 +19,7 @@ def parse_args():
   parser.add_argument('--user', type=str)
   
   parser.add_argument('--agg_mth', type=str, default="client-server",
-                      choices=['FA', 'client-client', 'client-server'])
+                      choices=['FA', 'client-client', 'client-server', 'ligengwk', 'ligengwok'])
   parser.add_argument('--retrain', action="store_true")
   parser.add_argument('--real_world', type=int, default=2)
   
@@ -59,8 +60,14 @@ def train(args):
   opt = [optim.SGD(model.parameters(), lr=args.lr) for model in client_models]
 
   # Load data loaders
+  if args.agg_mth=='ligengwk'||'ligengwok':
+      train_loader, val_loader, test_loader, class_distribution, client_labels, validation_data_sizes = get_data_loaders_val(
+    args.num_clients, args.batch_size, args.classes_pc, args.real_world, args.validation_split, args.verbose 
+)
+  else:
   train_loader, test_loader = get_data_loaders(classes_pc=args.classes_pc, nclients= args.num_clients, 
                                                batch_size=args.batch_size, real_wd=args.real_world, verbose=args.verbose)
+  
   if args.retrain:
     print("NOTE: Retraining is active!")
     loader_fixed = baseline_data(args.baseline_num)  # Load baseline data
@@ -102,6 +109,10 @@ def train(args):
       server_aggregate_mean(global_model, client_models, client_lens)
     elif args.agg_mth == 'client-server':
       server_aggregate_tocenter(global_model, client_models, client_lens)
+    elif args.agg_mth == 'ligenwok':
+      server_aggregate_ligeng_wok(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx], client_labels, client_idx, k)
+    elif args.agg_mth == 'ligenwk':
+      server_aggregate_ligeng_wk(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx], client_labels, client_idx, k)
     else:
       raise ValueError(f"Unsupported aggregation method: {args.agg_mth}")
 
