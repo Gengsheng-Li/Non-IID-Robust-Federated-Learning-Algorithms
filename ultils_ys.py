@@ -741,7 +741,7 @@ def server_aggregate_FA(global_model, client_models):
           
 
 # Proposed by ligen, without k-means
-def server_aggregate_ligen_wok(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
+def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
     client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[i]], [validation_data_sizes[i]]) for i in range(len(client_models))]
@@ -778,7 +778,7 @@ def server_aggregate_ligen_wok(global_model, client_models, client_data_loaders,
 
 
 # Proposed by ligen, with k-means
-def server_aggregate_ligen_wk(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
+def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
     client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[i]], [validation_data_sizes[i]]) for i in range(len(client_models))]
