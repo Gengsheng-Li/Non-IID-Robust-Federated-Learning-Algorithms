@@ -724,7 +724,7 @@ def evaluate_model_on_multiple_loaders(model, data_loaders, data_sizes):
 def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
-    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[i]], [validation_data_sizes[i]]) for i in range(len(client_models))]
+    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
 
     # Avoid division by zero
     total_accuracy = sum(client_accuracies)
@@ -761,7 +761,7 @@ def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders
 def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
-    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[i]], [validation_data_sizes[i]]) for i in range(len(client_models))]
+    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
     
     # Avoid division by zero
     total_accuracy = sum(client_accuracies)
