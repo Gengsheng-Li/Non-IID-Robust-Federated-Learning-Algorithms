@@ -374,51 +374,51 @@ def shuffle_list_data(x, y):
 
 
 class CustomImageDataset(Dataset):
-  '''
-  A custom Dataset class for images
-  inputs : numpy array [n_data x shape]
-  labels : numpy array [n_data (x 1)]
-  '''
-  def __init__(self, inputs, labels, transforms=None):
-      assert inputs.shape[0] == labels.shape[0]
-      self.inputs = torch.Tensor(inputs)
-      self.labels = torch.Tensor(labels).long()
-      self.transforms = transforms 
-
-  def __getitem__(self, index):
-      img, label = self.inputs[index], self.labels[index]
-
-      if self.transforms is not None:
-        img = self.transforms(img)
-
-      return (img, label)
-
-  def __len__(self):
-      return self.inputs.shape[0]
+    '''
+    A custom Dataset class for images
+    inputs : numpy array [n_data x shape]
+    labels : numpy array [n_data (x 1)]
+    '''
+    def __init__(self, inputs, labels, transforms=None):
+        assert inputs.shape[0] == labels.shape[0]
+        self.inputs = torch.Tensor(inputs)
+        self.labels = torch.Tensor(labels).long()
+        self.transforms = transforms 
+  
+    def __getitem__(self, index):
+        img, label = self.inputs[index], self.labels[index]
+  
+        if self.transforms is not None:
+          img = self.transforms(img)
+  
+        return (img, label)
+  
+    def __len__(self):
+        return self.inputs.shape[0]
           
 
 def get_default_data_transforms(train=True, verbose=True):
-  transforms_train = {
-  'cifar10' : transforms.Compose([
-    transforms.ToPILImage(),
-    transforms.RandomCrop(32, padding=4),
-    transforms.RandomHorizontalFlip(),
-    transforms.ToTensor(),
-    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))]),#(0.24703223, 0.24348513, 0.26158784)
-  }
-  transforms_eval = {    
-  'cifar10' : transforms.Compose([
-    transforms.ToPILImage(),
-    transforms.ToTensor(),
-    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
-  }
-  if verbose:
-    print("\nData preprocessing: ")
-    for transformation in transforms_train['cifar10'].transforms:
-      print(' -', transformation)
-    print()
-
-  return (transforms_train['cifar10'], transforms_eval['cifar10'])
+    transforms_train = {
+    'cifar10' : transforms.Compose([
+      transforms.ToPILImage(),
+      transforms.RandomCrop(32, padding=4),
+      transforms.RandomHorizontalFlip(),
+      transforms.ToTensor(),
+      transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))]),#(0.24703223, 0.24348513, 0.26158784)
+    }
+    transforms_eval = {    
+    'cifar10' : transforms.Compose([
+      transforms.ToPILImage(),
+      transforms.ToTensor(),
+      transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
+    }
+    if verbose:
+      print("\nData preprocessing: ")
+      for transformation in transforms_train['cifar10'].transforms:
+        print(' -', transformation)
+      print()
+  
+    return (transforms_train['cifar10'], transforms_eval['cifar10'])
 
 # def get_data_loaders(nclients,batch_size,classes_pc=10 ,verbose=True ):
   
@@ -563,21 +563,21 @@ def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, 
 
 
 def baseline_data(num):
-  '''
-  Returns baseline data loader to be used on retraining on global server
-  Input:
-        num : size of baseline data
-  Output:
-        loader: baseline data loader
-  '''
-  xtrain, ytrain, _, _ = get_cifar10()
-  x, y = shuffle_list_data(xtrain, ytrain)
-
-  x, y = x[:num], y[:num]
-  transform, _ = get_default_data_transforms(train=True, verbose=True)
-  loader = torch.utils.data.DataLoader(CustomImageDataset(x, y, transform), batch_size=16, shuffle=True)
-
-  return loader
+    '''
+    Returns baseline data loader to be used on retraining on global server
+    Input:
+          num : size of baseline data
+    Output:
+          loader: baseline data loader
+    '''
+    xtrain, ytrain, _, _ = get_cifar10()
+    x, y = shuffle_list_data(xtrain, ytrain)
+  
+    x, y = x[:num], y[:num]
+    transform, _ = get_default_data_transforms(train=True, verbose=True)
+    loader = torch.utils.data.DataLoader(CustomImageDataset(x, y, transform), batch_size=16, shuffle=True)
+  
+    return loader
 
 def client_update(client_model, optimizer, train_loader, epoch=5):
     """
