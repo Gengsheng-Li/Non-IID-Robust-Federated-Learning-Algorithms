@@ -9,7 +9,7 @@ import wandb
 from torch import nn
 from tqdm import tqdm
 
-from predict_brain_age_via_fl.data import generate_training_dataloders, generate_testing_dataloder
+from predict_brain_age_via_fl.mri_data import generate_training_dataloders, generate_testing_dataloder
 from models.resnet import generate_resnet
 
 torch.backends.cudnn.benchmark=True
