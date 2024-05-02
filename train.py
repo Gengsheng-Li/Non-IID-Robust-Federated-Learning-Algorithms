@@ -8,7 +8,7 @@ import torch.optim as optim
 
 from tqdm import tqdm
 from ultils import *
-from model import VGG
+from models.vgg import VGG
 from datetime import datetime
 
 torch.backends.cudnn.benchmark=True
