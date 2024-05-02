@@ -19,137 +19,137 @@ import pandas as pd
 #### get cifar dataset in x and y form
 
 def get_cifar10():
-  '''Return CIFAR10 train/test data and labels as numpy arrays'''
-  data_train = torchvision.datasets.CIFAR10('./data', train=True, download=True)
-  data_test = torchvision.datasets.CIFAR10('./data', train=False, download=True) 
-  
-  x_train, y_train = data_train.data.transpose((0,3,1,2)), np.array(data_train.targets)
-  x_test, y_test = data_test.data.transpose((0,3,1,2)), np.array(data_test.targets)
-  
-  return x_train, y_train, x_test, y_test
+    '''Return CIFAR10 train/test data and labels as numpy arrays'''
+    data_train = torchvision.datasets.CIFAR10('./data', train=True, download=True)
+    data_test = torchvision.datasets.CIFAR10('./data', train=False, download=True) 
+    
+    x_train, y_train = data_train.data.transpose((0,3,1,2)), np.array(data_train.targets)
+    x_test, y_test = data_test.data.transpose((0,3,1,2)), np.array(data_test.targets)
+    
+    return x_train, y_train, x_test, y_test
 
 def print_image_data_stats(data_train, labels_train, data_test, labels_test):
-  print("\nData: ")
-  print(" - Train Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
-    data_train.shape, labels_train.shape, np.min(data_train), np.max(data_train),
-      np.min(labels_train), np.max(labels_train)))
-  print(" - Test Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
-    data_test.shape, labels_test.shape, np.min(data_train), np.max(data_train),
-      np.min(labels_test), np.max(labels_test)))
+    print("\nData: ")
+    print(" - Train Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
+      data_train.shape, labels_train.shape, np.min(data_train), np.max(data_train),
+        np.min(labels_train), np.max(labels_train)))
+    print(" - Test Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
+      data_test.shape, labels_test.shape, np.min(data_train), np.max(data_train),
+        np.min(labels_test), np.max(labels_test)))
   
   
 def clients_rand(train_len, nclients):
-  '''
-  train_len: size of the train data
-  nclients: number of clients
-  
-  Returns: to_ret
-  
-  This function creates a random distribution 
-  for the clients, i.e. number of images each client 
-  possess.
-  '''
-  client_tmp=[]
-  sum_=0
-  #### creating random values for each client ####
-  for i in range(nclients-1):
-    tmp=random.randint(10,100)
-    sum_+=tmp
-    client_tmp.append(tmp)
-
-  client_tmp= np.array(client_tmp)
-  #### using those random values as weights ####
-  clients_dist= ((client_tmp/sum_)*train_len).astype(int)
-  num  = train_len - clients_dist.sum()
-  to_ret = list(clients_dist)
-  to_ret.append(num)
-  return to_ret
-
-def split_image_data_realwd(data, labels, n_clients=100, verbose=True):
-  '''
-  Splits (data, labels) among 'n_clients s.t. every client can holds any number of classes which is trying to simulate real world dataset
-  Input:
-    data : [n_data x shape]
-    labels : [n_data (x 1)] from 0 to n_labels(10)
-    n_clients : number of clients
-    verbose : True/False => True for printing some info, False otherwise
-  Output:
-    clients_split : splitted client data into desired format
-  '''
-
-  n_labels = np.max(labels) + 1
-
-  def break_into(n,m):
-    ''' 
-    return m random integers with sum equal to n 
     '''
-    to_ret = [1 for i in range(m)]
-    for i in range(n-m):
-        ind = random.randint(0,m-1)
-        to_ret[ind] += 1
+    train_len: size of the train data
+    nclients: number of clients
+    
+    Returns: to_ret
+    
+    This function creates a random distribution 
+    for the clients, i.e. number of images each client 
+    possess.
+    '''
+    client_tmp=[]
+    sum_=0
+    #### creating random values for each client ####
+    for i in range(nclients-1):
+        tmp=random.randint(10,100)
+        sum_+=tmp
+        client_tmp.append(tmp)
+  
+    client_tmp= np.array(client_tmp)
+    #### using those random values as weights ####
+    clients_dist= ((client_tmp/sum_)*train_len).astype(int)
+    num  = train_len - clients_dist.sum()
+    to_ret = list(clients_dist)
+    to_ret.append(num)
     return to_ret
 
-  #### constants ####
-  n_classes = len(set(labels))
-  classes = list(range(n_classes))
-  np.random.shuffle(classes)
-  label_indcs  = [list(np.where(labels==class_)[0]) for class_ in classes]
+def split_image_data_realwd(data, labels, n_clients=100, verbose=True):
+    '''
+    Splits (data, labels) among 'n_clients s.t. every client can holds any number of classes which is trying to simulate real world dataset
+    Input:
+      data : [n_data x shape]
+      labels : [n_data (x 1)] from 0 to n_labels(10)
+      n_clients : number of clients
+      verbose : True/False => True for printing some info, False otherwise
+    Output:
+      clients_split : splitted client data into desired format
+    '''
   
-  #### classes for each client ####
-  tmp = [np.random.randint(1,10) for i in range(n_clients)]
-  total_partition = sum(tmp)
-
-  #### create partition among classes to fulfill criteria for clients ####
-  class_partition = break_into(total_partition, len(classes))
-
-  #### applying greedy approach first come and first serve ####
-  class_partition = sorted(class_partition,reverse=True)
-  class_partition_split = {}
-
-  #### based on class partition, partitioning the label indexes ###
-  for ind, class_ in enumerate(classes):
-      class_partition_split[class_] = [list(i) for i in np.array_split(label_indcs[ind],class_partition[ind])]
-      
-#   print([len(class_partition_split[key]) for key in  class_partition_split.keys()])
-
-  clients_split = []
-  count = 0
-  for i in range(n_clients):
-    n = tmp[i]
-    j = 0
-    indcs = []
-
-    while n>0:
-        class_ = classes[j]
-        if len(class_partition_split[class_])>0:
-            indcs.extend(class_partition_split[class_][-1])
-            count+=len(class_partition_split[class_][-1])
-            class_partition_split[class_].pop()
-            n-=1
-        j+=1
-
-    ##### sorting classes based on the number of examples it has #####
-    classes = sorted(classes,key=lambda x:len(class_partition_split[x]),reverse=True)
-    if n>0:
-        raise ValueError(" Unable to fulfill the criteria ")
-    clients_split.append([data[indcs], labels[indcs]])
-#   print(class_partition_split)
-#   print("total example ",count)
-
-
-  def print_split(clients_split): 
-    print("Data split:")
-    for i, client in enumerate(clients_split):
-      split = np.sum(client[1].reshape(1,-1)==np.arange(n_labels).reshape(-1,1), axis=1)
-      print(" - Client {}: {}".format(i,split))
-    print()
-      
-  if verbose:
-    print_split(clients_split)
+    n_labels = np.max(labels) + 1
   
-  clients_split = np.array(clients_split, dtype=object)
+    def break_into(n,m):
+        ''' 
+        return m random integers with sum equal to n 
+        '''
+        to_ret = [1 for i in range(m)]
+        for i in range(n-m):
+            ind = random.randint(0,m-1)
+            to_ret[ind] += 1
+        return to_ret
   
-  return clients_split
+    #### constants ####
+    n_classes = len(set(labels))
+    classes = list(range(n_classes))
+    np.random.shuffle(classes)
+    label_indcs  = [list(np.where(labels==class_)[0]) for class_ in classes]
+    
+    #### classes for each client ####
+    tmp = [np.random.randint(1,10) for i in range(n_clients)]
+    total_partition = sum(tmp)
+  
+    #### create partition among classes to fulfill criteria for clients ####
+    class_partition = break_into(total_partition, len(classes))
+  
+    #### applying greedy approach first come and first serve ####
+    class_partition = sorted(class_partition,reverse=True)
+    class_partition_split = {}
+  
+    #### based on class partition, partitioning the label indexes ###
+    for ind, class_ in enumerate(classes):
+        class_partition_split[class_] = [list(i) for i in np.array_split(label_indcs[ind],class_partition[ind])]
+        
+  #   print([len(class_partition_split[key]) for key in  class_partition_split.keys()])
+  
+    clients_split = []
+    count = 0
+    for i in range(n_clients):
+      n = tmp[i]
+      j = 0
+      indcs = []
+  
+      while n>0:
+          class_ = classes[j]
+          if len(class_partition_split[class_])>0:
+              indcs.extend(class_partition_split[class_][-1])
+              count+=len(class_partition_split[class_][-1])
+              class_partition_split[class_].pop()
+              n-=1
+          j+=1
+  
+      ##### sorting classes based on the number of examples it has #####
+      classes = sorted(classes,key=lambda x:len(class_partition_split[x]),reverse=True)
+      if n>0:
+          raise ValueError(" Unable to fulfill the criteria ")
+      clients_split.append([data[indcs], labels[indcs]])
+  #   print(class_partition_split)
+  #   print("total example ",count)
+  
+  
+    def print_split(clients_split): 
+        print("Data split:")
+        for i, client in enumerate(clients_split):
+            split = np.sum(client[1].reshape(1,-1)==np.arange(n_labels).reshape(-1,1), axis=1)
+            print(" - Client {}: {}".format(i,split))
+        print()
+        
+    if verbose:
+        print_split(clients_split)
+    
+    clients_split = np.array(clients_split, dtype=object)
+    
+    return clients_split
 
 
 def split_image_data(data, labels, n_clients, classes_per_client, shuffle, verbose):
