@@ -287,50 +287,7 @@ def split_image_data(data, labels, n_clients, classes_per_client, shuffle, verbo
 
 
 
-def split_balanced_non_iid(data, labels, n_clients, n_iid, skewness=0.5, max_classes_per_client=2):
-    data_per_client = [len(data) // n_clients] * n_clients
-    data_per_client[-1] += len(data) - sum(data_per_client)  # 处理不能整除的情况
 
-    clients_split = []
-
-    # 分配IID数据
-    data_indices = np.arange(len(data))
-    np.random.shuffle(data_indices)
-    start = 0
-    for i in range(n_iid):
-        end = start + data_per_client[i]
-        client_indices = data_indices[start:end]
-        clients_split.append((data[client_indices], labels[client_indices]))
-        start = end
-
-    # 分配non-IID数据
-    num_classes = len(np.unique(labels))
-    for i in range(n_iid, n_clients):
-        # 选择这个客户端将拥有的类别数量
-        if max_classes_per_client is not None:
-            num_classes_for_client = np.random.randint(1, max_classes_per_client + 1)
-            chosen_classes = np.random.choice(num_classes, num_classes_for_client, replace=False)
-        else:
-            chosen_classes = range(num_classes)
-        
-        # 每个类别的数据量按照随机比例分配，但确保每个类别至少有一个样本
-        proportions = np.random.dirichlet(np.repeat(skewness, len(chosen_classes)))
-        proportions = proportions / proportions.sum() * data_per_client[i]
-        proportions = np.ceil(proportions).astype(int)  # 向上取整，确保至少有一个样本
-
-        # 调整比例以确保总数与data_per_client[i]一致
-        while proportions.sum() > data_per_client[i]:
-            proportions[np.argmax(proportions)] -= 1
-        
-        client_indices = []
-        for j, class_idx in enumerate(chosen_classes):
-            class_indices = np.where(labels == class_idx)[0]
-            class_choices = np.random.choice(class_indices, proportions[j], replace=False)
-            client_indices.extend(class_choices)
-        
-        clients_split.append((data[client_indices], labels[client_indices]))
-
-    return clients_split
 
 
 # def shuffle_list(data):
@@ -440,6 +397,120 @@ def get_default_data_transforms(train=True, verbose=True):
 #   test_loader  = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False) 
 
 #   return client_loaders, test_loader
+
+
+
+def baseline_data(num):
+    '''
+    Returns baseline data loader to be used on retraining on global server
+    Input:
+          num : size of baseline data
+    Output:
+          loader: baseline data loader
+    '''
+    xtrain, ytrain, _, _ = get_cifar10()
+    x, y = shuffle_list_data(xtrain, ytrain)
+  
+    x, y = x[:num], y[:num]
+    transform, _ = get_default_data_transforms(train=True, verbose=True)
+    loader = torch.utils.data.DataLoader(CustomImageDataset(x, y, transform), batch_size=16, shuffle=True)
+  
+    return loader
+
+def client_update(client_model, optimizer, train_loader, epoch=5):
+    """
+    This function updates/trains client model on client data
+    """
+    client_model.train()
+    for e in range(epoch):
+        for batch_idx, (data, target) in enumerate(train_loader):
+            data, target = data.cuda(), target.cuda()
+            optimizer.zero_grad()
+            output = client_model(data)
+            loss = F.nll_loss(output, target)
+            loss.backward()
+            optimizer.step()
+    return loss.item()
+
+def client_syn(client_model, global_model):
+  '''
+  This function synchronizes the client model with global model
+  '''
+  client_model.load_state_dict(global_model.state_dict())
+
+
+
+def test(global_model, test_loader):
+    """
+    This function test the global model on test 
+    data and returns test loss and test accuracy 
+    """
+    global_model.eval()
+    test_loss = 0
+    correct = 0
+    with torch.no_grad():
+        for data, target in test_loader:
+            data, target = data.cuda(), target.cuda()
+            output = global_model(data)
+            test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
+            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
+            correct += pred.eq(target.view_as(pred)).sum().item()
+
+    test_loss /= len(test_loader.dataset)
+    acc = correct / len(test_loader.dataset)
+
+    return test_loss, acc
+
+
+#############################################################################################################
+
+
+def split_balanced_non_iid(data, labels, n_clients, n_iid, skewness=0.5, max_classes_per_client=2):
+    data_per_client = [len(data) // n_clients] * n_clients
+    data_per_client[-1] += len(data) - sum(data_per_client)  # 处理不能整除的情况
+
+    clients_split = []
+
+    # 分配IID数据
+    data_indices = np.arange(len(data))
+    np.random.shuffle(data_indices)
+    start = 0
+    for i in range(n_iid):
+        end = start + data_per_client[i]
+        client_indices = data_indices[start:end]
+        clients_split.append((data[client_indices], labels[client_indices]))
+        start = end
+
+    # 分配non-IID数据
+    num_classes = len(np.unique(labels))
+    for i in range(n_iid, n_clients):
+        # 选择这个客户端将拥有的类别数量
+        if max_classes_per_client is not None:
+            num_classes_for_client = np.random.randint(1, max_classes_per_client + 1)
+            chosen_classes = np.random.choice(num_classes, num_classes_for_client, replace=False)
+        else:
+            chosen_classes = range(num_classes)
+        
+        # 每个类别的数据量按照随机比例分配，但确保每个类别至少有一个样本
+        proportions = np.random.dirichlet(np.repeat(skewness, len(chosen_classes)))
+        proportions = proportions / proportions.sum() * data_per_client[i]
+        proportions = np.ceil(proportions).astype(int)  # 向上取整，确保至少有一个样本
+
+        # 调整比例以确保总数与data_per_client[i]一致
+        while proportions.sum() > data_per_client[i]:
+            proportions[np.argmax(proportions)] -= 1
+        
+        client_indices = []
+        for j, class_idx in enumerate(chosen_classes):
+            class_indices = np.where(labels == class_idx)[0]
+            class_choices = np.random.choice(class_indices, proportions[j], replace=False)
+            client_indices.extend(class_choices)
+        
+        clients_split.append((data[client_indices], labels[client_indices]))
+
+    return clients_split
+
+
 
 def get_data_loaders_FA(nclients, batch_size, classes_pc, real_wd, verbose=True ):
   
@@ -561,44 +632,6 @@ def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, 
     #return client_loaders, test_loader
 
 
-
-def baseline_data(num):
-    '''
-    Returns baseline data loader to be used on retraining on global server
-    Input:
-          num : size of baseline data
-    Output:
-          loader: baseline data loader
-    '''
-    xtrain, ytrain, _, _ = get_cifar10()
-    x, y = shuffle_list_data(xtrain, ytrain)
-  
-    x, y = x[:num], y[:num]
-    transform, _ = get_default_data_transforms(train=True, verbose=True)
-    loader = torch.utils.data.DataLoader(CustomImageDataset(x, y, transform), batch_size=16, shuffle=True)
-  
-    return loader
-
-def client_update(client_model, optimizer, train_loader, epoch=5):
-    """
-    This function updates/trains client model on client data
-    """
-    client_model.train()
-    for e in range(epoch):
-        for batch_idx, (data, target) in enumerate(train_loader):
-            data, target = data.cuda(), target.cuda()
-            optimizer.zero_grad()
-            output = client_model(data)
-            loss = F.nll_loss(output, target)
-            loss.backward()
-            optimizer.step()
-    return loss.item()
-
-def client_syn(client_model, global_model):
-  '''
-  This function synchronizes the client model with global model
-  '''
-  client_model.load_state_dict(global_model.state_dict())
 
 
 
@@ -802,28 +835,6 @@ def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders,
 
 
 
-def test(global_model, test_loader):
-    """
-    This function test the global model on test 
-    data and returns test loss and test accuracy 
-    """
-    global_model.eval()
-    test_loss = 0
-    correct = 0
-    with torch.no_grad():
-        for data, target in test_loader:
-            data, target = data.cuda(), target.cuda()
-            output = global_model(data)
-            test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
-            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-            correct += pred.eq(target.view_as(pred)).sum().item()
-
-    test_loss /= len(test_loader.dataset)
-    acc = correct / len(test_loader.dataset)
-
-    return test_loss, acc
-
-
 def create_class_distribution_matrix(clients_data):
     # 获取客户端数量和类别数量
     num_clients = len(clients_data)
@@ -863,6 +874,3 @@ def print_model_parameters(model, layer_name):
         print(f"Parameters of {layer_name}: {param}")
     except KeyError:
         print(f"Layer {layer_name} not found in model.")
-
-
-
