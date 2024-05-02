@@ -69,7 +69,7 @@ def train(args):
                                                                                                                                 args.real_world, args.validation_split,
                                                                                                                                 args.verbose)
     else:
-        train_loader, test_loader = get_data_loaders(classes_pc=args.classes_pc, nclients= args.num_clients, 
+        train_loader, test_loader = get_data_loaders_FA(classes_pc=args.classes_pc, nclients= args.num_clients, 
                                                 batch_size=args.batch_size, real_wd=args.real_world, verbose=args.verbose)
     
     if args.retrain:
