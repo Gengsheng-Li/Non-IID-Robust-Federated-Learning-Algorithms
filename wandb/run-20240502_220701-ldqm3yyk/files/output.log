@@ -1,0 +1,42 @@
+Start training
+The aggregation algorithm chose is: ligengwk
+Files already downloaded and verified
+Files already downloaded and verified
+D:\Anaconda\envs\FLlearner\lib\site-packages\sklearn\cluster\_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+D:\Anaconda\envs\FLlearner\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=1.
+  warnings.warn(
+  0%|                                                                                                                                       | 0/6 [00:00<?, ?it/s]
+Slected clinets:  [ 9  7 10  2  1 15]
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:32<00:00,  5.43s/it]
+Performance Weights [0.27215551743853633, 0.19096626643796455, 0.27101200686106347, 0.03487707261292167, 0.12235563178959405, 0.10863350485991995]
+Combined Weights: [0.05443110348770727, 0.019096626643796456, 0.054202401372212695, 0.0034877072612921668, 0.006117781589479703, 0.02172670097198399]
+Normalized Weights: [0.34219985621854787, 0.12005751258087707, 0.34076204169662117, 0.02192667145938174, 0.038461538461538464, 0.1365923795830338]
+  0%|                                                                                                                                       | 0/6 [00:00<?, ?it/s]
+0-th round completed!
+loss_train 2.17 | loss_test 2.41 | acc_test: 0.100
+Slected clinets:  [ 2  1  8 13  4 14]
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:32<00:00,  5.38s/it]
+Performance Weights [0.1721432074546346, 0.1755762628739578, 0.25453653751839134, 0.13094654242275625, 0.18489455615497793, 0.081902893575282]
+Combined Weights: [0.01721432074546346, 0.00877881314369789, 0.025453653751839136, 0.013094654242275626, 0.018489455615497793, 0.0163805787150564]
+Normalized Weights: [0.1731623088307844, 0.08830784410458806, 0.2560434139121855, 0.1317217562900839, 0.18598914652195364, 0.16477553034040454]
+  0%|                                                                                                                                       | 0/6 [00:00<?, ?it/s]
+1-th round completed!
+loss_train 2.4 | loss_test 2.35 | acc_test: 0.100
+Slected clinets:  [ 0 16  5 10  7  6]
+
+
+
+

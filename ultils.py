@@ -31,10 +31,10 @@ def get_cifar10():
 def print_image_data_stats(data_train, labels_train, data_test, labels_test):
     print("\nData: ")
     print(" - Train Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
-      data_train.shape, labels_train.shape, np.min(data_train), np.max(data_train),
+        data_train.shape, labels_train.shape, np.min(data_train), np.max(data_train),
         np.min(labels_train), np.max(labels_train)))
     print(" - Test Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
-      data_test.shape, labels_test.shape, np.min(data_train), np.max(data_train),
+        data_test.shape, labels_test.shape, np.min(data_train), np.max(data_train),
         np.min(labels_test), np.max(labels_test)))
   
   
@@ -346,7 +346,7 @@ class CustomImageDataset(Dataset):
         img, label = self.inputs[index], self.labels[index]
   
         if self.transforms is not None:
-          img = self.transforms(img)
+            img = self.transforms(img)
   
         return (img, label)
   
@@ -356,24 +356,24 @@ class CustomImageDataset(Dataset):
 
 def get_default_data_transforms(train=True, verbose=True):
     transforms_train = {
-    'cifar10' : transforms.Compose([
-      transforms.ToPILImage(),
-      transforms.RandomCrop(32, padding=4),
-      transforms.RandomHorizontalFlip(),
-      transforms.ToTensor(),
-      transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))]),#(0.24703223, 0.24348513, 0.26158784)
+        'cifar10' : transforms.Compose([
+        transforms.ToPILImage(),
+        transforms.RandomCrop(32, padding=4),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))]),#(0.24703223, 0.24348513, 0.26158784)
     }
     transforms_eval = {    
-    'cifar10' : transforms.Compose([
-      transforms.ToPILImage(),
-      transforms.ToTensor(),
-      transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
+        'cifar10' : transforms.Compose([
+        transforms.ToPILImage(),
+        transforms.ToTensor(),
+        transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
     }
     if verbose:
-      print("\nData preprocessing: ")
-      for transformation in transforms_train['cifar10'].transforms:
-        print(' -', transformation)
-      print()
+        print("\nData preprocessing: ")
+        for transformation in transforms_train['cifar10'].transforms:
+            print(' -', transformation)
+        print()
   
     return (transforms_train['cifar10'], transforms_eval['cifar10'])
 
@@ -433,12 +433,10 @@ def client_update(client_model, optimizer, train_loader, epoch=5):
     return loss.item()
 
 def client_syn(client_model, global_model):
-  '''
-  This function synchronizes the client model with global model
-  '''
-  client_model.load_state_dict(global_model.state_dict())
-
-
+    '''
+    This function synchronizes the client model with global model
+    '''
+    client_model.load_state_dict(global_model.state_dict())
 
 def test(global_model, test_loader):
     """
@@ -512,7 +510,7 @@ def split_balanced_non_iid(data, labels, n_clients, n_iid, skewness=0.5, max_cla
 
 
 
-def get_data_loaders_FA(nclients, batch_size, classes_pc, real_wd, verbose=True ):
+def get_data_loaders(nclients, batch_size, classes_pc, real_wd, verbose=True ):
   
   x_train, y_train, x_test, y_test = get_cifar10()
 
@@ -723,11 +721,10 @@ def server_aggregate_tocenter(global_model, client_models, client_lens):
 
 
 def evaluate_model_on_multiple_loaders(model, data_loaders, data_sizes):
-    model.eval()
-    total_correct = 0
     total_samples = 0
     weighted_accuracy = 0
 
+    model.eval()
     with torch.no_grad():
         for data_loader, data_size in zip(data_loaders, data_sizes):
             correct = 0
@@ -739,40 +736,42 @@ def evaluate_model_on_multiple_loaders(model, data_loaders, data_sizes):
                 _, predicted = torch.max(outputs.data, 1)
                 correct += (predicted == labels).sum().item()
                 total += labels.size(0)
-            # 如果数据集为空，避免除以零
-            if total > 0:
-                weighted_accuracy += (correct / total) * data_size
+
+            if total == 0:
+                raise ValueError("Error! Total is 0.")
+            
+            weighted_accuracy += (correct / total) * data_size
             total_samples += data_size
 
-    if total_samples > 0:
-        weighted_accuracy /= total_samples
-    else:
-        weighted_accuracy = 0
+    if total_samples == 0:
+        raise ValueError("Error! Total sample is 0.")
+    weighted_accuracy /= total_samples
 
     return weighted_accuracy
 
 
 
 # Proposed by ligeng, without k-means
-def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
+def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders, validation_data_sizes):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
-    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
+    # client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
+    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], client_data_loaders, validation_data_sizes) for i in range(len(client_models))]
 
     # Avoid division by zero
     total_accuracy = sum(client_accuracies)
     if total_accuracy == 0:
-        print("Warning: Total accuracy is zero, adjusting weights to avoid division by zero.")
-        total_accuracy = 1  # Set to 1 or a small number to avoid division by zero
+        raise ValueError("Warning: Total accuracy is zero.")
 
     # Calculate performance weights based on accuracies
-    performance_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
+    normalized_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
+    print("Normalized Weights:", normalized_weights)
 
     # Normalize weights
-    total_weight = sum(performance_weights)
-    normalized_weights = [w / total_weight for w in performance_weights]
-    print("Performance Weights", performance_weights)
-    print("Normalized Weights:", normalized_weights)  # Print normalized weights for debugging
+    # total_weight = sum(performance_weights)
+    # normalized_weights = [w / total_weight for w in performance_weights]
+    # print("Performance Weights", performance_weights)
+    # print("Normalized Weights:", normalized_weights)  # Print normalized weights for debugging
 
     # Aggregate the models using normalized performance weights
     global_dict = global_model.state_dict()
@@ -785,22 +784,23 @@ def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders
     
     global_model.load_state_dict(global_dict)
 
-    # Optionally, update all client models to the new global model
-    for model in client_models:
-        model.load_state_dict(global_model.state_dict())
+    # 这部分在train.py中的client_syn函数里已经实现了。
+    # # Optionally, update all client models to the new global model
+    # for model in client_models:
+    #     model.load_state_dict(global_model.state_dict())
 
 
 # Proposed by ligeng, with k-means
-def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
+def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_idx, k):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
-    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
+    # client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
+    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], client_data_loaders, validation_data_sizes) for i in range(len(client_models))]
     
     # Avoid division by zero
     total_accuracy = sum(client_accuracies)
     if total_accuracy == 0:
-        print("Warning: Total accuracy is zero, adjusting weights to avoid division by zero.")
-        total_accuracy = 1  # Set to 1 or a small number to avoid division by zero
+        raise ValueError("Warning: Total accuracy is zero.")
     
     # Calculate cluster weights based on the number of clients in each cluster
     client_counts = [sum(client_labels == i) for i in range(k)]
@@ -808,7 +808,8 @@ def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders,
 
     # Adjust cluster weights by incorporating performance metrics
     performance_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
-    combined_weights = [cluster_weights[client_labels[i]] * performance_weights[i] for i in range(len(client_models))]
+    # combined_weights = [cluster_weights[client_labels[i]] * performance_weights[i] for i in range(len(client_models))]
+    combined_weights = [cluster_weights[client_labels[client_idx[i]]] * performance_weights[i] for i in range(len(client_models))]
 
     # Normalize weights
     total_weight = sum(combined_weights)
@@ -828,9 +829,9 @@ def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders,
     
     global_model.load_state_dict(global_dict)
 
-    # Optionally, update all client models to the new global model
-    for model in client_models:
-        model.load_state_dict(global_model.state_dict())
+    # # Optionally, update all client models to the new global model
+    # for model in client_models:
+    #     model.load_state_dict(global_model.state_dict())
 
 
 

@@ -16,7 +16,7 @@ torch.backends.cudnn.benchmark=True
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Train model in a FL manner.")
-    parser.add_argument('--user', type=str, default='shuang')
+    parser.add_argument('--user', type=str, default='gsli')
     
     parser.add_argument('--agg_mth', type=str, default="ligengwk",
                         choices=['FA', 'client-client', 'client-server', 'ligengwk', 'ligengwok'])
@@ -69,7 +69,7 @@ def train(args):
                                                                                                                                 args.real_world, args.validation_split,
                                                                                                                                 args.verbose)
     else:
-        train_loader, test_loader = get_data_loaders_FA(classes_pc=args.classes_pc, nclients= args.num_clients, 
+        train_loader, test_loader = get_data_loaders(classes_pc=args.classes_pc, nclients= args.num_clients, 
                                                 batch_size=args.batch_size, real_wd=args.real_world, verbose=args.verbose)
     
     if args.retrain:
@@ -113,7 +113,7 @@ def train(args):
         elif args.agg_mth == 'client-server':
             server_aggregate_tocenter(global_model, client_models, client_lens)
         elif args.agg_mth == 'ligengwok':
-            server_aggregate_ligeng_wok(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx], client_labels, client_idx, args.num_clusters)
+            server_aggregate_ligeng_wok(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx])
         elif args.agg_mth == 'ligengwk':
             server_aggregate_ligeng_wk(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx], client_labels, client_idx, args.num_clusters)
         else:

@@ -1,0 +1,34 @@
+Start training
+The aggregation algorithm chose is: ligengwk
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data\cifar-10-python.tar.gz
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 170498071/170498071 [00:29<00:00, 5745164.38it/s]
+Extracting ./data\cifar-10-python.tar.gz to ./data
+Files already downloaded and verified
+D:\Anaconda\envs\test\lib\site-packages\sklearn\cluster\_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  0%|                                                                                                                                                                                                | 0/6 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\train.py", line 141, in <module>
+    train(args)
+  File "E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\train.py", line 96, in train
+    loss_train += client_update(client_models[i], opt[i], train_loader[client_idx[i]], args.epochs)
+  File "E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\ultils.py", line 427, in client_update
+    data, target = data.cuda(), target.cuda()
+  File "D:\Anaconda\envs\test\lib\site-packages\torch\cuda\__init__.py", line 239, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+Slected clinets:  [ 6  5  1 17  8 15]
+Each train_loader's length (num of batch):  [110, 64, 98, 21, 51, 40]

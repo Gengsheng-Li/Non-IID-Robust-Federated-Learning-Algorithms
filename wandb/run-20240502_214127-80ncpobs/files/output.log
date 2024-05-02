@@ -1,0 +1,16 @@
+Start training
+The aggregation algorithm chose is: ligengwk
+Files already downloaded and verified
+Files already downloaded and verified
+d:\Anaconda\envs\FLlearner\lib\site-packages\sklearn\cluster\_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+d:\Anaconda\envs\FLlearner\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=1.
+  warnings.warn(
+  0%|                                                                                                                                                      | 0/6 [00:00<?, ?it/s]
+Slected clinets:  [ 4  9  7 16  3  8]
+
+
+
+
+
+

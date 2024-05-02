@@ -1,0 +1,51 @@
+2024-05-02 20:54:30,693 INFO    StreamThr :37768 [internal.py:wandb_internal():86] W&B internal server running at pid: 37768, started at: 2024-05-02 20:54:30.693040
+2024-05-02 20:54:30,694 DEBUG   HandlerThread:37768 [handler.py:handle_request():146] handle_request: status
+2024-05-02 20:54:30,697 INFO    WriterThread:37768 [datastore.py:open_for_write():87] open: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_205430-2g81mw6h\run-2g81mw6h.wandb
+2024-05-02 20:54:30,698 DEBUG   SenderThread:37768 [sender.py:send():379] send: header
+2024-05-02 20:54:30,731 DEBUG   SenderThread:37768 [sender.py:send():379] send: run
+2024-05-02 20:54:35,014 INFO    SenderThread:37768 [retry.py:__call__():172] Retry attempt failed:
+urllib3.exceptions.SSLError: TLS/SSL connection has been closed (EOF) (_ssl.c:1131)
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)'))))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\sdk\internal\internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)'))))
+2024-05-02 20:54:35,773 DEBUG   HandlerThread:37768 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:54:39,781 WARNING StreamThr :37768 [internal.py:is_dead():414] Internal process exiting, parent pid 44448 disappeared
+2024-05-02 20:54:39,781 ERROR   StreamThr :37768 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-05-02 20:54:39,790 INFO    HandlerThread:37768 [handler.py:finish():866] shutting down handler
+2024-05-02 20:54:39,790 INFO    WriterThread:37768 [datastore.py:close():296] close: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_205430-2g81mw6h\run-2g81mw6h.wandb
+2024-05-02 20:54:40,781 INFO    MainThread:37768 [internal.py:handle_exit():76] Internal process exited

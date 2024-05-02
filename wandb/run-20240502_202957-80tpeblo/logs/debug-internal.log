@@ -1,0 +1,1168 @@
+2024-05-02 20:29:57,950 INFO    StreamThr :33648 [internal.py:wandb_internal():86] W&B internal server running at pid: 33648, started at: 2024-05-02 20:29:57.950663
+2024-05-02 20:29:57,952 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status
+2024-05-02 20:29:57,954 INFO    WriterThread:33648 [datastore.py:open_for_write():87] open: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\run-80tpeblo.wandb
+2024-05-02 20:29:57,956 DEBUG   SenderThread:33648 [sender.py:send():379] send: header
+2024-05-02 20:29:57,991 DEBUG   SenderThread:33648 [sender.py:send():379] send: run
+2024-05-02 20:29:58,894 INFO    SenderThread:33648 [dir_watcher.py:__init__():211] watching files in: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files
+2024-05-02 20:29:58,905 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: check_version
+2024-05-02 20:29:58,906 INFO    SenderThread:33648 [sender.py:_start_run_threads():1124] run started: 80tpeblo with start time 1714652997.951662
+2024-05-02 20:29:58,907 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: check_version
+2024-05-02 20:29:59,708 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: run_start
+2024-05-02 20:29:59,733 DEBUG   HandlerThread:33648 [system_info.py:__init__():26] System info init
+2024-05-02 20:29:59,734 DEBUG   HandlerThread:33648 [system_info.py:__init__():41] System info init done
+2024-05-02 20:29:59,734 INFO    HandlerThread:33648 [system_monitor.py:start():194] Starting system monitor
+2024-05-02 20:29:59,734 INFO    SystemMonitor:33648 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-02 20:29:59,734 INFO    HandlerThread:33648 [system_monitor.py:probe():214] Collecting system info
+2024-05-02 20:29:59,740 INFO    SystemMonitor:33648 [interfaces.py:start():190] Started cpu monitoring
+2024-05-02 20:29:59,740 INFO    SystemMonitor:33648 [interfaces.py:start():190] Started disk monitoring
+2024-05-02 20:29:59,741 INFO    SystemMonitor:33648 [interfaces.py:start():190] Started gpu monitoring
+2024-05-02 20:29:59,750 INFO    SystemMonitor:33648 [interfaces.py:start():190] Started memory monitoring
+2024-05-02 20:29:59,761 INFO    SystemMonitor:33648 [interfaces.py:start():190] Started network monitoring
+2024-05-02 20:29:59,768 DEBUG   HandlerThread:33648 [system_info.py:probe():150] Probing system
+2024-05-02 20:29:59,769 DEBUG   HandlerThread:33648 [system_info.py:_probe_git():135] Probing git
+2024-05-02 20:29:59,836 DEBUG   HandlerThread:33648 [system_info.py:_probe_git():143] Probing git done
+2024-05-02 20:29:59,837 DEBUG   HandlerThread:33648 [system_info.py:probe():198] Probing system done
+2024-05-02 20:29:59,837 DEBUG   HandlerThread:33648 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.8.18', 'heartbeatAt': '2024-05-02T12:29:59.768104', 'startedAt': '2024-05-02T12:29:57.934132', 'docker': None, 'cuda': None, 'args': ('--agg_mth', 'ligengwok', '--user', 'gsli'), 'state': 'running', 'program': '.\\train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/Gengsheng-Li/Non-IID-Robust-Federated-Learning-Algorithms.git', 'commit': '01b67c9a3b3b5e43dc259d69241b4a8f2dc31a35'}, 'email': 'ligengchengucd@163.com', 'root': 'E:/Projects/Non-IID-Robust-Federated-Learning-Algorithms', 'host': 'LAPTOP-G8U7O3JS', 'username': 'RyukiRi', 'executable': 'D:\\Anaconda\\envs\\FLlearner\\python.exe', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 1506.0, 'min': 0.0, 'max': 2300.0}, 'cpu_freq_per_core': [{'current': 1506.0, 'min': 0.0, 'max': 2300.0}], 'disk': {'/': {'total': 1907.7265586853027, 'used': 990.4922332763672}}, 'gpu': 'NVIDIA GeForce RTX 3080 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080 Ti Laptop GPU', 'memory_total': 17179869184}], 'memory': {'total': 63.672584533691406}}
+2024-05-02 20:29:59,837 INFO    HandlerThread:33648 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-02 20:29:59,837 INFO    HandlerThread:33648 [system_monitor.py:probe():227] Publishing system info
+2024-05-02 20:29:59,837 DEBUG   HandlerThread:33648 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-02 20:29:59,901 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\conda-environment.yaml
+2024-05-02 20:30:03,208 DEBUG   HandlerThread:33648 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-02 20:30:03,208 INFO    HandlerThread:33648 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-02 20:30:03,220 DEBUG   SenderThread:33648 [sender.py:send():379] send: files
+2024-05-02 20:30:03,221 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-05-02 20:30:03,221 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:03,325 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-02 20:30:03,325 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: python_packages
+2024-05-02 20:30:03,326 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:30:03,326 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:30:03,328 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:30:03,931 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\conda-environment.yaml
+2024-05-02 20:30:03,931 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\requirements.txt
+2024-05-02 20:30:03,931 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-metadata.json
+2024-05-02 20:30:03,966 DEBUG   SenderThread:33648 [sender.py:send():379] send: telemetry
+2024-05-02 20:30:03,995 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:30:03,995 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:30:03,995 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:30:04,945 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:05,525 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:30:05,525 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:30:05,525 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:30:06,958 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:07,974 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:08,232 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:30:08,232 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:30:08,232 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:30:08,232 INFO    wandb-upload_0:33648 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\util\ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\util\ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "D:\Anaconda\envs\FLlearner\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "D:\Anaconda\envs\FLlearner\lib\ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "D:\Anaconda\envs\FLlearner\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\util\ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\urllib3\util\ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "D:\Anaconda\envs\FLlearner\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "D:\Anaconda\envs\FLlearner\lib\ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "D:\Anaconda\envs\FLlearner\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\sdk\internal\internal_api.py", line 2760, in upload_file
+    response = self._upload_file_session.put(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\sdk\internal\internal_api.py", line 2791, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\wandb\sdk\internal\internal_api.py", line 2760, in upload_file
+    response = self._upload_file_session.put(
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Anaconda\envs\FLlearner\lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2024-05-02 20:30:08,277 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:08,974 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:12,847 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:30:12,847 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:30:12,847 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:30:14,010 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:14,160 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:18,336 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:30:18,337 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:30:18,337 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:30:19,689 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:21,233 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:30:21,233 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:30:21,233 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:30:22,082 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:24,939 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:26,111 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:29,976 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:31,143 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\config.yaml
+2024-05-02 20:30:32,150 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:33,337 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:30:33,338 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:30:33,352 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:30:35,681 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:38,167 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:30:38,167 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:30:38,167 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:30:38,196 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:41,334 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:42,219 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:43,176 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:30:43,177 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:30:43,178 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:30:43,179 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:30:43,225 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_created():271] file/dir created: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:30:44,231 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:46,365 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:48,259 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:48,350 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:30:48,350 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:30:48,364 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:30:51,638 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:56,751 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:30:58,342 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:30:59,763 DEBUG   SystemMonitor:33648 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-02 20:30:59,764 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:31:02,107 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:02,380 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:03,359 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:31:03,359 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:31:03,374 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:31:07,175 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:08,435 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:12,278 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:12,474 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:15,771 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:31:15,771 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:31:15,771 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:31:17,320 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:18,378 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:31:18,378 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:31:18,379 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:31:22,576 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:22,832 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:24,595 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:26,337 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:31:26,338 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:31:26,340 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:31:26,340 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:31:26,612 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:31:28,360 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:28,631 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:29,778 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:31:33,370 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:33,385 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:31:33,385 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:31:33,386 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:31:36,715 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:39,015 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:42,774 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:44,687 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:48,393 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:31:48,394 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:31:48,394 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:31:50,127 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:50,851 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:55,259 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:31:55,910 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:31:59,779 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:31:59,959 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:00,789 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:02,990 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:03,398 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:32:03,399 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:32:03,399 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:32:04,429 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:32:04,430 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:32:04,430 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:32:04,431 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:32:05,015 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:32:06,028 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:06,452 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:07,029 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:11,494 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:14,107 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:16,527 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:18,402 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:32:18,417 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:32:18,418 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:32:20,182 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:21,787 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:26,840 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:27,557 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:32:27,557 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:32:27,557 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:32:29,788 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:32:30,289 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:32,812 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:33,401 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:32:33,430 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:32:33,431 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:32:36,360 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:38,213 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:40,405 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:43,672 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:44,441 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:47,472 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:48,409 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:32:48,418 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:32:48,419 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:32:48,419 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:32:48,421 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:32:48,439 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:32:48,440 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:32:48,484 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:32:48,709 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:49,496 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:50,512 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:53,775 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:56,585 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:32:59,535 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:32:59,807 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:33:03,423 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:33:03,454 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:33:03,455 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:33:04,676 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:04,752 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:09,809 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:14,772 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:15,610 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:16,786 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:18,438 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:33:18,468 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:33:18,469 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:33:20,771 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:25,962 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:26,849 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:28,863 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:29,795 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:33:31,687 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:32,890 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:33,435 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:33:33,437 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:33:33,437 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:33:33,438 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:33:33,446 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:33:33,491 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:33:33,492 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:33:33,898 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:33:34,906 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:36,723 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:36,919 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:41,757 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:44,977 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:47,059 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:48,450 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:33:48,495 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:33:48,509 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:33:49,006 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:51,019 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:52,895 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:55,040 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:57,271 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:33:57,272 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:33:57,272 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:33:57,274 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:33:58,060 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:33:58,285 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:33:59,071 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:33:59,802 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:34:03,099 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:03,433 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:03,447 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:34:03,508 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:34:03,508 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:34:08,760 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:09,168 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:14,436 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:15,210 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:17,217 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:18,457 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:34:18,503 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:34:18,503 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:34:19,743 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:25,289 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:25,578 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:27,326 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:34:27,327 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:34:27,327 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:34:27,328 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:34:28,295 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:34:29,296 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:29,812 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:34:30,823 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:33,464 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:34:33,517 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:34:33,517 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:34:35,357 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:36,799 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:39,400 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:41,853 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:46,888 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:48,475 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:34:48,520 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:34:48,520 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:34:49,491 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:51,508 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:52,402 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:57,556 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:34:57,663 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:34:59,813 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:35:03,453 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:03,482 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:35:03,528 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:35:03,559 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:35:03,603 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:06,448 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:35:06,448 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:35:06,448 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:35:07,648 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:08,179 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:35:08,180 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:35:08,180 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:35:08,182 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:35:08,661 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:35:09,189 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:09,662 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:13,692 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:14,309 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:15,705 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:18,493 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:35:18,538 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:35:18,538 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:35:19,888 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:23,762 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:25,065 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:29,820 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:35:29,821 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:30,820 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:33,499 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:35:33,545 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:35:33,546 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:35:33,864 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:35,847 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:40,918 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:43,960 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:45,963 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:46,098 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:46,857 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:35:46,858 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:35:46,858 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:35:46,860 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:35:46,977 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:35:47,978 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:48,508 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:35:48,568 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:35:48,568 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:35:51,876 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:54,013 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:35:57,069 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:35:59,824 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:36:02,098 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:02,854 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:03,516 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:36:03,576 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:36:03,577 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:36:07,950 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:11,196 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:13,207 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:18,250 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:18,521 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:36:18,598 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-02 20:36:18,598 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: stop_status
+2024-05-02 20:36:19,280 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:23,638 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:36:28,699 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:36:33,537 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:36:36,570 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:36:38,814 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:36:40,291 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:36:40,292 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:36:40,292 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:36:40,293 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:40,294 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:36:40,519 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:36:41,533 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:42,544 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:43,856 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:36:45,582 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:46,125 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:48,542 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:36:51,189 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:53,978 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:36:55,699 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:56,438 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:36:59,018 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:36:59,747 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:36:59,839 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:37:01,862 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:03,554 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:37:05,821 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:06,922 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:07,842 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:09,140 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:09,866 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:10,939 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:37:10,940 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:37:10,940 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:37:10,943 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:37:11,892 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:11,893 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:37:11,953 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:14,188 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:17,017 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:18,558 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:37:22,005 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:22,411 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:24,302 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:26,032 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:27,619 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:28,056 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:29,333 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:29,845 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:37:32,085 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:33,181 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:33,573 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:37:38,216 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:39,403 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:42,154 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:43,824 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:44,441 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:46,184 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:48,199 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:48,574 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:37:49,041 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:49,871 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:37:49,872 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:37:49,873 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:37:49,874 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:37:50,212 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:37:52,230 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:37:54,514 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:54,924 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:37:59,563 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:37:59,863 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:38:00,334 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:00,882 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:03,573 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:38:06,520 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:08,424 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:08,681 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:11,573 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:13,728 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:16,507 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:17,521 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:18,577 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:38:22,577 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:23,846 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:26,629 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:27,959 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:28,912 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:29,867 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:38:30,675 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:32,694 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:33,586 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:38:33,722 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:34,428 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:38:34,439 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:38:34,439 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:38:34,439 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:38:34,717 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:38:36,742 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:39,023 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:39,492 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:44,078 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:44,546 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:44,820 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:48,597 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:38:50,278 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:50,898 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:38:54,181 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:55,318 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:38:59,219 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:38:59,869 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:39:00,881 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:01,018 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:03,608 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:39:05,060 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:06,190 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:09,101 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:09,315 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:11,121 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:11,409 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:13,124 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:14,354 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:15,171 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:39:15,172 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:39:15,172 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:39:15,173 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:39:16,155 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:39:17,167 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:17,197 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:18,608 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:39:22,254 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:24,241 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:24,465 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:28,119 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:29,503 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:29,878 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:39:33,618 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:39:33,919 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:34,310 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:38,337 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:39,568 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:39,719 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:44,375 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:44,600 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:44,780 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:48,409 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:48,621 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:39:50,155 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:51,432 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:51,865 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:39:51,867 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:39:51,867 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:39:51,868 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:39:52,443 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:52,443 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:39:53,456 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:53,668 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:53,880 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:39:53,880 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:39:53,880 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:39:55,809 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:39:56,488 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:39:58,721 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:39:59,883 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:40:00,894 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:03,627 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:40:04,578 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:06,252 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:08,833 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:10,644 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:11,961 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:13,892 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:17,033 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:18,638 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:40:18,742 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:22,795 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:24,021 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:24,806 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:28,416 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:29,070 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:29,889 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:40:32,889 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:33,646 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:40:34,295 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:37,953 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:38,338 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:40:38,339 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:40:38,339 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:40:38,340 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:40:38,963 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:38,964 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:40:39,189 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:39,356 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:39,976 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:44,250 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:44,419 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:48,652 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:40:49,076 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:50,239 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:54,353 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:55,139 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:55,396 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:40:59,187 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:40:59,414 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:40:59,899 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:41:00,909 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:03,648 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:41:06,672 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:07,276 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:09,528 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:11,741 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:14,584 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:15,370 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:16,838 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:18,664 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:41:19,418 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:21,452 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:21,876 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:22,985 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:41:22,986 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:41:22,987 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:41:22,988 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:41:23,471 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:23,471 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:41:23,680 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:25,485 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:27,019 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:28,718 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:29,908 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:41:32,749 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:33,546 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:33,679 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:41:37,785 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:38,794 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:39,590 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:41,605 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:43,620 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:43,832 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:48,659 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:48,690 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:41:49,666 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:53,705 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:53,915 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:57,748 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:41:58,970 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:41:59,227 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:41:59,909 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:42:00,027 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:42:00,027 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:42:00,028 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:42:00,030 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:42:00,785 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:42:01,795 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:03,700 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:42:04,824 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:05,849 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:09,086 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:10,597 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:11,912 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:14,141 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:15,642 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:18,697 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:42:19,976 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:20,730 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:21,992 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:24,237 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:25,776 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:28,053 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:29,293 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:29,921 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:42:30,924 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:33,709 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:42:36,135 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:36,845 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:39,385 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:40,187 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:40,294 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:42:40,295 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:42:40,295 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:42:40,297 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:42:41,201 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:41,202 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:42:42,214 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:42,320 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:44,451 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:47,381 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:48,713 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:42:49,301 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:52,869 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:54,579 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:57,404 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:42:58,734 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:42:59,639 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:42:59,927 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:43:01,457 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:03,715 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:43:03,974 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:07,519 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:08,730 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:09,228 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:13,562 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:13,773 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:15,123 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:17,602 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:18,706 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:43:20,640 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:20,746 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:21,647 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:43:21,648 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:43:21,648 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:43:21,649 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:43:21,651 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:43:22,658 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:23,664 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:23,860 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:26,687 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:28,898 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:29,710 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:29,935 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:43:31,952 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:33,710 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:43:35,752 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:37,842 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:38,969 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:41,796 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:43,389 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:44,005 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:45,825 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:48,713 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:43:48,938 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:49,855 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:53,895 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:54,092 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:54,440 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:56,933 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:43:57,584 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:43:57,584 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:43:57,585 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:43:57,586 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:43:57,946 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:43:59,155 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:43:59,610 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:43:59,943 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:43:59,983 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:03,722 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:44:04,026 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:05,371 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:09,278 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:10,930 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:12,112 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:14,316 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:16,066 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:16,156 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:18,746 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:44:21,125 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:22,230 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:24,412 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:26,377 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:28,281 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:29,460 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:29,944 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:44:32,301 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:32,331 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:33,753 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:44:34,358 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:36,664 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:44:36,665 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:44:36,665 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:44:36,666 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:44:37,395 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:44:37,668 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:38,408 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:39,587 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:42,454 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:43,373 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:44,644 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:48,515 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:48,755 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:44:49,134 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:54,313 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:54,585 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:44:54,750 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:59,362 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:44:59,798 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:44:59,950 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:45:03,769 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:45:04,654 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:04,692 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:06,707 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:08,900 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:09,716 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:12,777 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:13,954 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:14,798 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:15,443 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:45:15,444 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:45:15,444 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:45:15,445 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:15,447 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:45:15,810 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:45:16,825 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:18,772 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:45:20,510 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:22,892 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:23,132 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-05-02 20:45:23,132 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:45:23,132 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:45:24,065 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:25,568 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:29,101 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:29,957 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:45:30,978 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:32,963 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:33,774 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:45:36,011 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:39,002 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:39,166 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:41,223 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:44,198 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:46,888 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:47,053 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:48,783 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:45:52,617 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:53,098 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:54,279 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:55,127 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:56,104 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:45:56,105 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:45:56,106 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:45:56,106 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:45:56,142 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:45:57,156 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:58,122 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:45:59,176 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:45:59,341 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:45:59,962 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:46:03,528 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:03,784 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:46:05,237 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:08,588 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:09,446 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:12,321 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:14,168 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:14,470 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:16,358 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:18,798 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:46:19,373 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:24,432 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:24,581 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:24,838 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:28,480 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:29,628 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:29,976 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:46:29,977 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:33,813 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:46:35,026 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:38,608 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:39,756 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:40,074 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:41,648 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:42,904 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:46:42,905 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:46:42,905 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:46:42,907 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:46:43,663 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:46:44,676 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:44,796 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:45,690 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:45,946 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:48,818 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:46:50,999 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:53,906 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:54,785 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:46:56,569 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:46:58,960 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:46:59,989 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:47:01,650 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:02,888 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:03,824 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:47:04,913 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:06,848 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:09,073 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:11,910 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:14,130 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:15,025 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:17,821 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:18,818 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:47:22,874 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:24,228 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:25,130 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:27,942 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:29,162 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:29,267 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:30,004 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:47:33,189 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:33,776 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:33,821 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:47:34,550 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:47:34,551 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:47:34,551 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:47:34,552 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:47:35,204 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:35,205 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:47:37,218 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:39,230 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:39,339 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:39,682 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:44,375 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:44,721 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:48,828 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:47:49,309 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:49,865 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:54,463 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:54,872 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:47:55,401 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:47:59,522 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:47:59,930 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:00,008 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:48:01,464 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:03,836 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:48:05,061 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:09,652 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:10,113 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:11,552 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:14,682 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:15,575 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:18,847 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:48:21,321 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:48:21,476 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:21,656 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:23,928 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:48:24,782 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:25,703 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:26,663 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:48:26,664 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:48:26,665 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:48:26,665 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:26,666 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:48:26,718 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:48:27,730 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:28,618 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:48:29,824 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:30,022 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:48:31,771 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:32,043 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:33,855 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:48:35,820 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:37,388 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:38,384 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:48:38,930 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:42,454 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:43,994 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:45,943 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:48,438 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:48,862 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:48:52,006 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:54,048 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:48:54,123 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:55,245 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:48:58,075 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:48:59,166 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:48:59,378 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:00,024 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:49:00,100 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:02,110 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:03,868 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:49:03,999 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:49:04,000 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:49:04,001 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:49:04,003 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:49:04,126 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:49:05,005 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:06,145 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:09,225 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:49:10,193 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:10,843 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:14,289 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:49:16,269 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:16,588 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:18,872 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:49:21,654 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:24,346 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:24,406 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:49:26,934 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:29,446 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:49:30,033 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:49:32,047 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:33,116 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:49:33,883 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:49:34,424 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:37,236 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:39,521 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:49:40,474 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:42,858 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:44,499 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:44,558 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:49:46,512 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:47,368 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:49:47,368 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:49:47,368 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:49:47,370 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:49:47,540 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:49:48,377 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:48,542 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:48,887 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:49:53,424 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:54,648 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:49:57,640 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:49:58,456 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:49:59,712 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:00,043 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:50:01,700 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:03,886 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:50:04,098 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:09,784 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:09,814 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:10,026 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:13,825 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:14,855 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:15,957 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:18,891 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:50:21,023 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:21,901 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:23,946 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:25,928 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:26,875 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:27,952 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:28,996 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:29,871 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:50:29,872 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:50:29,873 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:50:29,873 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:50:29,976 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:29,977 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:50:30,053 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:50:32,000 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:32,076 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:33,907 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:50:37,120 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:38,071 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:39,101 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:42,568 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:44,117 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:44,132 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:44,987 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:50:47,924 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:48,922 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:50:53,294 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:54,185 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:50:54,186 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:56,188 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:50:59,030 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:50:59,197 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:00,057 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:51:03,932 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:51:04,113 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:05,947 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2767] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/federated_learningg/federated_learningg/80tpeblo/wandb-metadata.json?Expires=1714739403&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JHSNgi8SXE2RYYsQgwOT41W%2FmNa9KSvIEL1Z654Wx7uD7jczn5tscLzTymOtxcYm7J77q9KjPUO0szmpcb5I4Xq%2BJtSHlvcvuu0L8cAT3UxQHoiOjnbq3qegItYpfv6kxvzmL9JpBtbb9JkTcuE7KT6rlS80xdz1YBkb4QWxQa7apePbMbpY04bC8wmsiwK3b0vPRvJlk29yGAYA%2BV5jgZFxrnt91zFfdEGWTsxTPRGSyhwF8pQrVOeS0vjERDTtpRNwV%2Bp5R870BnMffIXTdUNxWSjAdvKyzT7tsuPjUyMfaJQDzM28DPdvEr2kOXoSzCm4DHcd0qy2feIzGdpVfw%3D%3D (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)'))))
+2024-05-02 20:51:05,948 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2769] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1568'}
+2024-05-02 20:51:05,948 ERROR   wandb-upload_0:33648 [internal_api.py:upload_file():2771] upload_file response body: 
+2024-05-02 20:51:06,297 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:09,283 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:09,359 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:14,340 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:14,415 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:16,394 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:18,937 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:51:20,255 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:20,437 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:21,445 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:51:21,446 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:51:21,447 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:51:21,448 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:51:22,447 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:22,448 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:51:24,434 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:25,503 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:26,482 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:29,480 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:30,067 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:51:31,075 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:33,951 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:51:36,570 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:36,765 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:39,567 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:41,810 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:44,618 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:44,650 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:47,585 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:48,966 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:51:52,623 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:54,698 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:51:54,743 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:51:58,476 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:51:59,746 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:52:00,081 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:52:02,845 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:52:03,979 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-02 20:52:04,130 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:06,893 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:52:09,386 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:09,871 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-02 20:52:10,946 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:52:11,294 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-02 20:52:11,295 DEBUG   SenderThread:33648 [sender.py:send():379] send: history
+2024-05-02 20:52:11,295 DEBUG   SenderThread:33648 [sender.py:send_request():406] send_request: summary_record
+2024-05-02 20:52:11,296 INFO    SenderThread:33648 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-02 20:52:11,949 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\wandb-summary.json
+2024-05-02 20:52:12,962 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:52:14,651 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:14,985 INFO    Thread-16 :33648 [dir_watcher.py:_on_file_modified():288] file/dir modified: E:\Projects\Non-IID-Robust-Federated-Learning-Algorithms\wandb\run-20240502_202957-80tpeblo\files\output.log
+2024-05-02 20:52:19,671 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:24,704 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:29,737 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:30,088 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:52:35,122 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:40,161 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:45,244 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:50,304 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:52:55,340 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:53:00,098 DEBUG   SenderThread:33648 [sender.py:send():379] send: stats
+2024-05-02 20:53:01,109 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:53:06,156 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:53:11,188 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:53:13,373 WARNING FileStreamThread:33648 [file_stream.py:request_with_retry():687] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/federated_learningg/federated_learningg/80tpeblo/file_stream (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1131)')))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000027F0A61CD30>>, timeout=180.0), args: ('https://api.wandb.ai/files/federated_learningg/federated_learningg/80tpeblo/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 34, 'content': ['{"system.disk.\\\\.usagePercent": 51.9, "system.disk.\\\\.usageGB": 990.49, "system.disk.in": 2.12, "system.disk.out": 186.03, "system.cpu": 0.98, "system.cpu.0.cpu_percent": 1.61, "system.cpu.1.cpu_percent": 0.21, "system.cpu.2.cpu_percent": 0.79, "system.cpu.3.cpu_percent": 0.53, "system.cpu.4.cpu_percent": 3.11, "system.cpu.5.cpu_percent": 0.05, "system.cpu.6.cpu_percent": 28.53, "system.cpu.7.cpu_percent": 1.04, "system.cpu.8.cpu_percent": 1.31, "system.cpu.9.cpu_percent": 0.37, "system.cpu.10.cpu_percent": 3.27, "system.cpu.11.cpu_percent": 0.11, "system.cpu.12.cpu_percent": 0.16, "system.cpu.13.cpu_percent": 0.0, "system.cpu.14.cpu_percent": 0.27, "system.cpu.15.cpu_percent": 0.43, "system.cpu.16.cpu_percent": 0.26, "system.cpu.17.cpu_percent": 0.21, "system.cpu.18.cpu_percent": 0.31, "system.cpu.19.cpu_percent": 0.05, "system.proc.cpu.threads": 36, "system.proc.memory.availableMB": 43225.1, "system.memory": 33.71, "system.proc.memory.rssMB": 1946.18, "system.proc.memory.percent": 2.98, "system.network.sent": 1835391.13, "system.network.recv": 4829602.13, "system.gpu.0.memoryAllocated": 21.97, "system.gpu.process.0.memoryAllocated": 21.97, "system.gpu.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.process.0.memoryAllocatedBytes": 3774773930.67, "system.gpu.0.memory": 28.47, "system.gpu.process.0.memory": 28.47, "system.gpu.0.gpu": 58.93, "system.gpu.process.0.gpu": 58.93, "system.gpu.0.temp": 85.6, "system.gpu.process.0.temp": 85.6, "system.gpu.0.powerWatts": 114.52, "system.gpu.process.0.powerWatts": 114.52, "system.gpu.0.powerPercent": 96.09, "system.gpu.process.0.powerPercent": 96.09, "_wandb": true, "_timestamp": 1714654080.00658, "_runtime": 1082.054918}']}, 'output.log': {'offset': 65, 'content': ['ERROR 2024-05-02T12:48:21.053002 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:45<00:00,  7.65s/it]\n']}}, 'dropped': 0}}
+2024-05-02 20:53:16,244 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report
+2024-05-02 20:53:21,278 DEBUG   HandlerThread:33648 [handler.py:handle_request():146] handle_request: status_report

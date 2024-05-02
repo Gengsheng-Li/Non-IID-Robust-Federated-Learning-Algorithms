@@ -1,0 +1,58 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.8.18",
+    "heartbeatAt": "2024-05-02T14:07:03.140821",
+    "startedAt": "2024-05-02T14:07:01.322606",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--agg_mth",
+        "ligengwk",
+        "--user",
+        "gsli"
+    ],
+    "state": "running",
+    "program": ".\\train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/Gengsheng-Li/Non-IID-Robust-Federated-Learning-Algorithms.git",
+        "commit": "01b67c9a3b3b5e43dc259d69241b4a8f2dc31a35"
+    },
+    "email": "ligengchengucd@163.com",
+    "root": "E:/Projects/Non-IID-Robust-Federated-Learning-Algorithms",
+    "host": "LAPTOP-G8U7O3JS",
+    "username": "RyukiRi",
+    "executable": "D:\\Anaconda\\envs\\FLlearner\\python.exe",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2300.0,
+        "min": 0.0,
+        "max": 2300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2300.0,
+            "min": 0.0,
+            "max": 2300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1907.7265586853027,
+            "used": 990.4948616027832
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 63.672584533691406
+    }
+}
