@@ -63,7 +63,7 @@ def train(args):
     opt = [optim.SGD(model.parameters(), lr=args.lr) for model in client_models]
 
     # Load data loaders
-    if args.agg_mth=='ligengwk' or 'ligengwok':
+    if args.agg_mth == 'ligengwk' or args.agg_mth == 'ligengwok':
         train_loader, val_loader, test_loader, class_distribution, client_labels, validation_data_sizes = get_data_loaders_val(args.num_clients, args.batch_size, 
                                                                                                                                 args.num_clusters, args.classes_pc, 
                                                                                                                                 args.real_world, args.validation_split,
