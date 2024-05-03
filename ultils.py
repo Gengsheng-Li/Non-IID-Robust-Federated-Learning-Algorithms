@@ -31,10 +31,10 @@ def get_cifar10():
 def print_image_data_stats(data_train, labels_train, data_test, labels_test):
     print("\nData: ")
     print(" - Train Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
-        data_train.shape, labels_train.shape, np.min(data_train), np.max(data_train),
+      data_train.shape, labels_train.shape, np.min(data_train), np.max(data_train),
         np.min(labels_train), np.max(labels_train)))
     print(" - Test Set: ({},{}), Range: [{:.3f}, {:.3f}], Labels: {},..,{}".format(
-        data_test.shape, labels_test.shape, np.min(data_train), np.max(data_train),
+      data_test.shape, labels_test.shape, np.min(data_train), np.max(data_train),
         np.min(labels_test), np.max(labels_test)))
   
   
@@ -346,7 +346,7 @@ class CustomImageDataset(Dataset):
         img, label = self.inputs[index], self.labels[index]
   
         if self.transforms is not None:
-            img = self.transforms(img)
+          img = self.transforms(img)
   
         return (img, label)
   
@@ -356,24 +356,24 @@ class CustomImageDataset(Dataset):
 
 def get_default_data_transforms(train=True, verbose=True):
     transforms_train = {
-        'cifar10' : transforms.Compose([
-        transforms.ToPILImage(),
-        transforms.RandomCrop(32, padding=4),
-        transforms.RandomHorizontalFlip(),
-        transforms.ToTensor(),
-        transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))]),#(0.24703223, 0.24348513, 0.26158784)
+    'cifar10' : transforms.Compose([
+      transforms.ToPILImage(),
+      transforms.RandomCrop(32, padding=4),
+      transforms.RandomHorizontalFlip(),
+      transforms.ToTensor(),
+      transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))]),#(0.24703223, 0.24348513, 0.26158784)
     }
     transforms_eval = {    
-        'cifar10' : transforms.Compose([
-        transforms.ToPILImage(),
-        transforms.ToTensor(),
-        transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
+    'cifar10' : transforms.Compose([
+      transforms.ToPILImage(),
+      transforms.ToTensor(),
+      transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
     }
     if verbose:
-        print("\nData preprocessing: ")
-        for transformation in transforms_train['cifar10'].transforms:
-            print(' -', transformation)
-        print()
+      print("\nData preprocessing: ")
+      for transformation in transforms_train['cifar10'].transforms:
+        print(' -', transformation)
+      print()
   
     return (transforms_train['cifar10'], transforms_eval['cifar10'])
 
@@ -429,14 +429,17 @@ def client_update(client_model, optimizer, train_loader, epoch=5):
             output = client_model(data)
             loss = F.nll_loss(output, target)
             loss.backward()
+            #torch.nn.utils.clip_grad_norm_(client_model.parameters(), max_norm=1)
             optimizer.step()
     return loss.item()
 
 def client_syn(client_model, global_model):
-    '''
-    This function synchronizes the client model with global model
-    '''
-    client_model.load_state_dict(global_model.state_dict())
+  '''
+  This function synchronizes the client model with global model
+  '''
+  client_model.load_state_dict(global_model.state_dict())
+
+
 
 def test(global_model, test_loader):
     """
@@ -509,38 +512,88 @@ def split_balanced_non_iid(data, labels, n_clients, n_iid, skewness=0.5, max_cla
     return clients_split
 
 
+# def split_balanced_non_iid(data, labels, n_clients, n_iid, skewness=0.5, max_classes_per_client=2):
+#     total_data = len(data)
+#     data_per_client = np.random.randint(1, total_data, size=n_clients)
+#     data_per_client = np.floor(data_per_client / data_per_client.sum() * total_data).astype(int)
+#     data_per_client[-1] = total_data - data_per_client[:-1].sum()  # Adjust last client to sum correctly
 
-def get_data_loaders(nclients, batch_size, classes_pc, real_wd, verbose=True ):
-  
-  x_train, y_train, x_test, y_test = get_cifar10()
+#     clients_split = []
+#     data_indices = np.arange(total_data)
+#     np.random.shuffle(data_indices)
+#     start = 0
 
-  if verbose:
-    print_image_data_stats(x_train, y_train, x_test, y_test)
+#     for i in range(n_clients):
+#         end = start + data_per_client[i]
+#         if i < n_iid:
+#             client_indices = data_indices[start:end]
+#             clients_split.append((data[client_indices], labels[client_indices]))
+#         else:
+#             num_classes = len(np.unique(labels))
+#             if max_classes_per_client is not None:
+#                 num_classes_for_client = np.random.randint(1, max_classes_per_client + 1)
+#                 chosen_classes = np.random.choice(num_classes, num_classes_for_client, replace=False)
+#             else:
+#                 chosen_classes = range(num_classes)
 
-  transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
+#             proportions = np.random.dirichlet(np.repeat(skewness, len(chosen_classes)))
+#             proportions = proportions / proportions.sum() * data_per_client[i]
+#             proportions = np.ceil(proportions).astype(int)
+
+#             client_indices = []
+#             for j, class_idx in enumerate(chosen_classes):
+#                 class_indices = np.where(labels == class_idx)[0]
+#                 if proportions[j] > len(class_indices):  # Ensure we do not request more samples than available
+#                     proportions[j] = len(class_indices)
+#                 class_choices = np.random.choice(class_indices, proportions[j], replace=False)
+#                 client_indices.extend(class_choices)
+
+#             clients_split.append((data[client_indices], labels[client_indices]))
+
+#         start = end
+
+#     return clients_split
+
+
+
+def get_data_loaders_FA(nclients, batch_size, classes_pc, real_wd, verbose=True ):
   
-  if real_wd == 0:
-    # 全随机
-    split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
-  elif real_wd == 1:
-    # 自定义iid数量
-    split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=10)
-  else:  
-    # 最极端
-    split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
+    x_train, y_train, x_test, y_test = get_cifar10()
+
+    if verbose:
+        print_image_data_stats(x_train, y_train, x_test, y_test)
+
+    transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
   
-  split_tmp = shuffle_list(split)
+    if real_wd == 0:
+        # 全随机
+        split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
+    elif real_wd == 1:
+        # 自定义iid数量
+        split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=2)
+    else:  
+        # 最极端
+        split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
+
+    # 统计每个客户端的类别分布
+    class_distribution = get_class_distribution(split)
+
+    # Store the client category distribution matrix
+    class_distribution_matrix = create_class_distribution_matrix(split)
+    class_distribution_matrix.to_csv('class_distribution_matrix-FA.csv')
   
-  client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train), batch_size=batch_size, shuffle=True) 
+    split_tmp = shuffle_list(split)
+  
+    client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train), batch_size=batch_size, shuffle=True) 
                     for x, y in split_tmp]
 
-  test_loader  = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False) 
+    test_loader  = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False) 
 
-  return client_loaders, test_loader
+    return client_loaders, test_loader
 
 
 
-def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, validation_split=0.1, verbose=True):
+def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, validation_split=0.2, verbose=True):
     
     
     x_train, y_train, x_test, y_test = get_cifar10()
@@ -556,7 +609,7 @@ def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, 
         split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
     elif real_wd == 1:
         # 自定义iid数量
-        split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=10)
+        split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=2)
     else:  
         # 最极端
         split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
@@ -566,7 +619,7 @@ def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, 
 
     # Store the client category distribution matrix
     class_distribution_matrix = create_class_distribution_matrix(split)
-    class_distribution_matrix.to_csv('class_distribution_matrix-ba.csv')
+    class_distribution_matrix.to_csv('class_distribution_matrix-acc.csv')
     
     # 应用K-means聚类
     kmeans = KMeans(n_clusters=k, random_state=0).fit(class_distribution)
@@ -574,9 +627,9 @@ def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, 
 
     split_tmp = shuffle_list(split)
 
-    # Store the client category distribution matrix
-    class_distribution_matrix1 = create_class_distribution_matrix(split_tmp)
-    class_distribution_matrix1.to_csv('class_distribution_matrix-ba1.csv')
+    # # Store the client category distribution matrix
+    # class_distribution_matrix1 = create_class_distribution_matrix(split_tmp)
+    # class_distribution_matrix1.to_csv('class_distribution_matrix-ba1.csv')
 
         # 在每个客户端上分割出验证集
     client_loaders = []
@@ -721,10 +774,11 @@ def server_aggregate_tocenter(global_model, client_models, client_lens):
 
 
 def evaluate_model_on_multiple_loaders(model, data_loaders, data_sizes):
+    model.eval()
+    total_correct = 0
     total_samples = 0
     weighted_accuracy = 0
 
-    model.eval()
     with torch.no_grad():
         for data_loader, data_size in zip(data_loaders, data_sizes):
             correct = 0
@@ -736,42 +790,40 @@ def evaluate_model_on_multiple_loaders(model, data_loaders, data_sizes):
                 _, predicted = torch.max(outputs.data, 1)
                 correct += (predicted == labels).sum().item()
                 total += labels.size(0)
-
-            if total == 0:
-                raise ValueError("Error! Total is 0.")
-            
-            weighted_accuracy += (correct / total) * data_size
+            # 如果数据集为空，避免除以零
+            if total > 0:
+                weighted_accuracy += (correct / total) * data_size
             total_samples += data_size
 
-    if total_samples == 0:
-        raise ValueError("Error! Total sample is 0.")
-    weighted_accuracy /= total_samples
+    if total_samples > 0:
+        weighted_accuracy /= total_samples
+    else:
+        weighted_accuracy = 0
 
     return weighted_accuracy
 
 
 
 # Proposed by ligeng, without k-means
-def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders, validation_data_sizes):
+def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
-    # client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
-    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], client_data_loaders, validation_data_sizes) for i in range(len(client_models))]
+    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
 
     # Avoid division by zero
     total_accuracy = sum(client_accuracies)
     if total_accuracy == 0:
-        raise ValueError("Warning: Total accuracy is zero.")
+        print("Warning: Total accuracy is zero, adjusting weights to avoid division by zero.")
+        total_accuracy = 1  # Set to 1 or a small number to avoid division by zero
 
     # Calculate performance weights based on accuracies
-    normalized_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
-    print("Normalized Weights:", normalized_weights)
+    performance_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
 
     # Normalize weights
-    # total_weight = sum(performance_weights)
-    # normalized_weights = [w / total_weight for w in performance_weights]
-    # print("Performance Weights", performance_weights)
-    # print("Normalized Weights:", normalized_weights)  # Print normalized weights for debugging
+    total_weight = sum(performance_weights)
+    normalized_weights = [w / total_weight for w in performance_weights]
+    print("Performance Weights", performance_weights)
+    print("Normalized Weights:", normalized_weights)  # Print normalized weights for debugging
 
     # Aggregate the models using normalized performance weights
     global_dict = global_model.state_dict()
@@ -784,23 +836,22 @@ def server_aggregate_ligeng_wok(global_model, client_models, client_data_loaders
     
     global_model.load_state_dict(global_dict)
 
-    # 这部分在train.py中的client_syn函数里已经实现了。
-    # # Optionally, update all client models to the new global model
-    # for model in client_models:
-    #     model.load_state_dict(global_model.state_dict())
+    # Optionally, update all client models to the new global model
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
 
 
 # Proposed by ligeng, with k-means
-def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_idx, k):
+def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders, validation_data_sizes, client_labels, client_indices, k):
     # 确保这里使用的是包含多个 DataLoader 的列表，而不是单个 DataLoader
 
-    # client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
-    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], client_data_loaders, validation_data_sizes) for i in range(len(client_models))]
+    client_accuracies = [evaluate_model_on_multiple_loaders(client_models[i], [client_data_loaders[j] for j in range(len(client_models))], [validation_data_sizes[j] for j in range(len(client_models))]) for i in range(len(client_models))]
     
     # Avoid division by zero
     total_accuracy = sum(client_accuracies)
     if total_accuracy == 0:
-        raise ValueError("Warning: Total accuracy is zero.")
+        print("Warning: Total accuracy is zero, adjusting weights to avoid division by zero.")
+        total_accuracy = 1  # Set to 1 or a small number to avoid division by zero
     
     # Calculate cluster weights based on the number of clients in each cluster
     client_counts = [sum(client_labels == i) for i in range(k)]
@@ -808,9 +859,9 @@ def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders,
 
     # Adjust cluster weights by incorporating performance metrics
     performance_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
-    # combined_weights = [cluster_weights[client_labels[i]] * performance_weights[i] for i in range(len(client_models))]
-    combined_weights = [cluster_weights[client_labels[client_idx[i]]] * performance_weights[i] for i in range(len(client_models))]
-
+    #combined_weights = [cluster_weights[client_labels[i]] * performance_weights[i] for i in range(len(client_models))]
+    combined_weights = [cluster_weights[client_labels[client_indices[i]]] * performance_weights[i] for i in range(len(client_models))]
+    
     # Normalize weights
     total_weight = sum(combined_weights)
     normalized_weights = [w / total_weight for w in combined_weights]
@@ -829,10 +880,47 @@ def server_aggregate_ligeng_wk(global_model, client_models, client_data_loaders,
     
     global_model.load_state_dict(global_dict)
 
-    # # Optionally, update all client models to the new global model
-    # for model in client_models:
-    #     model.load_state_dict(global_model.state_dict())
+    # Optionally, update all client models to the new global model
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
 
+
+def server_aggregate_kmeans(global_model, client_models, client_labels, client_indices, k, num_clients):
+    client_indices = list(client_indices) if isinstance(client_indices, np.ndarray) else client_indices
+    
+    
+    client_counts = [sum(client_labels == i) for i in range(k)]
+    cluster_weights = {i: count / sum(client_counts) for i, count in enumerate(client_counts)}
+    
+    all_client_weights = [cluster_weights[client_labels[i]] for i in range(num_clients)]
+    selected_client_weights = [all_client_weights[i] for i in client_indices]
+    
+    total_weight = sum(selected_client_weights)
+    normalized_client_weights = [w / total_weight for w in selected_client_weights]
+    
+    print("Selected Client Weights:", selected_client_weights)  # 打印选中的客户端权重
+    print("Normalized Weights:", normalized_client_weights)  # 打印标准化后的权重
+    
+    
+    global_dict = global_model.state_dict()
+    for key in global_dict.keys():
+       # print(f"Key: {key}")  # 打印处理的键
+        try:
+            layer_weights = torch.stack([
+                client_models[i].state_dict()[key].float() * normalized_client_weights[i]
+                #for j, i in enumerate(client_indices)
+                for i in range(len(client_models))
+            ])
+        except IndexError as e:
+            print(f"Error accessing index: {e}")
+            break  # 中断循环以避免进一步的错误
+        
+        global_dict[key] = torch.sum(layer_weights, dim=0)
+    
+    global_model.load_state_dict(global_dict)
+    
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
 
 
 
@@ -855,6 +943,97 @@ def create_class_distribution_matrix(clients_data):
                                          index=[f'客户端 {i}' for i in range(num_clients)],
                                          columns=[f'类别 {i}' for i in range(num_classes)])
     return class_distribution_df
+
+
+
+# def evaluate_model(model, data_loader):
+#     model.eval()
+#     correct = 0
+#     total = 0
+#     with torch.no_grad():
+#         for data, labels in data_loader:
+#             data, labels = data.cuda(), labels.cuda()
+#             outputs = model(data)
+#             _, predicted = torch.max(outputs.data, 1)
+#             total += labels.size(0)
+#             correct += (predicted == labels).sum().item()
+#     accuracy = correct / total
+#     return accuracy
+
+# def server_aggregate(global_model, client_models, client_data_loaders, client_labels, client_indices, k):
+#     #     # Evaluate each selected client model
+#     # client_accuracies = [evaluate_model(client_models[i], client_data_loaders[i]) for i in range(len(client_models))]
+#     # # for client_model in client_models:
+#     # #     client_accuracies = evaluate_model(client_model, client_data_loaders)
+#     # # Avoid division by zero
+#     # total_accuracy = sum(client_accuracies)
+#     # if total_accuracy == 0:
+#     #     print("Warning: Total accuracy is zero, adjusting weights to avoid division by zero.")
+#     #     total_accuracy = 1  # Set to 1 or a small number to avoid division by zero
+
+#     # # Calculate performance weights based on accuracies
+#     # performance_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
+
+#     # # Normalize weights
+#     # total_weight = sum(performance_weights)
+#     # normalized_weights = [w / total_weight for w in performance_weights]
+#     # print("Performance Weights", performance_weights)
+#     # print("Normalized Weights:", normalized_weights)  # Print normalized weights for debugging
+
+#     # # Aggregate the models using normalized performance weights
+#     # global_dict = global_model.state_dict()
+#     # for key in global_dict.keys():
+#     #     layer_weights = torch.stack([
+#     #         client_models[i].state_dict()[key].float() * normalized_weights[i]
+#     #         for i in range(len(client_models))
+#     #     ])
+#     #     global_dict[key] = torch.sum(layer_weights, dim=0)
+    
+#     # global_model.load_state_dict(global_dict)
+
+#     # # Optionally, update all client models to the new global model
+#     # for model in client_models:
+#     #     model.load_state_dict(global_model.state_dict())
+        
+#     # Evaluate each client model
+#     client_accuracies = [evaluate_model(client_models[i], client_data_loaders[i]) for i in range(len(client_models))]
+    
+#     # Avoid division by zero
+#     total_accuracy = sum(client_accuracies)
+#     if total_accuracy == 0:
+#         print("Warning: Total accuracy is zero, adjusting weights to avoid division by zero.")
+#         total_accuracy = 1  # Set to 1 or a small number to avoid division by zero
+    
+#     # Calculate cluster weights based on the number of clients in each cluster
+#     client_counts = [sum(client_labels == i) for i in range(k)]
+#     cluster_weights = [count / sum(client_counts) for count in client_counts]
+
+#     # Adjust cluster weights by incorporating performance metrics
+#     performance_weights = [accuracy / total_accuracy for accuracy in client_accuracies]
+#     combined_weights = [cluster_weights[client_labels[i]] * performance_weights[i] for i in range(len(client_models))]
+#     combined_weights = [cluster_weights[client_labels[client_indices[i]]] * performance_weights[i] for i in range(len(client_models))]
+
+#     # Normalize weights
+#     total_weight = sum(combined_weights)
+#     normalized_weights = [w / total_weight for w in combined_weights]
+#     print("Performance Weights", performance_weights)
+#     print("Combined Weights:", combined_weights)  # 打印选中的客户端权重
+#     print("Normalized Weights:", normalized_weights)  # 打印标准化后的权重
+
+#     # Aggregate the models
+#     global_dict = global_model.state_dict()
+#     for key in global_dict.keys():
+#         layer_weights = torch.stack([
+#             client_models[i].state_dict()[key].float() * normalized_weights[i]
+#             for i in range(len(client_models))
+#         ])
+#         global_dict[key] = torch.sum(layer_weights, dim=0)
+    
+#     global_model.load_state_dict(global_dict)
+
+#     # Optionally, update all client models to the new global model
+#     for model in client_models:
+#         model.load_state_dict(global_model.state_dict())
 
 
 # 统计每个客户端的类别分布
