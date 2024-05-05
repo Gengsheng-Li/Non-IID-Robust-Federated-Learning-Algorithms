@@ -7,7 +7,7 @@
 #SBATCH -o slurm_log/slurm%A_mix.log
 #SBATCH -e slurm_log/slurm%A_mix.log
 
-cd /data0/user/gsli/FLNONIID/
+cd /data0/user/gsli/Non-IID-Robust-Federated-Learning-Algorithms
 conda activate FLlearner
 
 # Train

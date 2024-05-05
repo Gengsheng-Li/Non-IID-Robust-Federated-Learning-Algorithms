@@ -8,7 +8,7 @@ import torch.optim as optim
 
 from tqdm import tqdm
 from ultils import *
-from models.vgg import VGG
+from model import VGG
 from datetime import datetime
 
 torch.backends.cudnn.benchmark=True
@@ -16,17 +16,17 @@ torch.backends.cudnn.benchmark=True
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Train model in a FL manner.")
-    parser.add_argument('--user', type=str, default='gsli')
+    parser.add_argument('--user', type=str, default='shuang')
     
-    parser.add_argument('--agg_mth', type=str, default="ligengwk",
-                        choices=['FA', 'client-client', 'client-server', 'ligengwk', 'ligengwok'])
+    parser.add_argument('--agg_mth', type=str, default="ligengwok",
+                        choices=['FA', 'client-client', 'client-server', 'ligengwk', 'ligengwok', 'kmeans'])
     parser.add_argument('--retrain', action="store_true")
-    parser.add_argument('--real_world', type=int, default=2)
+    parser.add_argument('--real_world', type=int, default=1)
     
     parser.add_argument('--num_clients', type=int, default=20)
     parser.add_argument('--num_selected', type=int, default=6)
     parser.add_argument('--num_clusters', type=int, default=8) 
-    parser.add_argument('--validation_split', type=float, default=0.1)
+    parser.add_argument('--validation_split', type=float, default=0.2)
     parser.add_argument('--classes_pc', type=int, default=2)
     parser.add_argument('--baseline_num', type=int, default=100)
 
@@ -47,7 +47,7 @@ def train(args):
     wandb.login()
     wandb.init(
         project="federated_learningg",
-        name=f"{args.user}_am{args.agg_mth}_r{args.retrain}_rw{args.real_world}_nc{args.num_clients}_ns{args.num_selected}_cpc{args.classes_pc}_nb{args.baseline_num}_rounds{args.num_rounds}_lr{args.lr}_bs{args.batch_size}_t{current_time}",
+        name=f"{args.user}_am{args.agg_mth}_r{args.retrain}_rw{args.real_world}_nc{args.num_clients}_ns{args.num_selected}_cpc{args.classes_pc}_nb{args.baseline_num}_rounds{args.num_rounds}_lr{args.lr}_bs{args.batch_size}_t{current_time}_nojianqie",
         config=args
     )
 
@@ -63,13 +63,13 @@ def train(args):
     opt = [optim.SGD(model.parameters(), lr=args.lr) for model in client_models]
 
     # Load data loaders
-    if args.agg_mth == 'ligengwk' or args.agg_mth == 'ligengwok':
+    if args.agg_mth == 'ligengwk' or args.agg_mth == 'ligengwok' or args.agg_mth == 'kmeans':
         train_loader, val_loader, test_loader, class_distribution, client_labels, validation_data_sizes = get_data_loaders_val(args.num_clients, args.batch_size, 
                                                                                                                                 args.num_clusters, args.classes_pc, 
                                                                                                                                 args.real_world, args.validation_split,
                                                                                                                                 args.verbose)
     else:
-        train_loader, test_loader = get_data_loaders(classes_pc=args.classes_pc, nclients= args.num_clients, 
+        train_loader, test_loader = get_data_loaders_FA(classes_pc=args.classes_pc, nclients= args.num_clients, 
                                                 batch_size=args.batch_size, real_wd=args.real_world, verbose=args.verbose)
     
     if args.retrain:
@@ -113,9 +113,11 @@ def train(args):
         elif args.agg_mth == 'client-server':
             server_aggregate_tocenter(global_model, client_models, client_lens)
         elif args.agg_mth == 'ligengwok':
-            server_aggregate_ligeng_wok(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx])
+            server_aggregate_ligeng_wok(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx], client_labels, client_idx, args.num_clusters)
         elif args.agg_mth == 'ligengwk':
             server_aggregate_ligeng_wk(global_model, client_models, [val_loader[i] for i in client_idx], [validation_data_sizes[i] for i in client_idx], client_labels, client_idx, args.num_clusters)
+        elif args.agg_mth == 'kmeans':
+            server_aggregate_kmeans(global_model, client_models, client_labels, client_idx, args.num_clusters, args.num_clients)
         else:
             raise ValueError(f"Unsupported aggregation method: {args.agg_mth}")
 
