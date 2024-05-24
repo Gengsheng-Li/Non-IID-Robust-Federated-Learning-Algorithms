@@ -462,7 +462,8 @@ def test(global_model, test_loader):
 
     return test_loss, acc
 
-
+# A portion of the obove code code is inspired from the work of others, 
+# the link is: https://towardsdatascience.com/preserving-data-privacy-in-deep-learning-part-1-a04894f78029
 #############################################################################################################
 
 

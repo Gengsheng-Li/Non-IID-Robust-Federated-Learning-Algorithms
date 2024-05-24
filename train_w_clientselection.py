@@ -7,7 +7,7 @@ import torch
 import torch.optim as optim
 
 from tqdm import tqdm
-from ultils import *
+from ultils_w_clientselection import *
 from models.vgg import VGG
 from datetime import datetime
 
