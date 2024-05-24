@@ -18,14 +18,14 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Train model in a FL manner.")
     parser.add_argument('--user', type=str, default='shuang')
     
-    parser.add_argument('--agg_mth', type=str, default="ligengwok",
+    parser.add_argument('--agg_mth', type=str, default="kmeans",
                         choices=['FA', 'client-client', 'client-server', 'ligengwk', 'ligengwok', 'kmeans'])
     parser.add_argument('--retrain', action="store_true")
-    parser.add_argument('--real_world', type=int, default=1)
+    parser.add_argument('--real_world', type=int, default=0)
     
     parser.add_argument('--num_clients', type=int, default=20)
     parser.add_argument('--num_selected', type=int, default=6)
-    parser.add_argument('--num_clusters', type=int, default=8) 
+    parser.add_argument('--num_clusters', type=int, default=5) 
     parser.add_argument('--validation_split', type=float, default=0.2)
     parser.add_argument('--classes_pc', type=int, default=2)
     parser.add_argument('--baseline_num', type=int, default=100)
@@ -47,7 +47,7 @@ def train(args):
     wandb.login()
     wandb.init(
         project="federated_learningg",
-        name=f"{args.user}_am{args.agg_mth}_r{args.retrain}_rw{args.real_world}_nc{args.num_clients}_ns{args.num_selected}_cpc{args.classes_pc}_nb{args.baseline_num}_rounds{args.num_rounds}_lr{args.lr}_bs{args.batch_size}_t{current_time}_nojianqie",
+        name=f"{args.user}_am{args.agg_mth}_r{args.retrain}_rw{args.real_world}_nc{args.num_clients}_ns{args.num_selected}_k{args.num_clusters}_val{args.validation_split}_cpc{args.classes_pc}_nb{args.baseline_num}_rounds{args.num_rounds}_lr{args.lr}_bs{args.batch_size}_t{current_time}_nojianqie",
         config=args
     )
 
@@ -69,6 +69,7 @@ def train(args):
                                                                                                                                 args.real_world, args.validation_split,
                                                                                                                                 args.verbose)
     else:
+        print('FA')
         train_loader, test_loader = get_data_loaders_FA(classes_pc=args.classes_pc, nclients= args.num_clients, 
                                                 batch_size=args.batch_size, real_wd=args.real_world, verbose=args.verbose)
     
