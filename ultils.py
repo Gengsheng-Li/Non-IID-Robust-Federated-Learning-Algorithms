@@ -65,6 +65,7 @@ def clients_rand(train_len, nclients):
     to_ret.append(num)
     return to_ret
 
+
 def split_image_data_realwd(data, labels, n_clients=100, verbose=True):
     '''
     Splits (data, labels) among 'n_clients s.t. every client can holds any number of classes which is trying to simulate real world dataset
@@ -150,6 +151,7 @@ def split_image_data_realwd(data, labels, n_clients=100, verbose=True):
     clients_split = np.array(clients_split, dtype=object)
     
     return clients_split
+
 
 
 def split_image_data(data, labels, n_clients, classes_per_client, shuffle, verbose):
@@ -584,8 +586,7 @@ def get_data_loaders_FA(nclients, batch_size, classes_pc, real_wd, verbose=True 
   
     split_tmp = shuffle_list(split)
   
-    client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train), batch_size=batch_size, shuffle=True) 
-                    for x, y in split_tmp]
+    client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train), batch_size=batch_size, shuffle=True) for x, y in split_tmp]
 
     test_loader  = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False) 
 
