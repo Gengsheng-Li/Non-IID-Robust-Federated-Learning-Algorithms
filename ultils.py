@@ -13,7 +13,7 @@ from torchvision.transforms import Compose
 torch.backends.cudnn.benchmark=True
 from sklearn.cluster import KMeans
 import pandas as pd
-
+import pickle
 
 
 #### get cifar dataset in x and y form
@@ -595,95 +595,239 @@ def get_data_loaders_FA(nclients, batch_size, classes_pc, real_wd, verbose=True 
 
 
 
-def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, validation_split=0.2, verbose=True):
+# def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, validation_split=0.2, verbose=True):
     
     
-    x_train, y_train, x_test, y_test = get_cifar10()
+#     x_train, y_train, x_test, y_test = get_cifar10()
 
-    if verbose:
-        print_image_data_stats(x_train, y_train, x_test, y_test)
+#     if verbose:
+#         print_image_data_stats(x_train, y_train, x_test, y_test)
 
-    transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
+#     transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
 
-    if real_wd == 0:
+#     if real_wd == 0:
         
-        # 全随机
-        split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
-    elif real_wd == 1:
-        # 自定义iid数量
-        split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=2)
-    else:  
-        # 最极端
-        split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
+#         # 全随机
+#         split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
+#     elif real_wd == 1:
+#         # 自定义iid数量
+#         split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=2)
+#     else:  
+#         # 最极端
+#         split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
+
+#         # 统计每个客户端的类别分布
+#     class_distribution = get_class_distribution(split)
+
+#     # Store the client category distribution matrix
+#     class_distribution_matrix = create_class_distribution_matrix(split)
+#     class_distribution_matrix.to_csv('class_distribution_matrix-acc.csv')
+    
+#     # 应用K-means聚类
+#     kmeans = KMeans(n_clusters=k, random_state=0).fit(class_distribution)
+#     client_labels = kmeans.labels_
+
+#     split_tmp = shuffle_list(split)
+
+#     # # Store the client category distribution matrix
+#     # class_distribution_matrix1 = create_class_distribution_matrix(split_tmp)
+#     # class_distribution_matrix1.to_csv('class_distribution_matrix-ba1.csv')
+
+#         # 在每个客户端上分割出验证集
+#     client_loaders = []
+#     val_loaders = []
+#     validation_data_sizes = []  # List to store the size of each validation dataset
+#     for client_data in split_tmp:
+#         x_client, y_client = client_data
+#         if len(x_client) == 0:
+#             continue
+#         val_size = int(len(x_client) * validation_split)
+#         val_size = max(1, min(val_size, len(x_client) - 1))
+#         # 验证集
+#         x_val_client = x_client[-val_size:]
+#         y_val_client = y_client[-val_size:]
+#         # 训练集
+#         x_train_client = x_client[:-val_size]
+#         y_train_client = y_client[:-val_size]
+
+#         # Store the size of each validation dataset
+#         validation_data_sizes.append(len(x_val_client))
+
+
+#             # 检查分割后的训练集是否为空
+#         if len(x_train_client) > 0 and len(x_val_client) > 0:
+#             # 创建训练和验证 DataLoader
+#             train_loader = torch.utils.data.DataLoader(
+#                 CustomImageDataset(x_train_client, y_train_client, transforms_train),
+#                 batch_size=batch_size, shuffle=True
+#             )
+#             val_loader = torch.utils.data.DataLoader(
+#                 CustomImageDataset(x_val_client, y_val_client, transforms_eval),
+#                 batch_size=batch_size, shuffle=False
+#             )
+
+#             client_loaders.append(train_loader)
+#             val_loaders.append(val_loader)
+#         else:
+#             print(f"Skipping client with insufficient data. Training samples: {len(x_train_client)}, Validation samples: {len(x_val_client)}")
+#     # client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train),
+#     #                                               batch_size=batch_size, shuffle=True) for x, y in split_tmp]
+
+#     # val_loader = torch.utils.data.DataLoader(CustomImageDataset(x_val, y_val, transforms_eval),
+#     #                                          batch_size=batch_size, shuffle=False)
+
+#     test_loader = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100,
+#                                               shuffle=False)
+
+#    # 返回客户端数据加载器、测试数据加载器、类别分布和客户端标签
+#     return client_loaders, val_loaders, test_loader, class_distribution, client_labels, validation_data_sizes
+
+#     #return client_loaders, test_loader
+
+
+
+# def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, validation_split=0.2, verbose=True):
+#     x_train, y_train, x_test, y_test = get_cifar10()
+
+#     if verbose:
+#         print_image_data_stats(x_train, y_train, x_test, y_test)
+
+#     transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
+
+#     if real_wd == 0:
+#         # 全随机
+#         split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
+#     elif real_wd == 1:
+#         # 自定义iid数量
+#         split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=2)
+#     else:
+#         # 最极端
+#         split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
+
+#     # 统计每个客户端的类别分布
+#     class_distribution = get_class_distribution(split)
+
+#     # Store the client category distribution matrix
+#     class_distribution_matrix = create_class_distribution_matrix(split)
+#     class_distribution_matrix.to_csv('class_distribution_matrix.csv')
+
+#     # 应用K-means聚类
+#     kmeans = KMeans(n_clusters=k, random_state=0).fit(class_distribution)
+#     client_labels = kmeans.labels_
+
+#     split_tmp = shuffle_list(split)
+
+#     client_loaders = []
+#     val_loaders = []
+#     validation_data_sizes = []
+#     for client_data in split_tmp:
+#         x_client, y_client = client_data
+#         if len(x_client) == 0:
+#             continue
+#         val_size = int(len(x_client) * validation_split)
+#         val_size = max(1, min(val_size, len(x_client) - 1))
+#         x_val_client = x_client[-val_size:]
+#         y_val_client = y_client[-val_size:]
+#         x_train_client = x_client[:-val_size]
+#         y_train_client = y_client[:-val_size]
+
+#         validation_data_sizes.append(len(x_val_client))
+
+#         if len(x_train_client) > 0 and len(x_val_client) > 0:
+#             train_loader = torch.utils.data.DataLoader(
+#                 CustomImageDataset(x_train_client, y_train_client, transforms_train),
+#                 batch_size=batch_size, shuffle=True
+#             )
+#             val_loader = torch.utils.data.DataLoader(
+#                 CustomImageDataset(x_val_client, y_val_client, transforms_eval),
+#                 batch_size=batch_size, shuffle=False
+#             )
+#             client_loaders.append(train_loader)
+#             val_loaders.append(val_loader)
+#         else:
+#             print(f"Skipping client with insufficient data. Training samples: {len(x_train_client)}, Validation samples: {len(x_val_client)}")
+
+#     test_loader = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False)
+
+#     return client_loaders, val_loaders, test_loader, class_distribution, client_labels, validation_data_sizes
+
+
+
+def get_data_loaders_val(nclients, batch_size, k, classes_pc=10, real_wd=False, validation_split=0.2, verbose=True, save_path="data_split"):
+    save_file = os.path.join(save_path, f'data_split_{nclients}_clients_real_world_k={k}_1.pkl')
+    
+    # Check if the data has already been split and saved
+    if os.path.exists(save_file):
+        print(f"Loading previously saved data split from {save_file}")
+        client_loaders, val_loaders, test_loader, class_distribution, client_labels, validation_data_sizes, original_train_data = load_data(save_file)
+    else:
+        x_train, y_train, x_test, y_test = get_cifar10()
+
+        if verbose:
+            print_image_data_stats(x_train, y_train, x_test, y_test)
+
+        transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
+
+        if real_wd == 0:
+            # 全随机
+            split = split_image_data_realwd(x_train, y_train, n_clients=nclients, verbose=verbose)
+        elif real_wd == 1:
+            # 自定义iid数量
+            split = split_balanced_non_iid(x_train, y_train, n_clients=nclients, n_iid=2)
+        else:
+            # 最极端
+            split = split_image_data(x_train, y_train, n_clients=nclients, classes_per_client=classes_pc, shuffle=True, verbose=verbose)
 
         # 统计每个客户端的类别分布
-    class_distribution = get_class_distribution(split)
+        class_distribution = get_class_distribution(split)
 
-    # Store the client category distribution matrix
-    class_distribution_matrix = create_class_distribution_matrix(split)
-    class_distribution_matrix.to_csv('class_distribution_matrix-acc.csv')
-    
-    # 应用K-means聚类
-    kmeans = KMeans(n_clusters=k, random_state=0).fit(class_distribution)
-    client_labels = kmeans.labels_
+        # 应用K-means聚类
+        kmeans = KMeans(n_clusters=k, random_state=0).fit(class_distribution)
+        client_labels = kmeans.labels_
 
-    split_tmp = shuffle_list(split)
+        split_tmp = shuffle_list(split)
 
-    # # Store the client category distribution matrix
-    # class_distribution_matrix1 = create_class_distribution_matrix(split_tmp)
-    # class_distribution_matrix1.to_csv('class_distribution_matrix-ba1.csv')
+        client_loaders = []
+        val_loaders = []
+        validation_data_sizes = []
+        original_train_data = []
 
-        # 在每个客户端上分割出验证集
-    client_loaders = []
-    val_loaders = []
-    validation_data_sizes = []  # List to store the size of each validation dataset
-    for client_data in split_tmp:
-        x_client, y_client = client_data
-        if len(x_client) == 0:
-            continue
-        val_size = int(len(x_client) * validation_split)
-        val_size = max(1, min(val_size, len(x_client) - 1))
-        # 验证集
-        x_val_client = x_client[-val_size:]
-        y_val_client = y_client[-val_size:]
-        # 训练集
-        x_train_client = x_client[:-val_size]
-        y_train_client = y_client[:-val_size]
+        for x_client, y_client in split_tmp:
+            if len(x_client) == 0:
+                continue
+            val_size = int(len(x_client) * validation_split)
+            val_size = max(1, min(val_size, len(x_client) - 1))
+            x_val_client = x_client[-val_size:]
+            y_val_client = y_client[-val_size:]
+            x_train_client = x_client[:-val_size]
+            y_train_client = y_client[:-val_size]
 
-        # Store the size of each validation dataset
-        validation_data_sizes.append(len(x_val_client))
+            validation_data_sizes.append(len(x_val_client))
+            original_train_data.append((x_client, y_client))
 
+            if len(x_train_client) > 0 and len(x_val_client) > 0:
+                train_loader = torch.utils.data.DataLoader(
+                    CustomImageDataset(x_train_client, y_train_client, transforms_train),
+                    batch_size=batch_size, shuffle=True
+                )
+                val_loader = torch.utils.data.DataLoader(
+                    CustomImageDataset(x_val_client, y_val_client, transforms_eval),
+                    batch_size=batch_size, shuffle=False
+                )
+                client_loaders.append(train_loader)
+                val_loaders.append(val_loader)
+            else:
+                print(f"Skipping client with insufficient data. Training samples: {len(x_train_client)}, Validation samples: {len(x_val_client)}")
 
-            # 检查分割后的训练集是否为空
-        if len(x_train_client) > 0 and len(x_val_client) > 0:
-            # 创建训练和验证 DataLoader
-            train_loader = torch.utils.data.DataLoader(
-                CustomImageDataset(x_train_client, y_train_client, transforms_train),
-                batch_size=batch_size, shuffle=True
-            )
-            val_loader = torch.utils.data.DataLoader(
-                CustomImageDataset(x_val_client, y_val_client, transforms_eval),
-                batch_size=batch_size, shuffle=False
-            )
+        test_loader = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100, shuffle=False)
 
-            client_loaders.append(train_loader)
-            val_loaders.append(val_loader)
-        else:
-            print(f"Skipping client with insufficient data. Training samples: {len(x_train_client)}, Validation samples: {len(x_val_client)}")
-    # client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train),
-    #                                               batch_size=batch_size, shuffle=True) for x, y in split_tmp]
+        # Save the split data including train/val/test loaders
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)
+        save_data((client_loaders, val_loaders, test_loader, class_distribution, client_labels, validation_data_sizes, original_train_data), save_file)
+        print(f"Data split saved to {save_file}")
 
-    # val_loader = torch.utils.data.DataLoader(CustomImageDataset(x_val, y_val, transforms_eval),
-    #                                          batch_size=batch_size, shuffle=False)
-
-    test_loader = torch.utils.data.DataLoader(CustomImageDataset(x_test, y_test, transforms_eval), batch_size=100,
-                                              shuffle=False)
-
-   # 返回客户端数据加载器、测试数据加载器、类别分布和客户端标签
-    return client_loaders, val_loaders, test_loader, class_distribution, client_labels, validation_data_sizes
-
-    #return client_loaders, test_loader
-
+    return client_loaders, val_loaders, test_loader, class_distribution, client_labels, validation_data_sizes, original_train_data
 
 
 
@@ -719,6 +863,42 @@ def server_aggregate_FA(global_model, client_models, client_lens):
     
     for model in client_models:
         model.load_state_dict(global_model.state_dict())
+
+
+def server_aggregate_FedProx(global_model, client_models, client_lens):
+    """
+    Aggregation method for FedProx
+    """
+    global_dict = global_model.state_dict()
+    total_data_points = sum(client_lens)
+    
+    for k in global_dict.keys():
+        global_dict[k] = sum([client_models[i].state_dict()[k].float() * client_lens[i] for i in range(len(client_models))]) / total_data_points
+    
+    global_model.load_state_dict(global_dict)
+    
+    for model in client_models:
+        model.load_state_dict(global_model.state_dict())
+
+
+# def server_aggregate_FedProxCustom(global_model, client_models, client_lens, proximal_mu):
+#     """
+#     This function implements FedProx without learning rate decay.
+#     """
+#     global_dict = global_model.state_dict()
+
+#     for k in global_dict.keys():
+#         global_dict[k] = torch.stack([client_models[i].state_dict()[k].float() for i in range(len(client_models))], 0).mean(0)
+#     global_model.load_state_dict(global_dict)
+    
+#     for model in client_models:
+#         model.load_state_dict(global_model.state_dict())
+
+#     # Apply proximal term if needed
+#     for model in client_models:
+#         for param_name, param in model.named_parameters():
+#             param.data.add_(-proximal_mu, param.data - global_model.state_dict()[param_name].data)
+
 
 
     
@@ -1056,3 +1236,13 @@ def print_model_parameters(model, layer_name):
         print(f"Parameters of {layer_name}: {param}")
     except KeyError:
         print(f"Layer {layer_name} not found in model.")
+
+
+def save_data(split_data, filepath):
+    with open(filepath, 'wb') as f:
+        pickle.dump(split_data, f)
+
+
+def load_data(filepath):
+    with open(filepath, 'rb') as f:
+        return pickle.load(f)
